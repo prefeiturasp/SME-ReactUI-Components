@@ -1,0 +1,54 @@
+{
+  "name": "@sme/secretui",
+  "version": "1.0.0",
+  "description": "Biblioteca de componentes visuais construída em React para a secretaria municipal de educação de São Paulo",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "yarn test",
+    "start": "webpack-dev-server --mode development",
+    "transpile": "babel src -d dist --copy-files",
+    "prepublishOnly": "npm run transpile",
+    "build": "webpack --mode development"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Ítalo Maio",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/plugin-proposal-optional-chaining": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "7.1.4",
+    "babel-plugin-root-import": "^6.5.0",
+    "css-loader": "^3.5.3",
+    "eslint": "^7.1.0",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "lodash": "^4.17.15",
+    "prettier": "^2.0.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-is": "^16.13.1",
+    "style-loader": "^1.2.1",
+    "styled-components": "^5.1.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "antd": "^4.3.1",
+    "react-router-dom": "^5.2.0",
+    "shortid": "^2.2.15"
+  },
+  "peerDependencies": {
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0",
+    "styled-components": "^4.4.1"
+  }
+}

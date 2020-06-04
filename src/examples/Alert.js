@@ -1,0 +1,80 @@
+import React, { useState, useEffect, useCallback } from 'react';
+import shortid from 'shortid';
+
+// Ant
+import { Input } from 'antd';
+
+// Componentes
+import { Alert } from '~/components';
+
+// Theme
+import { ThemeProvider } from 'styled-components';
+import Temas, { support } from '~/themes';
+
+function AlertExample() {
+  const [alertas, setAlertas] = useState([]);
+
+  useEffect(() => {
+    setAlertas([
+      {
+        id: shortid.generate(),
+        type: Alert.Types.success,
+        message: 'Ocorreu um erro. Contate o suporte.',
+        closable: true,
+        closeText: 'Fechar',
+        timeout: 2000,
+        showIcon: true,
+      },
+      {
+        id: shortid.generate(),
+        type: Alert.Types.error,
+        message: 'Ocorreu um erro. Contate o suporte.',
+        closable: true,
+        showIcon: true,
+        timeout: 4000,
+      },
+      {
+        id: shortid.generate(),
+        type: Alert.Types.warning,
+        message: 'Ocorreu um erro. Contate o suporte.',
+        closable: true,
+        showIcon: true,
+        timeout: 6000,
+      },
+      {
+        id: shortid.generate(),
+        type: Alert.Types.info,
+        message: 'Ocorreu um erro. Contate o suporte.',
+        closable: true,
+        showIcon: true,
+        timeout: 8000,
+      },
+    ]);
+  }, []);
+
+  const handleClose = useCallback((item) => {
+    setAlertas((estadoAnterior) =>
+      estadoAnterior.filter((x) => x.id !== item.id)
+    );
+  }, []);
+
+  return (
+    <div style={{ width: '50%' }}>
+      <ThemeProvider theme={{ ...support, ...Temas.temaSGC }}>
+        <Alert.AlertToastr
+          afterClose={(item) => handleClose(item)}
+          list={alertas}
+        />
+        <Alert.AlertBox
+          visible
+          text="Mussum Ipsum, cacilds vidis litro abertis. Delegadis gente finis, bibendum egestas augue arcu ut est. Atirei o pau no gatis, per gatis num morreus. "
+          title="Teste"
+        >
+          <Input />
+        </Alert.AlertBox>
+      </ThemeProvider>
+    </div>
+  );
+}
+
+export default AlertExample;
