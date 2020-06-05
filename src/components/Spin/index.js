@@ -1,7 +1,7 @@
-import * as React from 'react';
+import React from 'react';
 import t from 'prop-types';
 
-// Estilos
+// Styles
 import { SpinStyle, LoadingOutlinedStyle } from './styles';
 
 function Spin({ children, spinning, hideTip, size }) {

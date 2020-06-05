@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
 
-// Componentes
+// Components
 import { Spin, Alert, Button } from '~/components';
 
-// Temas
+// Themes
 import Themes from '~/themes';
 
 function SpinExample() {
   const [ exampleLoading, setExampleLoading ] = useState(true);
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setExampleLoading(false);
-  //   }, 7000);
-  // }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      setExampleLoading(false);
+    }, 7000);
+  }, []);
 
   return (
     <div className="App">
