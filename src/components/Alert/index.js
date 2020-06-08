@@ -5,13 +5,16 @@ import shortid from 'shortid';
 // Estilo
 import { AlertToastStyle, AlertToastrStyle, AlertBoxStyle } from './styles';
 
+// Utils
+import Utils from './utils';
+
 function AlertToast({ props, afterClose }) {
   return <AlertToastStyle afterClose={afterClose} {...props} />;
 }
 
-function AlertToastr({ list, position, afterClose }) {
+function AlertToastr({ list, position, float, afterClose }) {
   return (
-    <AlertToastrStyle>
+    <AlertToastrStyle float={float} position={position}>
       {list?.map((item) => {
         if (item?.timeout) {
           setTimeout(() => afterClose(item), item.timeout);
@@ -49,13 +52,7 @@ function AlertBox({ children, text, title, visible }) {
   );
 }
 
-AlertToast.Types = {
-  success: 'success',
-  error: 'error',
-  warning: 'warning',
-  info: 'info',
-};
-
+AlertToast.Utils = Utils;
 AlertToast.AlertBox = AlertBox;
 AlertToast.AlertToastr = AlertToastr;
 export default AlertToast;
