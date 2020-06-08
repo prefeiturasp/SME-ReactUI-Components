@@ -2,6 +2,7 @@ import ButtonExample from '~/examples/Button';
 import AlertExample from '~/examples/Alert';
 import BreadcrumbExample from '~/examples/Breadcrumb';
 import CollapseExample from '~/examples/Collapse';
+import SpinExample from '~/examples/Spin';
 
 export default [
   {
@@ -23,5 +24,9 @@ export default [
     path: '/components/collapse',
     component: CollapseExample,
     exact: true,
+  },
+  {
+    path: '/components/spin',
+    component: SpinExample,
   },
 ];
