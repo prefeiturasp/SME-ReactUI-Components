@@ -4,9 +4,13 @@ import t from 'prop-types';
 // Styles
 import { CheckboxStyle } from './styles';
 
-function Checkbox({ children }) {
+function Checkbox({ children, defaultChecked, disabled, onChange }) {
   return (
-    <CheckboxStyle>
+    <CheckboxStyle
+      defaultChecked={defaultChecked}
+      disabled={disabled}
+      onChange={onChange}
+    >
       {children}
     </CheckboxStyle>
   );

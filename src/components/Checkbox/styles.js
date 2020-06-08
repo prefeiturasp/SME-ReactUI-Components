@@ -24,4 +24,18 @@ export const CheckboxStyle = styled(Checkbox)`
   .ant-checkbox-input:focus + .ant-checkbox-inner {
     border-color: ${(props) => props.theme.primary};
   }
+
+  // Disabled
+  .ant-checkbox-disabled {
+    .ant-checkbox-inner {
+      background-color: ${(props) => props.theme.disabled};
+      border-color: ${(props) => props.theme.disabled} !important;
+    }
+
+    &.ant-checkbox-checked {
+      .ant-checkbox-inner::after {
+        border-color: #FFF;
+      }
+    }
+  }
 `;
