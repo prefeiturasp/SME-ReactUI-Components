@@ -1,5 +1,7 @@
 import ButtonExample from '~/examples/Button';
 import AlertExample from '~/examples/Alert';
+import BreadcrumbExample from '~/examples/Breadcrumb';
+import CollapseExample from '~/examples/Collapse';
 import SpinExample from '~/examples/Spin';
 import CheckboxExample from '~/examples/Checkbox';
 
@@ -15,9 +17,18 @@ export default [
     exact: true,
   },
   {
+    path: '/components/breadcrumb',
+    component: BreadcrumbExample,
+    exact: true,
+  },
+  {
+    path: '/components/collapse',
+    component: CollapseExample,
+    exact: true,
+  },
+  {
     path: '/components/spin',
     component: SpinExample,
-    exact: true,
   },
   {
     path: '/components/checkbox',

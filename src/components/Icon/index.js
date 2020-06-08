@@ -1,6 +1,8 @@
 import React from 'react';
 import t from 'prop-types';
 
+import { IconStyle } from './styles';
+
 const typesMap = {
   solid: 'fas',
   brand: 'fab',
@@ -9,8 +11,10 @@ const typesMap = {
   duotone: 'fad',
 };
 
-function Icon({ type, icon }) {
-  return <i className={`${typesMap[type]} ${icon}`} />;
+function Icon({ type, icon, typeColor }) {
+  return (
+    <IconStyle typeColor={typeColor} className={`${typesMap[type]} ${icon}`} />
+  );
 }
 
 Icon.propTypes = {

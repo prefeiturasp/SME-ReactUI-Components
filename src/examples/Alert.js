@@ -18,7 +18,7 @@ function AlertExample() {
     setAlertas([
       {
         id: shortid.generate(),
-        type: Alert.Types.success,
+        type: Alert.Utils.Type.SUCCESS,
         message: 'Ocorreu um erro. Contate o suporte.',
         closable: true,
         closeText: 'Fechar',
@@ -27,7 +27,7 @@ function AlertExample() {
       },
       {
         id: shortid.generate(),
-        type: Alert.Types.error,
+        type: Alert.Utils.Type.ERROR,
         message: 'Ocorreu um erro. Contate o suporte.',
         closable: true,
         showIcon: true,
@@ -35,7 +35,7 @@ function AlertExample() {
       },
       {
         id: shortid.generate(),
-        type: Alert.Types.warning,
+        type: Alert.Utils.Type.WARNING,
         message: 'Ocorreu um erro. Contate o suporte.',
         closable: true,
         showIcon: true,
@@ -43,7 +43,7 @@ function AlertExample() {
       },
       {
         id: shortid.generate(),
-        type: Alert.Types.info,
+        type: Alert.Utils.Type.INFO,
         message: 'Ocorreu um erro. Contate o suporte.',
         closable: true,
         showIcon: true,
@@ -64,14 +64,14 @@ function AlertExample() {
         <Alert.AlertToastr
           afterClose={(item) => handleClose(item)}
           list={alertas}
+          position={Alert.Utils.Position.BOTTOM_RIGHT}
+          float
         />
         <Alert.AlertBox
           visible
           text="Mussum Ipsum, cacilds vidis litro abertis. Delegadis gente finis, bibendum egestas augue arcu ut est. Atirei o pau no gatis, per gatis num morreus. "
           title="Teste"
-        >
-          <Input />
-        </Alert.AlertBox>
+        />
       </ThemeProvider>
     </div>
   );

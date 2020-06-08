@@ -41,7 +41,7 @@ function ButtonExample() {
               {carregando?.teste}
               <Button
                 type="primary"
-                size="middle"
+                size="default"
                 outline
                 loading={carregando}
                 onClick={toggleLoading}

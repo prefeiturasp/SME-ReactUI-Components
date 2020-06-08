@@ -4,6 +4,9 @@ import styled from 'styled-components';
 // Ant
 import { Alert } from 'antd';
 
+// Utils
+import Utils from './utils';
+
 export const AlertToastStyle = styled(Alert)`
   margin: 0.3rem 0 !important;
   font-weight: bold;
@@ -48,12 +51,47 @@ ${(props) =>
 `;
 
 export const AlertToastrStyle = styled.div`
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  min-width: 40%;
-  z-index: 99999;
   margin: 0.5rem;
+
+  ${(props) =>
+    props.float &&
+    `
+    position: absolute;
+    z-index: 99999;
+    min-width: 40%;
+
+    ${
+      props.position === Utils.Position.BOTTOM_RIGHT &&
+      `
+        bottom: 0;
+        right: 0;
+    `
+    }
+
+    ${
+      props.position === Utils.Position.BOTTOM_LEFT &&
+      `
+        bottom: 0 !important;
+        left: 0;
+    `
+    }
+
+    ${
+      props.position === Utils.Position.TOP_LEFT &&
+      `
+        top: 0;
+        left: 0;
+    `
+    }
+
+    ${
+      props.position === Utils.Position.TOP_RIGHT &&
+      `
+        top: 0;
+        right: 0;
+    `
+    }
+  `}
 `;
 
 export const AlertBoxStyle = styled.div`
