@@ -1,6 +1,7 @@
 import ButtonExample from '~/examples/Button';
 import AlertExample from '~/examples/Alert';
 import SpinExample from '~/examples/Spin';
+import CheckboxExample from '~/examples/Checkbox';
 
 export default [
   {
@@ -18,4 +19,9 @@ export default [
     component: SpinExample,
     exact: true,
   },
+  {
+    path: '/components/checkbox',
+    component: CheckboxExample,
+    exact: true,
+  }
 ];
