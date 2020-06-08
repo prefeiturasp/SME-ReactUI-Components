@@ -2,10 +2,10 @@ import React from 'react';
 import t from 'prop-types';
 
 // Styles
-import { SpinStyle, LoadingOutlinedStyle } from './styles';
+import { SpinStyle, IconStyle } from './styles';
 
 function Spin({ children, spinning, hideTip, size }) {
-  const icon = <LoadingOutlinedStyle size={size} spin />;
+  const icon = <IconStyle type="loading" size={size} spin />;
 
   return (
     <SpinStyle

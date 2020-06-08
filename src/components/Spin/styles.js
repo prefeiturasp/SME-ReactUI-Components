@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 // Ant
-import { Spin } from 'antd';
-import { LoadingOutlined } from '@ant-design/icons';
+import { Spin, Icon } from 'antd';
 
 export const SpinStyle = styled(Spin)`
   display: flex !important;
@@ -18,7 +17,7 @@ export const SpinStyle = styled(Spin)`
   }
 `;
 
-export const LoadingOutlinedStyle = styled(LoadingOutlined)`
+export const IconStyle = styled(Icon)`
   font-size: ${(props) => `${props.size}px !important`};
   margin: 0 !important;
   position: relative !important;
