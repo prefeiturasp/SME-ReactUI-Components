@@ -11,9 +11,6 @@ export const ButtonStyle = styled(Button)`
   font-size: 14px;
   border-radius: 0.25rem;
   min-width: 65px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
 
   i {

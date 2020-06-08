@@ -27,8 +27,8 @@ const Button = React.forwardRef(
 
 Button.propTypes = {
   type: t.oneOf(['primary', 'secondary', 'dashed', 'link']),
-  size: t.oneOf(['small', 'middle', 'large']),
-  shape: t.oneOf(['circle', 'round', 'default']),
+  size: t.oneOf(['small', 'default', 'large']),
+  shape: t.oneOf(['circle', 'circle-outline', 'default']),
   icon: t.oneOfType([t.element, t.elementType, t.string, t.bool]),
   outline: t.oneOfType([t.bool, t.string, t.number]),
   loading: t.bool,
@@ -38,7 +38,7 @@ Button.propTypes = {
 Button.defaultProps = {
   type: 'secondary',
   size: 'large',
-  shape: 'default',
+  shape: null,
   icon: false,
   outline: false,
   loading: false,
