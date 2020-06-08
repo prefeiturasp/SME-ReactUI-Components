@@ -3,6 +3,7 @@ import AlertExample from '~/examples/Alert';
 import BreadcrumbExample from '~/examples/Breadcrumb';
 import CollapseExample from '~/examples/Collapse';
 import SpinExample from '~/examples/Spin';
+import CheckboxExample from '~/examples/Checkbox';
 
 export default [
   {
@@ -29,4 +30,9 @@ export default [
     path: '/components/spin',
     component: SpinExample,
   },
+  {
+    path: '/components/checkbox',
+    component: CheckboxExample,
+    exact: true,
+  }
 ];

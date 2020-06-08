@@ -24,4 +24,5 @@ export const support = {
   success: '#297805',
   alert: '#D06D12',
   attention: '#FFFF30',
+  disabled: '#dadada',
 };
