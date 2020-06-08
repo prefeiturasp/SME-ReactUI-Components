@@ -16,8 +16,16 @@ function Checkbox({ children, defaultChecked, disabled, onChange }) {
   );
 };
 
-Checkbox.propTypes = {};
+Checkbox.propTypes = {
+  defaultChecked: t.bool,
+  disabled: t.bool,
+  onChange: t.func
+};
 
-Checkbox.defaultProps = {};
+Checkbox.defaultProps = {
+  defaultChecked: false,
+  disabled: false,
+  onChange: () => {}
+};
 
 export default Checkbox;
