@@ -7,10 +7,10 @@ import { RadioStyle } from './styles';
 function Radio({ children, value, defaultChecked, disabled, onChange }) {
   return (
     <RadioStyle
+      value={value}
       defaultChecked={defaultChecked}
       disabled={disabled}
       onChange={onChange}
-      value={value}
     >
       {children}
     </RadioStyle>

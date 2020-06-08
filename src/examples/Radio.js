@@ -3,7 +3,6 @@ import { ThemeProvider } from 'styled-components';
 
 // Components
 import { Radio } from '~/components';
-// import { Radio } from 'antd';
 
 // Themes
 import Themes, { support } from '~/themes';
