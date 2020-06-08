@@ -4,6 +4,7 @@ import BreadcrumbExample from '~/examples/Breadcrumb';
 import CollapseExample from '~/examples/Collapse';
 import SpinExample from '~/examples/Spin';
 import CheckboxExample from '~/examples/Checkbox';
+import RadioExample from '~/examples/Radio';
 
 export default [
   {
@@ -33,6 +34,11 @@ export default [
   {
     path: '/components/checkbox',
     component: CheckboxExample,
+    exact: true,
+  },
+  {
+    path: '/components/radio',
+    component: RadioExample,
     exact: true,
   }
 ];
