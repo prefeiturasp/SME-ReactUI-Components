@@ -17,16 +17,34 @@ export const SelectStyle = styled(Select)`
     }
   }
 
-  // Items
-  .ant-select-dropdown-menu-item {
-    padding-left: 18px;
+  // Suffix arrow
+  .ant-select-arrow {
+    transition: transform 300ms;
+  }
+
+  &.ant-select-open .ant-select-arrow {
+    transform: rotate(180deg);
   }
 `;
 
 export const OptionStyle = styled(Option)``;
 
 export const GlobalStyle = createGlobalStyle`
-  .ant-select-dropdown-menu-item {
-    color: #F00;
+  .ant-select-dropdown {
+    overflow: hidden;
+
+    &-menu {
+      padding-top: 0;
+      padding-bottom: 0;
+
+      &-item {
+        padding-left: 18px;
+    
+        &.ant-select-dropdown-menu-item-active:not(.ant-select-dropdown-menu-item-disabled) {
+          background-color: ${(props) => props.theme.primary};
+          color: #FFF;
+        }
+      }
+    }
   }
 `

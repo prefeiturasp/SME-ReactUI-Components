@@ -26,6 +26,12 @@ function SelectExample() {
     }
   ];
 
+  function handleChangeTest(value) {
+    const message = `value = ${value}`;
+    console.log(message);
+    alert(message);
+  }
+
   return (
     <div className="App">
       <div style={{ width: '50%' }}>
@@ -49,6 +55,13 @@ function SelectExample() {
               placeholder="Select a option"
               defaultValue="value2"
               options={optionsExample} />
+          </div>
+
+          <div style={{ padding: '0.2rem' }}>
+            <Select
+              placeholder="Select with onChange event"
+              options={optionsExample}
+              onChange={handleChangeTest} />
           </div>
         </ThemeProvider>
       </div>
