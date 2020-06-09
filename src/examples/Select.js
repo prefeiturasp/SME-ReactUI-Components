@@ -63,6 +63,13 @@ function SelectExample() {
               options={optionsExample}
               onChange={handleChangeTest} />
           </div>
+
+          <div style={{ padding: '0.2rem' }}>
+            <Select
+              mode="multiple"
+              placeholder="Multiple select"
+              options={optionsExample} />
+          </div>
         </ThemeProvider>
       </div>
     </div>

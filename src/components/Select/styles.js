@@ -1,4 +1,8 @@
+import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
+
+// Components
+import { Icon } from '~/components';
 
 // Ant
 import { Select } from 'antd';
@@ -47,4 +51,6 @@ export const GlobalStyle = createGlobalStyle`
       }
     }
   }
-`
+`;
+
+export const CustomIcon = <Icon type="solid" icon="fa-caret-down" />;
