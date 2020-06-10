@@ -53,7 +53,7 @@ function SelectExample() {
           <div style={{ padding: '0.2rem' }}>
             <Select
               placeholder="Select a option"
-              defaultValue="value2"
+              defaultValue="Text example #2"
               options={optionsExample} />
           </div>
 
