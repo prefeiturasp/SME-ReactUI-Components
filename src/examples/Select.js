@@ -11,17 +11,17 @@ function SelectExample() {
   const optionsExample = [
     {
       text: "Text example #1",
-      value: "value1",
+      value: "Text example #1",
       disabled: false
     },
     {
       text: "Text example #2",
-      value: "value2",
+      value: "Text example #2",
       disabled: false
     },
     {
       text: "Text example disabled",
-      value: "value3",
+      value: "Text example disabled",
       disabled: true
     }
   ];
@@ -53,7 +53,7 @@ function SelectExample() {
           <div style={{ padding: '0.2rem' }}>
             <Select
               placeholder="Select a option"
-              defaultValue="value2"
+              defaultValue="Text example #2"
               options={optionsExample} />
           </div>
 
@@ -62,6 +62,13 @@ function SelectExample() {
               placeholder="Select with onChange event"
               options={optionsExample}
               onChange={handleChangeTest} />
+          </div>
+
+          <div style={{ padding: '0.2rem' }}>
+            <Select
+              mode="multiple"
+              placeholder="Multiple select"
+              options={optionsExample} />
           </div>
         </ThemeProvider>
       </div>

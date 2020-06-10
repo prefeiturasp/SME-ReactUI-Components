@@ -2,14 +2,12 @@ import React from 'react';
 import t from 'prop-types';
 
 // Componentes
-import { Icon } from '~/components';
+
 
 // Styles
-import { SelectStyle, OptionStyle, GlobalStyle } from './styles';
+import { SelectStyle, OptionStyle, GlobalStyle, SuffixIcon, MenuItemSelectedIcon, NotFoundContent } from './styles';
 
-function Select({ placeholder, options, defaultValue, disabled, onChange }) {
-  const testIcon = <Icon type="solid" icon="fa-caret-down" />;
-
+function Select({ mode, placeholder, options, defaultValue, disabled, onChange }) {
   return (
     <>
       <GlobalStyle />
@@ -19,7 +17,10 @@ function Select({ placeholder, options, defaultValue, disabled, onChange }) {
         defaultValue={defaultValue}
         disabled={disabled}
         onChange={onChange}
-        suffixIcon={testIcon}
+        suffixIcon={SuffixIcon}
+        mode={mode}
+        menuItemSelectedIcon={MenuItemSelectedIcon}
+        notFoundContent={NotFoundContent}
       >
         {options.map((item, index) => (
           <OptionStyle
@@ -36,6 +37,7 @@ function Select({ placeholder, options, defaultValue, disabled, onChange }) {
 };
 
 Select.propTypes = {
+  mode: t.oneOf(['default', 'multiple']),
   placeholder: t.string,
   options: t.array,
   defaultValue: t.string,
@@ -44,6 +46,7 @@ Select.propTypes = {
 };
 
 Select.defaultProps = {
+  mode: "default",
   options: [],
   disabled: false,
   onClick: () => {}
