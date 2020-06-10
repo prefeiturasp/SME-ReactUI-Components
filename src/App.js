@@ -7,13 +7,18 @@ import Rotas from '~/routes';
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        {Rotas?.map((item) => (
-          <Route key={shortid.generate()} {...item} />
-        ))}
-      </Switch>
-    </Router>
+    <React.Fragment>
+      <Router>
+        <Switch>
+          {Rotas?.map(
+            (item) =>
+              item?.title === 'Summary' && (
+                <Route key={shortid.generate()} {...item} />
+              )
+          )}
+        </Switch>
+      </Router>
+    </React.Fragment>
   );
 }
 
