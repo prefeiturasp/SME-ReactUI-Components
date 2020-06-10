@@ -5,7 +5,7 @@ import t from 'prop-types';
 
 
 // Styles
-import { SelectStyle, OptionStyle, GlobalStyle, CustomIcon } from './styles';
+import { SelectStyle, OptionStyle, GlobalStyle, SuffixIcon, MenuItemSelectedIcon, NotFoundContent } from './styles';
 
 function Select({ mode, placeholder, options, defaultValue, disabled, onChange }) {
   return (
@@ -17,9 +17,10 @@ function Select({ mode, placeholder, options, defaultValue, disabled, onChange }
         defaultValue={defaultValue}
         disabled={disabled}
         onChange={onChange}
-        suffixIcon={CustomIcon}
+        suffixIcon={SuffixIcon}
         mode={mode}
-        menuItemSelectedIcon={CustomIcon}
+        menuItemSelectedIcon={MenuItemSelectedIcon}
+        notFoundContent={NotFoundContent}
       >
         {options.map((item, index) => (
           <OptionStyle

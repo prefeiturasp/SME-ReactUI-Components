@@ -11,17 +11,17 @@ function SelectExample() {
   const optionsExample = [
     {
       text: "Text example #1",
-      value: "value1",
+      value: "Text example #1",
       disabled: false
     },
     {
       text: "Text example #2",
-      value: "value2",
+      value: "Text example #2",
       disabled: false
     },
     {
       text: "Text example disabled",
-      value: "value3",
+      value: "Text example disabled",
       disabled: true
     }
   ];
