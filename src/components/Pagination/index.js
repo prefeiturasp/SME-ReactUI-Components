@@ -9,8 +9,6 @@ import { PaginationStyle } from './styles';
 
 function Pagination({ defaultCurrent, pageSize, total, onChange }) {
   function itemRender(current, type, originalElement) {
-    console.log(type);
-
     if (type === 'prev') {
       return <Icon icon="fa-chevron-left" />;
     }
