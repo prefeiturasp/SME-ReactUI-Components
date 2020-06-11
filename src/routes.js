@@ -8,6 +8,7 @@ import RadioExample from '~/examples/Radio';
 import SelectExample from '~/examples/Select';
 import SwitchExample from '~/examples/Switch';
 import PaginationExample from '~/examples/Pagination';
+import ModalExample from '~/examples/Modal';
 import Summary from '~/Summary';
 
 export default [
@@ -74,6 +75,12 @@ export default [
     title: 'Pagination',
     path: '/components/pagination',
     component: PaginationExample,
+    exact: true,
+  },
+  {
+    title: 'Modal',
+    path: '/components/modal',
+    component: ModalExample,
     exact: true,
   },
 ];
