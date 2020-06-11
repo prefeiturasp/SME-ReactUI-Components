@@ -7,6 +7,7 @@ import CheckboxExample from '~/examples/Checkbox';
 import RadioExample from '~/examples/Radio';
 import SelectExample from '~/examples/Select';
 import SwitchExample from '~/examples/Switch';
+import PaginationExample from '~/examples/Pagination';
 import Summary from '~/Summary';
 
 export default [
@@ -67,6 +68,12 @@ export default [
     title: 'Switch',
     path: '/components/switch',
     component: SwitchExample,
+    exact: true,
+  },
+  {
+    title: 'Pagination',
+    path: '/components/pagination',
+    component: PaginationExample,
     exact: true,
   },
 ];
