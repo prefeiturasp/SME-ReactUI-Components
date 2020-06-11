@@ -1,9 +1,6 @@
 import React from 'react';
 import t from 'prop-types';
 
-// Components
-// import { Icon } from '~/components';
-
 // Styles
 import { ModalStyle, CloseIcon } from './styles';
 
