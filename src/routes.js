@@ -9,6 +9,7 @@ import SelectExample from '~/examples/Select';
 import SwitchExample from '~/examples/Switch';
 import PaginationExample from '~/examples/Pagination';
 import ModalExample from '~/examples/Modal';
+import TooltipExample from '~/examples/Tooltip';
 import Summary from '~/Summary';
 
 export default [
@@ -83,4 +84,10 @@ export default [
     component: ModalExample,
     exact: true,
   },
+  {
+    title: 'Tooltip',
+    path: '/components/tooltip',
+    component: TooltipExample,
+    exact: true,
+  }
 ];
