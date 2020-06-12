@@ -86,16 +86,15 @@ export default [
     exact: true,
   },
   {
-<<<<<<< HEAD
     title: 'Tooltip',
     path: '/components/tooltip',
     component: TooltipExample,
     exact: true,
-  }
-=======
+  },
+  {
     title: 'Card',
     path: '/components/card',
     component: CardExample,
-  },
->>>>>>> master
+    exact: true,
+  }
 ];

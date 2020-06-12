@@ -1,11 +1,8 @@
 import React from 'react';
 import t from 'prop-types';
 
-// Components
-import { Icon } from '~/components';
-
-// Styles
-import { TooltipStyle } from './styles';
+// Ant
+import { Tooltip as TooltipStyle } from 'antd';
 
 function Tooltip({ children, title, placement }) {
   return (
