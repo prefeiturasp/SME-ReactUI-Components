@@ -17,7 +17,15 @@ function PaginationExample() {
       <div>
         <ThemeProvider theme={{ ...support, ...Themes.temaSIGPAE }}>
           <div style={{ padding: '0.2rem' }}>
-            <Pagination total={500} onChange={exampleOnChange} />
+            <Pagination total={500} size="small" onChange={exampleOnChange} />
+          </div>
+          
+          <div style={{ padding: '0.2rem' }}>
+            <Pagination total={500} size="medium" />
+          </div>
+
+          <div style={{ padding: '0.2rem' }}>
+            <Pagination total={500} size="large" />
           </div>
         </ThemeProvider>
         <ThemeProvider theme={{ ...support, ...Themes.temaSGP }}>

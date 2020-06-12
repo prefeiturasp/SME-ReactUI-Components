@@ -9,4 +9,5 @@ export { default as Radio } from './Radio';
 export { default as Select } from './Select';
 export { default as Switch } from './Switch';
 export { default as Pagination } from './Pagination';
+export { default as Modal } from './Modal';
 export { default as Card } from './Card';

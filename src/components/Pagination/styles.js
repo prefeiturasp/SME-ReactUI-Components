@@ -1,19 +1,24 @@
-import React from 'react';
 import styled from 'styled-components';
 
 // Ant
 import { Pagination  } from 'antd';
+
+const SIZES = {
+  small: 24,
+  medium: 32,
+  large: 40,
+};
 
 export const PaginationStyle = styled(Pagination)`
   li {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #DADADA;
-    min-width: 56px;
-    height: 56px;
+    border: 1px solid #DADADA !important;
+    min-width: ${props => `${SIZES[props.size]}px`};
+    height: ${props => `${SIZES[props.size]}px`};
     border-radius: 0;
-    margin-right: -1px;
+    margin-right: -1px !important;
     transition: background 0.3s ease;
 
     &:focus, &:hover {
@@ -38,7 +43,7 @@ export const PaginationStyle = styled(Pagination)`
 
     &.ant-pagination-item-active {
       background-color: ${props => props.theme.primary};
-      border-color: ${props => props.theme.primary};
+      border-color: ${props => props.theme.primary} !important;
       position: relative;
       z-index: 1;
 
