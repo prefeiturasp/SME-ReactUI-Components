@@ -9,6 +9,7 @@ import SelectExample from '~/examples/Select';
 import SwitchExample from '~/examples/Switch';
 import PaginationExample from '~/examples/Pagination';
 import ModalExample from '~/examples/Modal';
+import CardExample from '~/examples/Card';
 import Summary from '~/Summary';
 
 export default [
@@ -82,5 +83,10 @@ export default [
     path: '/components/modal',
     component: ModalExample,
     exact: true,
+  },
+  {
+    title: 'Card',
+    path: '/components/card',
+    component: CardExample,
   },
 ];
