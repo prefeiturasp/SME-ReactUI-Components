@@ -9,6 +9,7 @@ import SelectExample from '~/examples/Select';
 import SwitchExample from '~/examples/Switch';
 import PaginationExample from '~/examples/Pagination';
 import ModalExample from '~/examples/Modal';
+import TooltipExample from '~/examples/Tooltip';
 import CardExample from '~/examples/Card';
 import UploadExample from '~/examples/Upload';
 import Summary from '~/Summary';
@@ -86,6 +87,12 @@ export default [
     exact: true,
   },
   {
+    title: 'Tooltip',
+    path: '/components/tooltip',
+    component: TooltipExample,
+    exact: true,
+  },
+  {
     title: 'Card',
     path: '/components/card',
     component: CardExample,
@@ -96,5 +103,5 @@ export default [
     path: '/components/upload',
     component: UploadExample,
     exact: true,
-  },
+  }
 ];
