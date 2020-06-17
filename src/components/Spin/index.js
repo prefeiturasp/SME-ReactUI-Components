@@ -11,6 +11,7 @@ function Spin({ children, spinning, hideTip, size }) {
     <SpinStyle
       spinning={spinning}
       indicator={icon}
+      customSize={size}
       tip={`${hideTip ? '' : 'Carregando...'}`}
     >
       {children}

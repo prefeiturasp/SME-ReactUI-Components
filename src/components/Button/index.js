@@ -8,7 +8,7 @@ import { Button as BotaoAnt } from 'antd';
 import { ButtonStyle, Teste } from './styles';
 
 const Button = React.forwardRef(
-  ({ children, type, size, shape, icon, outline, loading, onClick }, ref) => {
+  ({ children, type, size, shape, icon, outline, loading, disabled, onClick }, ref) => {
     return (
       <ButtonStyle
         type={type}
@@ -17,6 +17,7 @@ const Button = React.forwardRef(
         outline={outline ? 1 : 0}
         onClick={onClick}
         loading={loading}
+        disabled={disabled}
       >
         {icon}
         {children}
@@ -32,6 +33,7 @@ Button.propTypes = {
   icon: t.oneOfType([t.element, t.elementType, t.string, t.bool]),
   outline: t.oneOfType([t.bool, t.string, t.number]),
   loading: t.bool,
+  disabled: t.bool,
   onClick: t.func,
 };
 
@@ -42,6 +44,7 @@ Button.defaultProps = {
   icon: false,
   outline: false,
   loading: false,
+  disabled: false,
   onClick: () => {},
 };
 

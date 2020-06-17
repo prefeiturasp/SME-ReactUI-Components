@@ -1,46 +1,122 @@
-import React from 'react';
+import React, { useState } from 'react';
 import t from 'prop-types';
 
 // Components
-import { Button, Icon } from '~/components';
+import { Button, Icon, Spin } from '~/components';
 
 // Styles
-import { UploadStyle } from './styles';
+import { UploadStyle, DraggerStyle } from './styles';
 
-function Upload({ children }) {
-  const props = {
-    name: 'file',
-    action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
-    headers: {
-      authorization: 'authorization-text',
-    },
-    onChange(info) {
-      if (info.file.status !== 'uploading') {
-        console.log(info.file, info.fileList);
-      }
+function Upload({ dragger, action, listType, multiple, showUploadList, accept, complementText, disabled, onChange }) {
+  const [ isLoading, setIsLoading ] = useState(false);
+  const [ error, setError ] = useState(false);
+  const [ imageUrl, setImageUrl ] = useState(null);
+  
+  function getBase64(img, callback) {
+    const reader = new FileReader();
+    reader.addEventListener('load', () => callback(reader.result));
+    reader.readAsDataURL(img);
+  }
+  
+  function defaultOnChange(info) {
+    if (listType === "picture-card"){
       if (info.file.status === 'done') {
-        console.log(`${info.file.name} file uploaded successfully`);
-      } else if (info.file.status === 'error') {
-        console.log(`${info.file.name} file upload failed.`);
+        getBase64(info.file.originFileObj, imageUrl =>
+          setImageUrl(imageUrl)
+        );
+      } else {
+        setImageUrl(null);
       }
-    },
-  };
 
-  return (
-    <UploadStyle {...props}>
-      <Button outline icon={<Icon type="solid" icon="fa-upload" />}>
+      setError(info.file.status === 'error');
+      setIsLoading(info.file.status === 'uploading');
+    }
+    
+    onChange(info);
+  }
+
+  function ContentText() {
+    return (
+      <Button disabled={disabled} outline icon={<Icon type="solid" icon="fa-upload" />}>
         Upload
       </Button>
-    </UploadStyle>
+    )
+  }
+
+  function ContentPictureCard() {
+    if (imageUrl){
+      return <img src={imageUrl} alt="avatar" style={{ width: '100%' }} />
+    }
+
+    return (
+      <div className={`contentPictureCard ${error ? 'error' : ''}`}>
+        {isLoading ? <Spin size={20} spinning={true} hideTip /> : <Icon type="solid" icon="fa-plus" />}
+        <div className="ant-upload-text">Upload</div>
+      </div>
+    );
+  }
+
+  const props = {
+    action,
+    listType,
+    multiple,
+    showUploadList,
+    disabled,
+    accept,
+    onChange: defaultOnChange,
+  }
+
+  if (dragger) {
+    return (
+      <DraggerStyle {...props}>
+        <p className="ant-upload-drag-icon">
+          <Icon type="solid" icon="fa-inbox" />
+        </p>
+
+        <p className="ant-upload-text">Clique ou arraste para fazer o upload.</p>
+        
+        {complementText && (
+          <p className="ant-upload-hint">
+            {complementText}
+          </p>
+        )}
+      </DraggerStyle>
+    )
+  }
+
+  return (
+    <>
+      <UploadStyle {...props}>
+        {listType === "text" && <ContentText />}
+        {listType === "picture-card" && <ContentPictureCard />}
+      </UploadStyle>
+
+      {complementText && (
+        <span className="complementText">{complementText}</span>
+      )}
+    </>
   );
 };
 
 Upload.propTypes = {
-  visible: t.bool,
+  dragger: t.bool,
+  action: t.string,
+  listType: t.oneOf(['text', 'picture', 'picture-card']),
+  multiple: t.bool,
+  showUploadList: t.bool,
+  accept: t.string,
+  complementText: t.string,
+  disabled: t.bool,
+  onChange: t.func,
 };
 
 Upload.defaultProps = {
-  visible: false,
+  dragger: false,
+  listType: "text",
+  multiple: false,
+  showUploadList: true,
+  disabled: false,
+  onChange: () => {}
 };
 
 export default Upload;
