@@ -7,23 +7,23 @@ import { Icon } from '~/components';
 // Styles
 import { PaginationStyle } from './styles';
 
-function Pagination({ defaultCurrent, pageSize, size, total, onChange }) {
-  function itemRender(current, type, originalElement) {
-    if (type === 'prev') {
-      return <Icon icon="fa-chevron-left" />;
-    }
-
-    if (type === 'next') {
-      return <Icon icon="fa-chevron-right" />;
-    }
-
-    if (type === 'jump-prev' || type === 'jump-next') {
-      return <Icon icon="fa-ellipsis-h" />;
-    }
-
-    return originalElement;
+export function customRenderNavButtons(_, type, originalElement) {
+  if (type === 'prev') {
+    return <Icon icon="fa-chevron-left" />;
   }
 
+  if (type === 'next') {
+    return <Icon icon="fa-chevron-right" />;
+  }
+
+  if (type === 'jump-prev' || type === 'jump-next') {
+    return <Icon icon="fa-ellipsis-h" />;
+  }
+
+  return originalElement;
+}
+
+function Pagination({ defaultCurrent, pageSize, size, total, onChange }) {
   return (
     <PaginationStyle
       defaultCurrent={defaultCurrent}
@@ -31,7 +31,7 @@ function Pagination({ defaultCurrent, pageSize, size, total, onChange }) {
       pageSize={pageSize}
       size={size}
       onChange={onChange}
-      itemRender={itemRender}
+      itemRender={customRenderNavButtons}
     />
   );
 };
