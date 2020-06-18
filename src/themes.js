@@ -16,13 +16,46 @@ export default {
   },
 };
 
-export const support = {
-  info: '#086397',
-  info2: '#10A3FB',
-  cancel: '#040404',
-  warning: '#B40C02',
-  success: '#297805',
-  alert: '#D06D12',
-  attention: '#FFFF30',
-  disabled: '#dadada',
+export const Support = {
+  Colors: {
+    info: '#086397',
+    info2: '#10A3FB',
+    cancel: '#040404',
+    warning: '#B40C02',
+    success: '#297805',
+    alert: '#D06D12',
+    attention: '#FFFF30',
+    disabled: '#dadada',
+  },
+  Typography: {
+    FontWeight: {
+      Regular: 400,
+      Bold: 700,
+      ExtraBold: 900,
+    },
+    Size: {
+      XBig: '40px',
+      Big: '32px',
+      Medium: '24px',
+      Small: '16px',
+      XSmall: '14px',
+      XXSmall: '12px',
+    },
+    LineHeight: {
+      Big: 8,
+      Regular: 4,
+      Small: 2,
+    },
+  },
+  Spacing: {
+    XXXS: '4px',
+    XXS: '8px',
+    XS: '16px',
+    SM: '24px',
+    MD: '32px',
+    LG: '40px',
+    XL: '48px',
+    XXL: '56px',
+    XXXL: '64px',
+  },
 };

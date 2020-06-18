@@ -12,6 +12,7 @@ import ModalExample from '~/examples/Modal';
 import TooltipExample from '~/examples/Tooltip';
 import CardExample from '~/examples/Card';
 import UploadExample from '~/examples/Upload';
+import TypographyExample from '~/examples/Typography';
 import Summary from '~/Summary';
 
 export default [
@@ -103,5 +104,11 @@ export default [
     path: '/components/upload',
     component: UploadExample,
     exact: true,
-  }
+  },
+  {
+    title: 'Typography',
+    path: '/components/typography',
+    component: TypographyExample,
+    exact: true,
+  },
 ];
