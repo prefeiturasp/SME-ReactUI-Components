@@ -46,7 +46,7 @@ function AlertBox({ children, text, title, visible }) {
       <AlertBoxStyle title={title}>
         {title && <h2>{title}</h2>}
         {text}
-        {React.Children.count(children) > 0 && children}
+        <div>{React.Children.count(children) > 0 && children}</div>
       </AlertBoxStyle>
     )
   );

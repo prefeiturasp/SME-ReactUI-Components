@@ -13,6 +13,7 @@ import TooltipExample from '~/examples/Tooltip';
 import CardExample from '~/examples/Card';
 import UploadExample from '~/examples/Upload';
 import TableExample from '~/examples/Table';
+import TypographyExample from '~/examples/Typography';
 import Summary from '~/Summary';
 
 export default [
@@ -109,6 +110,12 @@ export default [
     title: 'Table',
     path: '/components/table',
     component: TableExample,
+    exact: true,
+  },
+  {
+    title: 'Typography',
+    path: '/components/typography',
+    component: TypographyExample,
     exact: true,
   },
 ];
