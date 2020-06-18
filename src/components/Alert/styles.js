@@ -21,7 +21,7 @@ export const AlertToastStyle = styled(Alert)`
     props.type === 'success' &&
     `
     .ant-alert-message {
-        color: ${props.theme.Colors.success};
+        color: ${props.theme?.Colors?.success};
     }
   `}
 
@@ -29,7 +29,7 @@ ${(props) =>
   props.type === 'info' &&
   `
     .ant-alert-message {
-        color: ${props.theme.Colors.info};
+        color: ${props.theme?.Colors?.info};
     }
   `}
 
@@ -37,7 +37,7 @@ ${(props) =>
   props.type === 'error' &&
   `
     .ant-alert-message {
-        color: ${props.theme.Colors.warning};
+        color: ${props.theme?.Colors?.warning};
     }
   `}
 
@@ -45,7 +45,7 @@ ${(props) =>
   props.type === 'warning' &&
   `
     .ant-alert-message {
-        color: ${props.theme.Colors.alert};
+        color: ${props.theme?.Colors?.alert};
     }
   `}
 `;
