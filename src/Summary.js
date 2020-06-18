@@ -42,10 +42,8 @@ function Summary({ children }) {
           {Rotas?.map(
             (item) =>
               item.title !== 'Summary' && (
-                <li>
-                  <Link key={shortid.generate()} to={item.path}>
-                    {item.title}
-                  </Link>
+                <li key={shortid.generate()}>
+                  <Link to={item.path}>{item.title}</Link>
                 </li>
               )
           )}

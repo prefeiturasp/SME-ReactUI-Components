@@ -14,6 +14,7 @@ import CardExample from '~/examples/Card';
 import UploadExample from '~/examples/Upload';
 import TableExample from '~/examples/Table';
 import TypographyExample from '~/examples/Typography';
+import TextFieldExample from '~/examples/TextField';
 import Summary from '~/Summary';
 
 export default [
@@ -116,6 +117,12 @@ export default [
     title: 'Typography',
     path: '/components/typography',
     component: TypographyExample,
+    exact: true,
+  },
+  {
+    title: 'TextField',
+    path: '/components/text-field',
+    component: TextFieldExample,
     exact: true,
   },
 ];
