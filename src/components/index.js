@@ -16,6 +16,7 @@ export { default as Upload } from './Upload';
 export { default as Table } from './Table';
 export { default as Typography } from './Typography';
 export { default as Tag } from './Tag';
+export { default as TextField } from './TextField';
 
 // Hooks
 export { default as useTheme } from '~/utils/hook/useTheme';
