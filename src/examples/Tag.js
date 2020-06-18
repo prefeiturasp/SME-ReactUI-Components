@@ -24,11 +24,26 @@ function TagExample() {
     <div className="App">
       <div>
         <ThemeProvider theme={{ ...support, ...Themes.temaSIGPAE }}>
+          <div style={{ padding: '0.2rem 0.2rem' }}>
+            <Tag size="small">Small</Tag>
+            <Tag size="small">Small</Tag>
+          </div>
+          <div style={{ padding: '0.2rem 0.2rem' }}>
+            <Tag>Medium</Tag>
+            <Tag>Medium</Tag>
+          </div>
+          <div style={{ padding: '0.2rem 0.2rem' }}>
+            <Tag size="large">Large</Tag>
+            <Tag size="large">Large</Tag>
+          </div>
           <div style={{ padding: '1rem 0.2rem' }}>
-            <Tag>Example tag</Tag>
+            <Tag closable onClose={exampleOnClose}>Tag closable</Tag>
+            <Tag closable onClose={exampleOnClose}>Tag closable</Tag>
             <Tag closable onClose={exampleOnClose}>Tag closable</Tag>
           </div>
           <div style={{ padding: '1rem 0.2rem' }}>
+            <span style={{ marginRight: 8 }}>Categories:</span>
+
             {tags.map(tag => (
               <Tag
                 key={tag}
