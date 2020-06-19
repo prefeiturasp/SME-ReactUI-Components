@@ -13,7 +13,9 @@ const lineHeights = {
 export const TagStyle = styled(Tag)`
   line-height: ${props => lineHeights[props.size]};
   padding: ${props => props.closable ? '0 6px 0 12px' : '0 12px'};
-  background-color: #F5F6F8;
+  background-color: ${props => props.add ? 'transparent' : '#F5F6F8'};
+  border-style: ${props => props.add ? 'dashed' : 'solid'};
+
 `;
 
 export const CheckableTagStyle = styled(CheckableTag)`
