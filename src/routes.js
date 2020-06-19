@@ -15,6 +15,7 @@ import UploadExample from '~/examples/Upload';
 import TableExample from '~/examples/Table';
 import TypographyExample from '~/examples/Typography';
 import TextFieldExample from '~/examples/TextField';
+import DatePickerExample from '~/examples/DatePicker';
 import Summary from '~/Summary';
 
 export default [
@@ -123,6 +124,12 @@ export default [
     title: 'TextField',
     path: '/components/text-field',
     component: TextFieldExample,
+    exact: true,
+  },
+  {
+    title: 'DatePicker',
+    path: '/components/datepicker',
+    component: DatePickerExample,
     exact: true,
   },
 ];
