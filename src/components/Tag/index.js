@@ -1,9 +1,6 @@
 import React from 'react';
 import t from 'prop-types';
 
-// Components
-// import { Button, Icon, Spin } from '~/components';
-
 // Styles
 import { TagStyle, CheckableTagStyle } from './styles';
 

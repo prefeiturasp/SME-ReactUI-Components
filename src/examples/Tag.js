@@ -34,17 +34,13 @@ function TagExample() {
     setShowInput(true);
   }
 
-  function testing() {
-    setShowInput(false);
-  }
-  
   useEffect(() => {
     if (!showInput) return;
     
     const input = document.getElementById('inputNewTag');
     input.focus();
 
-    input.addEventListener("focusout", testing, false);
+    input.addEventListener("focusout", () => setShowInput(false), false);
   }, [showInput]);
   
   return (
