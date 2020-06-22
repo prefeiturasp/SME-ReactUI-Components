@@ -3,18 +3,35 @@ import shortid from 'shortid';
 import styled from 'styled-components';
 
 // Rotas
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { Switch, Route, Link } from 'react-router-dom';
 
 import Rotas from '~/routes';
 
 const ComponentsList = styled.ul`
   display: block;
   padding: 0;
-  margin: 0.5rem;
+  margin: 0.2rem;
 
   li {
     display: block;
     padding: 0.5rem;
+    background: #d8d7d7;
+    margin-bottom: 3px;
+
+    &:hover {
+      background: gray;
+      a {
+        color: white;
+      }
+    }
+
+    a {
+      color: gray;
+      font-weight: bold;
+      width: 100%;
+      height: inherit;
+      display: block;
+    }
   }
 `;
 
@@ -27,6 +44,7 @@ function Summary({ children }) {
         overflow: 'hidden',
         display: 'flex',
         flexDirection: 'row',
+        overflow: 'scroll',
       }}
     >
       <div
@@ -36,6 +54,7 @@ function Summary({ children }) {
           backgroundColor: '#e4e4e4',
           borderRight: '1px solid #d4d4d4',
           boxShadow: '#8080802b 1px 0px 7px 1px',
+          overflow: 'scroll',
         }}
       >
         <ComponentsList>
