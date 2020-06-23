@@ -7,12 +7,6 @@ import { Button as BotaoAnt } from 'antd';
 // Estilos
 import { ButtonStyle, Teste } from './styles';
 
- /**
-   * Os alertas aparecem na parte superior da tela e exibem informações críticas sobre perda de dados, funcionalidade, erro, validações, etc.
-   * Boas práticas de uso:
-   * - Deve aparecer um de cada vez e no máximo duas linhas devem ser usadas para exibir as mensagens.
-   * - Use as notificações para apresentar informações que precisam ser visualizadas imediatamente e que requerem atenção do usuário.
- */
 const Button = React.forwardRef(
   ({ children, type, size, shape, icon, outline, loading, disabled, onClick }, ref) => {
     return (
