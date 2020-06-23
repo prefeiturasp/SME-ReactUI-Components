@@ -6,6 +6,5 @@ module.exports = {
     'storybook-addon-styled-component-theme/dist/register',
     'storybook-addon-playroom',
     '@storybook/addon-knobs/register',
-    '@storybook/addon-notes/register',
   ],
 };

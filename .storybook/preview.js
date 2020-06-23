@@ -9,6 +9,7 @@ const { withPropsTable } = require('storybook-addon-react-docgen');
 import { withThemesProvider } from 'storybook-addon-styled-component-theme';
 import { withPlayroom } from 'storybook-addon-playroom';
 import { withKnobs, text, boolean, number } from '@storybook/addon-knobs';
+import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks';
 
 const themes = [Themes.temaSGP, Themes.temaSGC, Themes.temaSIGPAE];
 
@@ -26,5 +27,9 @@ addParameters({
       process.env.NODE_ENV === 'production'
         ? '/playroom/'
         : 'http://localhost:9000',
+  },
+  docs: {
+    container: DocsContainer,
+    page: DocsPage,
   },
 });
