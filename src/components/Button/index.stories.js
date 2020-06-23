@@ -1,23 +1,17 @@
 import React from 'react';
-import { Button, useTheme } from '~/components';
-
-import { ThemeProvider } from 'styled-components';
-import Themes from '~/themes';
+import { Button } from '~/components';
 
 export default { title: 'Button' };
 
-export const withText = () => {
-  const tema = useTheme(Themes.temaSGP);
+export const PrimaryButton = () => <Button type="primary">Hello Button</Button>;
 
-  return (
-    <ThemeProvider theme={tema}>
-      <Button type="primary">Hello Button</Button>
-    </ThemeProvider>
-  )
-}
+PrimaryButton.parameters = {
+  props: {
+    propTablesExclude: [],
+  },
+};
 
-withText.parameters = {
- props: {
-   propTablesExclude: []
- }
-}
+PrimaryButton.story = {
+  name: 'Teste nome da historia',
+  descripion: 'OAISJDOAHSIDHAISDUHAS',
+};
