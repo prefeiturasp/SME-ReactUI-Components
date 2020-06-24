@@ -22,6 +22,11 @@ export const SelectStyle = styled(Select)`
       // Multiselect - Placeholder
       .ant-select-selection__placeholder {
         margin-left: 0;
+        font-size: ${(props) => props.theme?.Typography?.Size.XSmall};
+      }
+
+      .ant-select-selection-selected-value {
+        font-size: ${(props) => props.theme?.Typography?.Size.XSmall};
       }
 
       // Multiselect - tag
@@ -31,6 +36,7 @@ export const SelectStyle = styled(Select)`
         padding-left: 6px;
         margin-top: 6px;
         border-radius: 6px;
+        font-size: ${(props) => props.theme?.Typography?.Size.XSmall};
 
         &:first-child {
           margin-left: -7px;
@@ -65,6 +71,7 @@ export const GlobalStyle = createGlobalStyle`
         align-items: center;
         padding-left: 18px;
         padding-right: 10px !important;
+        font-size: ${(props) => props.theme?.Typography?.Size.XSmall};
     
         &.ant-select-dropdown-menu-item-active:not(.ant-select-dropdown-menu-item-disabled) {
           background-color: ${(props) => props.theme.primary};
