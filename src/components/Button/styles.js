@@ -7,48 +7,85 @@ export const Teste = styled(Button)``;
 
 export const ButtonStyle = styled(Button)`
   font-family: 'Roboto', sans-serif !important;
-  font-weight: 700;
-  font-size: 14px;
+  font-weight: ${(props) =>
+    props.theme?.Typography?.FontWeight?.Bold} !important;
+  font-size: ${(props) => props.theme?.Typography?.Size?.XSmall};
   border-radius: 0.25rem;
-  min-width: 65px;
   overflow: hidden;
 
+  .sme__icon + .button__content {
+    margin-left: ${(props) => props.theme?.Spacing?.XXS} !important;
+  }
+
+  &.ant-btn-group {
+    background: red;
+  }
+
+  &:disabled {
+    background: transparent !important;
+    border-color: ${(props) => props.theme?.Colors?.disabled} !important;
+    color: ${(props) => props.theme?.Colors?.disabled} !important;
+  }
+
   i {
-    font-size: 14px;
-    margin-right: 8px;
+    font-size: ${(props) => props.theme?.Typography?.Size?.XSmall};
+  }
+
+  &.ant-btn-link {
+    color: ${(props) => props.theme?.Colors?.info} !important;
+    border: none;
+
+    &:hover {
+      background: transparent;
+    }
+
+    &:disabled {
+      color: ${(props) => props.theme?.Colors?.disabled} !important;
+    }
   }
 
   &.ant-btn-sm {
-    font-size: 11px;
+    font-size: ${(props) => props.theme?.Typography?.Size?.XXSmall};
 
     i {
-      font-size: 11px;
-      margin-right: 8px;
+      font-size: ${(props) => props.theme?.Typography?.Size?.XXSmall};
     }
   }
 
   &.ant-btn-lg {
-    font-size: 17px;
+    font-size: ${(props) => props.theme?.Typography?.Size?.Small};
 
     i {
-      font-size: 17px;
-      margin-right: 8px;
+      font-size: ${(props) => props.theme?.Typography?.Size?.Small};
     }
   }
 
   &.ant-btn-primary {
-    background-color: ${(props) => props.theme.primary} !important;
-    border-color: ${(props) => props.theme.primary} !important;
+    background-color: ${(props) => props.theme?.Colors?.Primary} !important;
+    border-color: ${(props) => props.theme?.Colors?.Primary} !important;
 
-    &:hover {
-      background-color: ${(props) => props.theme.primaryDark} !important;
+    &:hover:not(:disabled) {
+      background-color: ${(props) =>
+        props.theme?.Colors?.PrimaryDark} !important;
+    }
+
+    &:disabled {
+      background: transparent !important;
+      border-color: ${(props) => props.theme?.Colors?.disabled} !important;
+      color: ${(props) => props.theme?.Colors?.disabled} !important;
     }
   }
 
   &.ant-btn-secondary {
-    background-color: #086397 !important;
-    border-color: #086397 !important;
+    background-color: ${(props) => props.theme?.Colors?.info} !important;
+    border-color: ${(props) => props.theme?.Colors?.info} !important;
     color: white;
+
+    &:disabled {
+      background: transparent !important;
+      border-color: ${(props) => props.theme?.Colors?.disabled} !important;
+      color: ${(props) => props.theme?.Colors?.disabled} !important;
+    }
   }
 
   ${(props) =>
@@ -56,22 +93,28 @@ export const ButtonStyle = styled(Button)`
     `
     &.ant-btn-primary {
       background-color: transparent !important;
-      color: ${props.theme.primary} !important;
+      color: ${props.theme?.Colors?.Primary} !important;
 
-      &:hover {
-        background-color: ${props.theme.primary} !important;
+      &:hover:not(:disabled) {
+        background-color: ${props.theme?.Colors?.Primary} !important;
         color: white !important;
       }
     }
 
     &.ant-btn-secondary {
       background-color: transparent !important;
-      color: #086397 !important;
+      color: ${props.theme?.Colors?.info} !important;
 
-      &:hover {
-        background-color: #086397 !important;
+      &:hover:not(:disabled) {
+        background-color: ${props.theme?.Colors?.info} !important;
         color: white !important;
       }
     }
   `}
+`;
+
+export const ButtonGroupStyle = styled(Button.Group)`
+  .ant-btn:not(:nth-child(1)) {
+    margin-left: -1px !important;
+  }
 `;
