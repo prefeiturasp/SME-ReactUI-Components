@@ -1,7 +1,7 @@
 pipeline {
     agent {
       node { 
-        label 'sme-node:14.4-alpine'
+        label 'sme-node'
       }
     }
     
