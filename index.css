@@ -71,6 +71,11 @@ body {
 [id*='story--button'] button {
   margin-right: 0.2rem;
 }
+
+#story--select--all .ant-select {
+  margin: 0.2rem 0;
+}
+
 #story--button--button-group:nth-child(1) div {
   margin-bottom: 0.1rem;
 }
