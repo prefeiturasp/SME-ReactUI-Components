@@ -74,7 +74,7 @@ export const GlobalStyle = createGlobalStyle`
         font-size: ${(props) => props.theme?.Typography?.Size.XSmall};
     
         &.ant-select-dropdown-menu-item-active:not(.ant-select-dropdown-menu-item-disabled) {
-          background-color: ${(props) => props.theme.primary};
+          background-color: ${(props) => props.theme?.Colors?.Primary};
           color: #FFF;
         }
 
