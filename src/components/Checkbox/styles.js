@@ -25,6 +25,10 @@ export const CheckboxStyle = styled(Checkbox)`
     border-color: ${(props) => props.theme.primary};
   }
 
+  .ant-checkbox + span {
+    font-size: ${(props) => props.theme?.Typography?.Size.XSmall};
+  }
+
   // Disabled
   .ant-checkbox-disabled {
     .ant-checkbox-inner {

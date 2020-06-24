@@ -2,7 +2,7 @@ import '../index.css';
 import 'antd/dist/antd.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-import Themes from '~/themes';
+import Themes, { Support } from '~/themes';
 
 const { addDecorator, addParameters } = require('@storybook/react');
 const { withPropsTable } = require('storybook-addon-react-docgen');
@@ -11,7 +11,7 @@ import { withPlayroom } from 'storybook-addon-playroom';
 import { withKnobs, text, boolean, number } from '@storybook/addon-knobs';
 import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks';
 
-const themes = [Themes.temaSGP, Themes.temaSGC, Themes.temaSIGPAE];
+const themes = [{...Support, ...Themes.temaSGP}, {...Support, ...Themes.temaSGC }, {...Support, ...Themes.temaSIGPAE }];
 
 addDecorator(withPropsTable);
 addDecorator(withPlayroom);
