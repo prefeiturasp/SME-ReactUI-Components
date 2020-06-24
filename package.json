@@ -1,5 +1,5 @@
 {
-  "name": "@sme/reactui",
+  "name": "@sme/secretui",
   "version": "1.0.0",
   "description": "Biblioteca de componentes visuais construída em React para a secretaria municipal de educação de São Paulo",
   "main": "dist/index.js",
