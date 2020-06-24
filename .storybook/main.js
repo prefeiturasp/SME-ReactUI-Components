@@ -1,9 +1,10 @@
 module.exports = {
-  stories: ['../src/**/*.stories.js'],
-  addons: ['@storybook/addon-actions', '@storybook/addon-links'],
-  webpackFinal: async config => {
-    // do mutation to the config
-
-    return config;
-  },
+  stories: ['../src/**/*.stories.[tj]s'],
+  addons: [
+    '@storybook/addon-docs',
+    'storybook-addon-react-docgen',
+    'storybook-addon-styled-component-theme/dist/register',
+    'storybook-addon-playroom',
+    '@storybook/addon-knobs/register',
+  ],
 };

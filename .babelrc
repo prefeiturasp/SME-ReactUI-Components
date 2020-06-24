@@ -15,6 +15,7 @@
   ],
   "plugins": [
     "@babel/plugin-proposal-optional-chaining",
+    "react-docgen",
     [
       "babel-plugin-root-import",
       {
