@@ -14,6 +14,7 @@ export const ModalStyle = styled(Modal)`
     
     .ant-modal-title {
       font-weight: bold;
+      font-size: ${(props) => props.theme?.Typography?.Size.Small};
     }
   }
 
