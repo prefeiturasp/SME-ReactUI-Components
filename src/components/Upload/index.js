@@ -7,6 +7,16 @@ import { Button, Icon, Spin } from '~/components';
 // Styles
 import { UploadStyle, DraggerStyle } from './styles';
 
+/**
+ * `import { Upload } from "@sme/secretui"`
+ * 
+ * O File Uploader permite ao usuário transferir um arquivo ou enviar conteúdo próprio. Usando nativamente uma entrada de arquivo ou arraste e solte.
+ * O File Uploader mostra o progresso do upload e fornece feedback sobre o status do upload.
+ * 
+ * # Boas práticas de uso
+ * - Sempre mantenha o nome do arquivo visível.
+ * - Forneça informações sobre tipo, tamanho e velocidade ou progresso do upload.
+ */
 function Upload({ dragger, action, listType, multiple, showUploadList, accept, complementText, disabled, onChange }) {
   const [ isLoading, setIsLoading ] = useState(false);
   const [ error, setError ] = useState(false);
