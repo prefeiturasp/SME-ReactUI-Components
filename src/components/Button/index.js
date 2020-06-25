@@ -19,7 +19,18 @@ import { ButtonStyle, ButtonGroupStyle } from './styles';
  */
 const Button = React.forwardRef(
   (
-    { children, type, size, shape, icon, outline, loading, disabled, onClick },
+    {
+      children,
+      type,
+      size,
+      shape,
+      icon,
+      outline,
+      loading,
+      disabled,
+      style,
+      onClick,
+    },
     ref
   ) => {
     return (
@@ -31,6 +42,7 @@ const Button = React.forwardRef(
         onClick={onClick}
         loading={loading}
         disabled={disabled}
+        style={style}
       >
         {icon}
         {React.Children.count(children) > 0 && (
@@ -42,16 +54,13 @@ const Button = React.forwardRef(
 );
 
 Button.propTypes = {
-  /**
-   * Components used in story
-   * Displays Prop Tables with these components
-   */
   type: t.oneOf(['primary', 'secondary', 'dashed', 'link']),
   size: t.oneOf(['small', 'default', 'large']),
   icon: t.oneOfType([t.element, t.elementType, t.string, t.bool]),
   outline: t.oneOfType([t.bool, t.string, t.number]),
   loading: t.bool,
   disabled: t.bool,
+  style: t.object,
   onClick: t.func,
 };
 
@@ -62,6 +71,7 @@ Button.defaultProps = {
   outline: false,
   loading: false,
   disabled: false,
+  style: null,
   onClick: () => {},
 };
 

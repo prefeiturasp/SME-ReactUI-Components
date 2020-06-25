@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import t from 'prop-types';
 import shortid from 'shortid';
 
@@ -8,51 +8,65 @@ import { AlertToastStyle, AlertToastrStyle, AlertBoxStyle } from './styles';
 // Utils
 import Utils from './utils';
 
-function AlertToast({ props, afterClose }) {
-  return <AlertToastStyle afterClose={afterClose} {...props} />;
-}
+// Internal components
+import Box from './components/AlertBox';
+import Toastr from './components/AlertToastr';
 
-function AlertToastr({ list, position, float, afterClose }) {
+/**
+ * `import { Alert } from "@sme/secretui"`
+ *
+ * Os alertas aparecem na parte superior da tela e exibem informações críticas sobre perda de dados, funcionalidade, erro, validações, etc.
+ *
+ * # Boas práticas de uso
+ * - Deve aparecer um de cada vez e no máximo duas linhas devem ser usadas para exibir as mensagens.
+ * - Use as notificações para apresentar informações que precisam ser visualizadas imediatamente e que requerem atenção do usuário.
+ * - Apresente mensagens claras e concisas e dê ações de acompanhamento para permitir que o usuário fique mais informado ou resolva o problema.
+ * - Evite exibir mensagens com códigos de erro técnico que não ajudam o usuário a resolver o problema.
+ * - Apresente mensagens específicas para cada situação em vez de usar mensagens padrão.
+ * - Assuma a culpa quando for apropriado. Diga "estamos com problemas para conectar" em vez de "você está tendo problemas de conexão".
+ */
+function Alert({
+  afterClose,
+  type,
+  showIcon,
+  icon,
+  message,
+  closable,
+  closeText,
+}) {
   return (
-    <AlertToastrStyle float={float} position={position}>
-      {list?.map((item) => {
-        if (item?.timeout) {
-          setTimeout(() => afterClose(item), item.timeout);
-        }
-
-        return (
-          <AlertToast
-            key={shortid.generate()}
-            props={{ ...item }}
-            afterClose={() => afterClose(item)}
-          />
-        );
-      })}
-    </AlertToastrStyle>
+    <AlertToastStyle
+      afterClose={afterClose}
+      type={type}
+      showIcon={showIcon}
+      icon={icon}
+      message={message}
+      closable={closable}
+      closeText={closeText}
+    />
   );
 }
 
-AlertToastr.propTypes = {
-  list: t.oneOfType([t.array]),
+Alert.propTypes = {
+  afterClose: t.func.isRequired,
+  type: t.oneOf(['success', 'info', 'warning', 'error']),
+  showIcon: t.bool,
+  icon: t.element,
+  message: t.string.isRequired,
+  closable: t.bool,
+  closeText: t.string,
 };
 
-AlertToastr.defaultProps = {
-  list: [],
+Alert.defaultProps = {
+  type: 'info',
+  showIcon: false,
+  icon: null,
+  closable: true,
+  closeText: '',
 };
 
-function AlertBox({ children, text, title, visible }) {
-  return (
-    visible && (
-      <AlertBoxStyle title={title}>
-        {title && <h2>{title}</h2>}
-        {text}
-        <div>{React.Children.count(children) > 0 && children}</div>
-      </AlertBoxStyle>
-    )
-  );
-}
+Alert.Utils = Utils;
+Alert.Box = Box;
+Alert.Toastr = Toastr;
 
-AlertToast.Utils = Utils;
-AlertToast.AlertBox = AlertBox;
-AlertToast.AlertToastr = AlertToastr;
-export default AlertToast;
+export default Alert;
