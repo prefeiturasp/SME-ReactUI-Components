@@ -14,41 +14,55 @@ export const UploadStyle = styled(Upload)`
   .complementText {
     display: block;
     margin-top: 5px;
+    font-size: ${(props) => props.theme?.Typography?.Size?.XXSmall};
   }
-
+  
+  .ant-upload-list-item-name {
+    font-size: ${(props) => props.theme?.Typography?.Size?.XSmall};
+  }
+  
   .contentPictureCard {
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    
     &.error {
-      color: ${props => props.theme.alert};
+      color: ${props => props.theme?.Colors?.alert};
     }
   }
-
+  
   .ant-upload-text {
     margin-top: 5px;
+    font-size: ${(props) => props.theme?.Typography?.Size?.XSmall};
   }
-
+  
   .ant-upload-select-picture-card:hover {
-    border-color: ${props => props.theme.primary} !important;
+    border-color: ${props => props.theme?.Colors?.Primary} !important;
   }
-`;
-
+  `;
+  
 export const DraggerStyle = styled(Dragger)`
   height: max-content !important;
-
+  
   .ant-upload-btn {
     padding: 30px 0;
   }
 
+  .ant-upload-text {
+    font-size: ${(props) => props.theme?.Typography?.Size?.Small} !important;
+  }
+  
   .ant-upload-drag-icon {
     font-size: 40px;
-    color: ${props => props.theme.primary};
+    color: ${props => props.theme?.Colors?.Primary};
+  }
+  
+  &:not(.ant-upload-disabled):hover {
+    border-color: ${props => props.theme?.Colors?.Primary} !important;
   }
 
-  &:not(.ant-upload-disabled):hover {
-    border-color: ${props => props.theme.primary} !important;
+  .ant-upload-list-item-name {
+    font-size: ${(props) => props.theme?.Typography?.Size?.XSmall};
   }
 
   // File uploaded

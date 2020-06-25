@@ -85,7 +85,7 @@ function Upload({ dragger, action, listType, multiple, showUploadList, accept, c
   }
 
   return (
-    <>
+    <div>
       <UploadStyle {...props}>
         {listType === "text" && <ContentText />}
         {listType === "picture-card" && <ContentPictureCard />}
@@ -94,7 +94,7 @@ function Upload({ dragger, action, listType, multiple, showUploadList, accept, c
       {complementText && (
         <span className="complementText">{complementText}</span>
       )}
-    </>
+    </div>
   );
 };
 
