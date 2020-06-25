@@ -4,7 +4,15 @@ import t from 'prop-types';
 // Styles
 import { BreadcrumbStyle } from '../styles';
 
-function BreadcrumbItem({ disabled, text, href, path, target, separator }) {
+function BreadcrumbItem({
+  children,
+  disabled,
+  text,
+  href,
+  path,
+  target,
+  separator,
+}) {
   return (
     <BreadcrumbStyle.Item
       path={path}
@@ -14,11 +22,13 @@ function BreadcrumbItem({ disabled, text, href, path, target, separator }) {
       disabled={disabled}
     >
       {text}
+      {chidren}
     </BreadcrumbStyle.Item>
   );
 }
 
 BreadcrumbItem.propTypes = {
+  children: t.oneOfType([t.element, t.elementType, t.node]),
   disabled: t.bool.isRequired,
   text: t.string.isRequired,
   href: t.string,
@@ -28,6 +38,7 @@ BreadcrumbItem.propTypes = {
 };
 
 BreadcrumbItem.defaultProps = {
+  children: null,
   href: '#',
   path: '#',
   target: '_self',
