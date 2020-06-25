@@ -51,8 +51,6 @@ ${(props) =>
 `;
 
 export const AlertToastrStyle = styled.div`
-  margin: 0.5rem;
-
   ${(props) =>
     props.float &&
     `
