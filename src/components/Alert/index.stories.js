@@ -33,9 +33,8 @@ export const AlertToastrStory = () => {
     {
       id: shortid.generate(),
       type: Alert.Utils.Type.SUCCESS,
-      message: 'Ocorreu um erro. Contate o suporte.',
+      message: 'Cadastrado com sucesso!',
       closable: true,
-      timeout: 2000,
       showIcon: true,
     },
   ]);
