@@ -83,3 +83,7 @@ body {
 #story--button--button-group button {
   margin: 0;
 }
+
+#story--upload--all > div > div {
+  margin-bottom: 2rem;
+}
