@@ -22,7 +22,7 @@ function BreadcrumbItem({
       disabled={disabled}
     >
       {text}
-      {chidren}
+      {children}
     </BreadcrumbStyle.Item>
   );
 }
