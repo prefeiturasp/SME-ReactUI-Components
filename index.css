@@ -87,3 +87,10 @@ body {
 #story--upload--all > div > div {
   margin-bottom: 2rem;
 }
+
+#story--table--all .ant-table-wrapper {
+  margin-bottom: 2rem; 
+}
+#story--table--all .ant-table-wrapper:last-child {
+  margin-bottom: 0;
+}
