@@ -23,6 +23,11 @@ export function customRenderNavButtons(_, type, originalElement) {
   return originalElement;
 }
 
+/**
+ * `import { Pagination } from "@sme/secretui"`
+ * 
+ * Usado para navegar entre várias páginas sempre que houver muitos resultados para mostrar de uma só vez ou quando algo levar muito tempo para carregar / renderizar todos os itens. É normalmente usado em uma tabela ou para exibir resultados da pesquisa.
+ */
 function Pagination({ defaultCurrent, pageSize, size, total, onChange }) {
   return (
     <PaginationStyle

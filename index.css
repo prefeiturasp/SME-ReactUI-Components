@@ -87,3 +87,10 @@ body {
 #story--upload--all > div > div {
   margin-bottom: 2rem;
 }
+
+#story--pagination--all ul {
+  margin-bottom: 2rem;
+}
+#story--pagination--all ul:last-child {
+  margin-bottom: 0;
+}
