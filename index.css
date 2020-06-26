@@ -87,3 +87,31 @@ body {
 #story--upload--all > div > div {
   margin-bottom: 2rem;
 }
+
+/* Tooltip storybook */
+#story--tooltip--all > div > div:first-child {
+  margin-bottom: 2rem;
+}
+
+.examplePlacements__globalHorizontal {
+  display: flex;
+  width: 100%;
+  padding: 0 70px;
+  justify-content: space-between;
+}
+
+.examplePlacements__globalVertical {
+  display: flex;
+  justify-content: space-between;
+}
+
+.examplePlacements__globalVertical > div {
+  width: 70px;
+  display: flex;
+  flex-direction: column;
+}
+
+.examplePlacements__globalVertical button {
+  width: 100%;
+  margin: 0.2rem 0;
+}
