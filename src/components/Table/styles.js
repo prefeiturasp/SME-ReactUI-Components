@@ -11,12 +11,12 @@ export const TableStyle = styled(Table)`
   }
   
   .ant-table-thead > tr > th, .ant-table-tbody > tr > td {
-    font-size: 14px;
+    font-size: ${props => props.theme?.Typography?.Size?.XSmall};
     padding: 14px 14px 14px 25px;
   }
 
   .ant-table-tbody > tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td, .ant-table-tbody > tr.ant-table-row-selected td {
-    background-color: ${props => props.theme.primary};
+    background-color: ${props => props.theme?.Colors?.Primary};
     color: #FFF;
   }
 
@@ -31,6 +31,10 @@ export const TableStyle = styled(Table)`
       border-radius: 0;
       margin-right: -1px !important;
       transition: background 0.3s ease;
+
+      a {
+        font-size: ${props => props.theme?.Typography?.Size?.XSmall};
+      }
   
       &:focus, &:hover {
         border-color: #DADADA;
@@ -48,13 +52,13 @@ export const TableStyle = styled(Table)`
         background-color: #fafafa;
   
         a {
-          color: ${props => props.theme.primary};
+          color: ${props => props.theme?.Colors?.Primary};
         }
       }
   
       &.ant-pagination-item-active {
-        background-color: ${props => props.theme.primary};
-        border-color: ${props => props.theme.primary} !important;
+        background-color: ${props => props.theme?.Colors?.Primary};
+        border-color: ${props => props.theme?.Colors?.Primary} !important;
         position: relative;
         z-index: 1;
   
