@@ -24,30 +24,31 @@ function Collapse({
   defaultActiveKey,
   onChange,
   destroyInactivePanel,
+  ...props
 }) {
   return (
     <CollapseStyle
       expandIconPosition="right"
       expandIcon={(panelProps) => <Chevron opened={panelProps.isActive} />}
-      // activeKey={activeKey}
+      activeKey={activeKey}
       defaultActiveKey={defaultActiveKey}
-      // onChange={onChange}
-      // destroyInactivePanel={destroyInactivePanel}
+      onChange={onChange}
+      destroyInactivePanel={destroyInactivePanel}
+      {...props}
     >
       {children}
     </CollapseStyle>
   );
 }
 
-// Collapse.propTypes = {
-//   children: t.oneOfType([t.element, t.elementType, t.node]),
-//   activeKey: t.number,
-//   defaultActiveKey: t.number,
-//   onChange: t.func,
-//   destroyInactivePanel: t.bool,
-// };
+Collapse.propTypes = {
+  activeKey: t.array,
+  defaultActiveKey: t.number,
+  onChange: t.func,
+  destroyInactivePanel: t.bool,
+};
 
-// Collapse.defaultProps = {};
+Collapse.defaultProps = {};
 
 Collapse.Panel = Panel;
 

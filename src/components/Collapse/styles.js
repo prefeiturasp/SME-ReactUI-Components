@@ -11,7 +11,7 @@ export const CollapseStyle = styled(Collapse)`
     span.float-icon {
       position: absolute;
       right: 15px;
-      top: 13px;
+      top: 10px;
     }
   }
 `;

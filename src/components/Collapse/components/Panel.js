@@ -4,7 +4,16 @@ import t from 'prop-types';
 // Styles
 import { PanelStyle } from '../styles';
 
-function Panel({ children, disabled, bordered, borderColor, header, key }) {
+// disabled, bordered, borderColor, header, key
+function Panel({
+  children,
+  disabled,
+  bordered,
+  borderColor,
+  header,
+  key,
+  ...props
+}) {
   return (
     <PanelStyle
       disabled={disabled}
@@ -12,20 +21,25 @@ function Panel({ children, disabled, bordered, borderColor, header, key }) {
       borderColor={borderColor}
       header={header}
       key={key}
+      {...props}
     >
       {children}
     </PanelStyle>
   );
 }
 
-// Panel.propTypes = {
-//   disabled: t.bool,
-//   bordered: t.bool,
-//   borderColor: t.string,
-//   header: t.string,
-//   key: t.oneOfType([t.string, t.number]),
-// };
+Panel.propTypes = {
+  disabled: t.bool,
+  bordered: t.bool,
+  borderColor: t.string,
+  header: t.string.isRequired,
+  key: t.oneOfType([t.string]),
+};
 
-// Panel.defaultProps = {};
+Panel.defaultProps = {
+  disabled: false,
+  bordered: false,
+  borderColor: null,
+};
 
 export default Panel;
