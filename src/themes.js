@@ -29,6 +29,7 @@ export const Support = {
     alert: '#D06D12',
     attention: '#FFFF30',
     disabled: '#dadada',
+    neutralDark: '#42474A',
   },
   Typography: {
     FontWeight: {
