@@ -21,6 +21,10 @@ export const PaginationStyle = styled(Pagination)`
     margin-right: -1px !important;
     transition: background 0.3s ease;
 
+    a {
+      font-size: ${props => props.theme?.Typography?.Size.XSmall};
+    }
+
     &:focus, &:hover {
       border-color: #DADADA;
     }
@@ -37,13 +41,13 @@ export const PaginationStyle = styled(Pagination)`
       background-color: #fafafa;
 
       a {
-        color: ${props => props.theme.primary};
+        color: ${props => props.theme?.Colors?.Primary};
       }
     }
 
     &.ant-pagination-item-active {
-      background-color: ${props => props.theme.primary};
-      border-color: ${props => props.theme.primary} !important;
+      background-color: ${props => props.theme?.Colors?.Primary};
+      border-color: ${props => props.theme?.Colors?.Primary} !important;
       position: relative;
       z-index: 1;
 
