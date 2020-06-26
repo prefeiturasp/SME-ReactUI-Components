@@ -12,6 +12,7 @@ export const ButtonStyle = styled(Button)`
   font-size: ${(props) => props.theme?.Typography?.Size?.XSmall};
   border-radius: 0.25rem;
   overflow: hidden;
+  pointer-events: initial !important;
 
   .sme__icon + .button__content {
     margin-left: ${(props) => props.theme?.Spacing?.XXS} !important;

@@ -26,6 +26,7 @@ const Button = React.forwardRef(
       shape,
       icon,
       outline,
+      block,
       loading,
       disabled,
       style,
@@ -39,6 +40,7 @@ const Button = React.forwardRef(
         size={size}
         shape={shape}
         outline={outline ? 1 : 0}
+        block={block}
         onClick={onClick}
         loading={loading}
         disabled={disabled}
@@ -58,6 +60,7 @@ Button.propTypes = {
   size: t.oneOf(['small', 'default', 'large']),
   icon: t.oneOfType([t.element, t.elementType, t.string, t.bool]),
   outline: t.oneOfType([t.bool, t.string, t.number]),
+  block: t.bool,
   loading: t.bool,
   disabled: t.bool,
   style: t.object,
@@ -69,6 +72,7 @@ Button.defaultProps = {
   size: 'large',
   icon: false,
   outline: false,
+  block: false,
   loading: false,
   disabled: false,
   style: null,
