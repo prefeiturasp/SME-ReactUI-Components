@@ -38,8 +38,9 @@ export const InputStyle = styled(Input)`
       &:not(.has-error) {
         &:focus,
         &:hover:not(:disabled) {
-          border-color: ${(props) => props.theme.Colors.Primary};
-          box-shadow: 0 0 0 2px #6933ff1c;
+          border-color: ${(props) => props.theme?.Colors?.Primary};
+          box-shadow: 0 0 0 2px
+            ${(props) => props.theme?.Colors?.PrimaryDark + `26`};
         }
       }
     }
@@ -50,12 +51,12 @@ export const InputStyle = styled(Input)`
 
     .ant-input-suffix,
     .ant-input-prefix {
-      font-size: ${(props) => props.theme.Typography.Size.Small} !important;
+      font-size: ${(props) => props.theme?.Typography?.Size?.Small} !important;
     }
 
     &.has-error {
       .ant-input-suffix {
-        color: ${(props) => props.theme.Colors.warning};
+        color: ${(props) => props.theme?.Colors?.warning};
       }
     }
   }
@@ -64,19 +65,20 @@ export const InputStyle = styled(Input)`
     height: 38px;
 
     &.has-error {
-      border-color: ${(props) => props.theme.Colors.warning};
+      border-color: ${(props) => props.theme?.Colors?.warning};
     }
 
     &::placeholder {
-      font-size: ${(props) => props.theme.Typography.Size.XSmall};
+      font-size: ${(props) => props.theme?.Typography?.Size?.XSmall};
       line-height: 22px;
       color: #a4a4a4;
     }
 
     &:focus,
     &:hover:not(:disabled) {
-      border-color: ${(props) => props.theme.Colors.Primary};
-      box-shadow: 0 0 0 2px #6933ff1c;
+      border-color: ${(props) => props.theme?.Colors?.Primary};
+      box-shadow: 0 0 0 2px
+        ${(props) => props.theme?.Colors?.PrimaryDark + `26`};
     }
   }
 `;
@@ -89,17 +91,18 @@ export const InputSearchStyle = styled(Input.Search)`
 
       &:focus,
       &:hover:not(:disabled) {
-        border-color: ${(props) => props.theme.Colors.Primary};
-        box-shadow: 0 0 0 2px #6933ff1c;
+        border-color: ${(props) => props.theme?.Colors?.Primary};
+        box-shadow: 0 0 0 2px
+          ${(props) => props.theme?.Colors?.PrimaryDark + `26`};
       }
     }
 
     .ant-input-suffix {
-      font-size: ${(props) => props.theme.Typography.Size.Small} !important;
-      color: ${(props) => props.theme.Colors.Primary};
+      font-size: ${(props) => props.theme?.Typography?.Size?.Small} !important;
+      color: ${(props) => props.theme?.Colors?.Primary};
 
       i svg {
-        fill: ${(props) => props.theme.Colors.Primary};
+        fill: ${(props) => props.theme?.Colors?.Primary};
         font-size: 22px;
       }
     }
@@ -109,19 +112,20 @@ export const InputSearchStyle = styled(Input.Search)`
     height: 38px;
 
     &.has-error {
-      border-color: ${(props) => props.theme.Colors.warning};
+      border-color: ${(props) => props.theme?.Colors?.warning};
     }
 
     &::placeholder {
-      font-size: ${(props) => props.theme.Typography.Size.XSmall};
+      font-size: ${(props) => props.theme?.Typography?.Size?.XSmall};
       line-height: 22px;
       color: #a4a4a4;
     }
 
     &:focus,
     &:hover:not(:disabled) {
-      border-color: ${(props) => props.theme.Colors.Primary};
-      box-shadow: 0 0 0 2px #6933ff1c;
+      border-color: ${(props) => props.theme?.Colors?.Primary};
+      box-shadow: 0 0 0 2px
+        ${(props) => props.theme?.Colors?.PrimaryDark + `26`};
     }
   }
 `;
