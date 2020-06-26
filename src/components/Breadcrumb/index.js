@@ -17,10 +17,22 @@ function Separator() {
   );
 }
 
+/**
+ * `import { Breadcrumb } from "@sme/secretui"`
+ *
+ * O breadcrumb permite que os usuários vejam rapidamente sua localização como um caminho de navegação.
+ *
+ * # Boas práticas de uso
+ * - Coloque breadcrumb na parte superior da página.
+ * - Mostrar hierarquia, não histórico.
+ * - Mantenha os títulos do Breadcrumb curtos, mas descritivos.
+ * - Não use o breadcrumb se estiver conduzindo os usuários por um processo de várias etapas (use um Indicador de Progresso para isso.)
+ * - Use breadcrumbs somente se houver dois ou mais níveis de navegação (por exemplo: Início> Configurações).
+ */
 function Breadcrumb({ items }) {
   return (
     <BreadcrumbStyle routes={[]} separator="">
-      <BreadcrumbItem separator="" href="/">
+      <BreadcrumbItem text="" separator="" href="/">
         <Icon typeColor="primary" type="solid" icon="fa-home" />
       </BreadcrumbItem>
       <Separator />
@@ -40,7 +52,17 @@ function Breadcrumb({ items }) {
 }
 
 Breadcrumb.propTypes = {
-  items: t.oneOfType([t.array]).isRequired,
+  items: t.arrayOf(
+    t.shape({
+      children: t.oneOfType([t.element, t.elementType, t.node]),
+      disabled: t.bool.isRequired,
+      text: t.string,
+      href: t.string,
+      path: t.string,
+      target: t.string,
+      separator: t.oneOfType([t.string, t.element, t.elementType]),
+    })
+  ),
 };
 
 Breadcrumb.Item = BreadcrumbItem;

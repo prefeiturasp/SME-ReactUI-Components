@@ -2,7 +2,7 @@ import React from 'react';
 import t from 'prop-types';
 
 // Styles
-import { BreadcrumbStyle } from '../styles';
+import { BreadcrumbItemStyle } from '../styles';
 
 function BreadcrumbItem({
   children,
@@ -14,7 +14,7 @@ function BreadcrumbItem({
   separator,
 }) {
   return (
-    <BreadcrumbStyle.Item
+    <BreadcrumbItemStyle
       path={path}
       target={target}
       separator={separator}
@@ -23,21 +23,22 @@ function BreadcrumbItem({
     >
       {text}
       {children}
-    </BreadcrumbStyle.Item>
+    </BreadcrumbItemStyle>
   );
 }
 
 BreadcrumbItem.propTypes = {
   children: t.oneOfType([t.element, t.elementType, t.node]),
-  disabled: t.bool.isRequired,
+  disabled: t.bool,
   text: t.string.isRequired,
   href: t.string,
   path: t.string,
   target: t.string,
-  separator: t.oneOfType([t.string, t.element, t.elementType]),
+  separator: t.string,
 };
 
 BreadcrumbItem.defaultProps = {
+  disabled: false,
   children: null,
   href: '#',
   path: '#',

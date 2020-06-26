@@ -14,10 +14,12 @@ export const BreadcrumbStory = () => {
     {
       text: 'Relatórios',
       href: null,
+      disabled: true,
     },
     {
       text: 'PAP',
       href: '#',
+      disabled: false,
     },
     {
       text: 'Acompanhamento PAP',
