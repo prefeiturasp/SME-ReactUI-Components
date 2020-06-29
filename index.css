@@ -140,3 +140,8 @@ body {
 #story--tag--all > div > div:not(:last-child) {
   margin-bottom: 2rem;
 }
+
+/* Spin story book */
+#story--spin--all > div > div:not(:last-child) {
+  margin-bottom: 2rem;
+}
