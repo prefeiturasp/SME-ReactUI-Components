@@ -32,7 +32,7 @@ function TextField({
   value,
   onChange,
   onPressEnter,
-  allowClear,
+  allowClear
 }) {
   return (
     <InputWrapperStyle required={required}>
