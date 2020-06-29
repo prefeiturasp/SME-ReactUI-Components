@@ -43,8 +43,8 @@ Tag.propTypes = {
   checkable: t.bool,
   checked: t.bool,
   closable: t.bool,
-  size: t.oneOf(["small", "medium", "large"]),
   add: t.bool,
+  size: t.oneOf(["small", "medium", "large"]),
   onClose: t.func,
   onChange: t.func
 };

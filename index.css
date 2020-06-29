@@ -137,10 +137,6 @@ body {
 }
 
 /* Tag story book */
-#story--tag--all > div > div {
+#story--tag--all > div > div:not(:last-child) {
   margin-bottom: 2rem;
-}
-
-#story--tag--all > div > div:last-child {
-  margin-bottom: 0;
 }

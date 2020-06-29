@@ -9,8 +9,10 @@ export default {
 export const All = () => {
   const [showInput, setShowInput] = useState(false);
   const [selectedTags, setSelectedTags] = useState([]);
-  const tags = ['Movies', 'Books', 'Music', 'Sports'];
-
+  const [tagsColor, setTagsColor] = useState(['amarelo', 'azul']);
+  const [valueNewTag, setValueNewTag] = useState("");
+  const tagsCategory = ['Movies', 'Books', 'Music', 'Sports'];
+  
   useEffect(() => {
     if (!showInput) return;
     
@@ -22,6 +24,24 @@ export const All = () => {
 
   function handleOnClose(e) {
     console.log(e);
+  }
+
+  function handleRemoveColor(tag) {
+    const allTags = tagsColor;
+    const indexToRemove = allTags.findIndex(element => element === tag);
+    allTags.splice(indexToRemove, 1);
+    setTagsColor(allTags);
+  }
+
+  function handleAddColor() {
+    if (valueNewTag.length === 0) return;
+
+    const allTags = tagsColor;
+    allTags.push(valueNewTag);
+
+    setTagsColor(allTags);
+    setShowInput(false);
+    setValueNewTag("");
   }
 
   function handleOnChange(tag, checked){
@@ -44,10 +64,19 @@ export const All = () => {
       </div>
 
       <div style={{ display: 'flex' }}>
-        <Tag closable size="large" onClose={handleOnClose}>Tag closable</Tag>
+        {tagsColor.map(tag => (
+          <Tag
+            key={tag}
+            closable
+            size="large"
+            onClose={() => handleRemoveColor(tag)}
+          >
+            {tag}
+          </Tag>
+        ))}
 
         {showInput && (
-          <TextField id="inputNewTag" />
+          <TextField id="inputNewTag" value={valueNewTag} onChange={e => setValueNewTag(e.target.value)} onPressEnter={handleAddColor} />
         )}
 
         {!showInput && (
@@ -60,7 +89,7 @@ export const All = () => {
       <div>
         <span style={{ marginRight: 8 }}>Categories:</span>
 
-        {tags.map(tag => (
+        {tagsCategory.map(tag => (
           <Tag
             key={tag}
             checkable
@@ -99,7 +128,9 @@ export const Closable = () => {
 }
 
 export const AddNewTag = () => {
+  const [tagsColor, setTagsColor] = useState(['amarelo', 'azul']);
   const [showInput, setShowInput] = useState(false);
+  const [valueNewTag, setValueNewTag] = useState("");
 
   useEffect(() => {
     if (!showInput) return;
@@ -110,16 +141,39 @@ export const AddNewTag = () => {
     input.addEventListener("focusout", () => setShowInput(false), false);
   }, [showInput]);
 
-  function handleOnClose(e) {
-    console.log(e);
+  function handleRemoveColor(tag) {
+    const allTags = tagsColor;
+    const indexToRemove = allTags.findIndex(element => element === tag);
+    allTags.splice(indexToRemove, 1);
+    setTagsColor(allTags);
+  }
+
+  function handleAddColor() {
+    if (valueNewTag.length === 0) return;
+
+    const allTags = tagsColor;
+    allTags.push(valueNewTag);
+
+    setTagsColor(allTags);
+    setShowInput(false);
+    setValueNewTag("");
   }
 
   return (
     <div style={{ display: 'flex' }}>
-      <Tag closable size="large" onClose={handleOnClose}>Tag closable</Tag>
+      {tagsColor.map(tag => (
+        <Tag
+          key={tag}
+          closable
+          size="large"
+          onClose={() => handleRemoveColor(tag)}
+        >
+          {tag}
+        </Tag>
+      ))}
 
       {showInput && (
-        <TextField id="inputNewTag" />
+        <TextField id="inputNewTag" value={valueNewTag} onChange={e => setValueNewTag(e.target.value)} onPressEnter={handleAddColor} />
       )}
 
       {!showInput && (
@@ -133,7 +187,7 @@ export const AddNewTag = () => {
 
 export const Checkable = () => {
   const [selectedTags, setSelectedTags] = useState([]);
-  const tags = ['Movies', 'Books', 'Music', 'Sports'];
+  const tagsCategory = ['Movies', 'Books', 'Music', 'Sports'];
 
   function handleOnChange(tag, checked){
     const nextSelectedTags = checked ? [...selectedTags, tag] : selectedTags.filter(t => t !== tag);
@@ -144,7 +198,7 @@ export const Checkable = () => {
     <div>
       <span style={{ marginRight: 8 }}>Categories:</span>
 
-      {tags.map(tag => (
+      {tagsCategory.map(tag => (
         <Tag
           key={tag}
           checkable
