@@ -135,3 +135,12 @@ body {
 #story--pagination--all ul:last-child {
   margin-bottom: 0;
 }
+
+/* Tag story book */
+#story--tag--all > div > div {
+  margin-bottom: 2rem;
+}
+
+#story--tag--all > div > div:last-child {
+  margin-bottom: 0;
+}
