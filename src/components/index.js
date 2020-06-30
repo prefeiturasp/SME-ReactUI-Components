@@ -18,6 +18,7 @@ export { default as Typography } from './Typography';
 export { default as Tag } from './Tag';
 export { default as TextField } from './TextField';
 export { default as DatePicker } from './DatePicker';
+export { default as Tabs } from './Tabs';
 
 // Hooks
 export { default as useTheme } from '~/utils/hook/useTheme';
