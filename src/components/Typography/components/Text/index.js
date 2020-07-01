@@ -17,13 +17,11 @@ function Text({ children, weight, inverted, ...rest }) {
 Text.propTypes = {
   weight: oneOf(['regular', 'bold', 'extrabold']),
   inverted: bool,
-  children: oneOfType([any]),
 };
 
 Text.defaultProps = {
   weight: 'regular',
   inverted: false,
-  children: () => null,
 };
 
 export default Text;

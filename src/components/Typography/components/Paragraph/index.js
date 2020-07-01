@@ -17,13 +17,11 @@ function Paragraph({ children, weight, inverted, ...rest }) {
 Paragraph.propTypes = {
   weight: oneOf(['regular', 'bold', 'extrabold']),
   inverted: bool,
-  children: oneOfType([any]),
 };
 
 Paragraph.defaultProps = {
   weight: 'regular',
   inverted: false,
-  children: () => null,
 };
 
 export default Paragraph;

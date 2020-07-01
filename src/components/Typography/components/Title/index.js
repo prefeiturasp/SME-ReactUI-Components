@@ -19,14 +19,12 @@ const Title = ({ children, level, weight, inverted, ...rest }) => (
 
 Title.propTypes = {
   inverted: bool,
-  children: oneOfType([any]),
   weight: oneOf(['regular', 'bold', 'extrabold']),
   level: number,
 };
 
 Title.defaultProps = {
   inverted: false,
-  children: () => null,
   weight: 'regular',
   level: 1,
 };
