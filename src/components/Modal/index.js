@@ -4,6 +4,17 @@ import t from 'prop-types';
 // Styles
 import { ModalStyle, CloseIcon } from './styles';
 
+/**
+ * `import { Modal } from "@sme/secretui"`
+ * 
+ * Os modais são usados ​​para exibir o conteúdo em uma camada acima do aplicativo. É usado nos casos em que você precisa visualizar, criar ou editar conteúdo, bem como mensagens de confirmação. Nenhuma outra informação na página principal deve ser acessada enquanto um modal estiver ativo.
+ * 
+ * # Boas práticas de uso
+ * - Use modais com moderação, porque eles interrompem o fluxo de trabalho do usuário.
+ * - O título deve refletir a ação ou botão que foi clicado pelo usuário.
+ * - Deve ser descartado pressionando a tecla ESC, clicando / tocando fora da área modal e usando o ícone "x" no canto superior direito do modal.
+ * - Mantenha o usuário focado no elemento anterior após fechar o modal.
+ */
 function Modal({ children, visible, title, width, footer, onCancel }) {
   return (
     <ModalStyle

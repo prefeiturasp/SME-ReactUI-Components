@@ -11,9 +11,12 @@ const typesMap = {
   duotone: 'fad',
 };
 
-function Icon({ type, icon, typeColor }) {
+function Icon({ type, icon, typeColor, className }) {
   return (
-    <IconStyle typeColor={typeColor} className={`${typesMap[type]} ${icon}`} />
+    <IconStyle
+      typeColor={typeColor}
+      className={`sme__icon ${typesMap[type]} ${icon} ${className}`}
+    />
   );
 }
 

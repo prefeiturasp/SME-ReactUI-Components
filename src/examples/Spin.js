@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
 
 // Components
-import { Spin, Alert, Button } from '~/components';
+import { Spin, Alert, Button, useTheme } from '~/components';
 
 // Themes
 import Themes from '~/themes';
 
 function SpinExample() {
-  const [ exampleLoading, setExampleLoading ] = useState(true);
+  const [exampleLoading, setExampleLoading] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
@@ -16,10 +16,12 @@ function SpinExample() {
     }, 7000);
   }, []);
 
+  const tema = useTheme(Themes.temaSIGPAE);
+
   return (
     <div className="App">
       <div style={{ width: '50%' }}>
-        <ThemeProvider theme={Themes.temaSIGPAE}>
+        <ThemeProvider theme={tema}>
           <div style={{ marginBottom: '0.2rem' }}>
             <Spin spinning={exampleLoading}>
               <Alert.AlertBox
@@ -55,8 +57,11 @@ function SpinExample() {
               />
             </Spin>
           </div>
+          <div style={{ marginBottom: '0.2rem' }}>
+            <Spin size={20} spinning={exampleLoading} hideTip />
+          </div>
         </ThemeProvider>
-        <ThemeProvider theme={Themes.temaSGP}>
+        <ThemeProvider theme={tema}>
           <div style={{ marginBottom: '0.2rem' }}>
             <Spin spinning={exampleLoading}>
               <Alert.AlertBox
@@ -71,7 +76,7 @@ function SpinExample() {
             </Spin>
           </div>
         </ThemeProvider>
-        <ThemeProvider theme={Themes.temaSGC}>
+        <ThemeProvider theme={tema}>
           <div style={{ marginBottom: '0.2rem' }}>
             <Spin spinning={exampleLoading}>
               <Alert.AlertBox

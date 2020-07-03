@@ -11,7 +11,7 @@ export const CollapseStyle = styled(Collapse)`
     span.float-icon {
       position: absolute;
       right: 15px;
-      top: 13px;
+      top: 10px;
     }
   }
 `;
@@ -31,7 +31,9 @@ export const PanelStyle = styled(Collapse.Panel)`
     ${(props) =>
       props.bordered &&
       `border-left: 7px solid ${
-        props.borderColor ? props.borderColor : `${props.theme.primary}`
+        props.borderColor
+          ? props.borderColor
+          : `${props.theme?.Colors?.Primary}`
       }`};
   }
 

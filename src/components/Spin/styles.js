@@ -4,10 +4,14 @@ import styled from 'styled-components';
 import { Spin, Icon } from 'antd';
 
 export const SpinStyle = styled(Spin)`
-  display: flex !important;
+  display: ${props => props.spinning ? 'flex' : 'none'} !important;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  position: static;
+  opacity: 1;
+  width: ${(props) => `${props.customSize}px`};
 
   .ant-spin-text {
     position: relative !important;
