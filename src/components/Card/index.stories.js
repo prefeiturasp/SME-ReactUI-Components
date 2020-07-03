@@ -7,7 +7,7 @@ import { Card, Icon } from '~/components';
 const { Header, Body, Footer } = Card;
 
 export default {
-  title: 'Card',
+  title: 'Components|Card',
   component: Card,
   subcomponents: { Header, Body, Footer },
 };

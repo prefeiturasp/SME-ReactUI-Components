@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Spin, Alert, Button } from '~/components';
 
 export default {
-  title: 'Spin',
+  title: 'Components|Spin',
   component: Spin
 };
 

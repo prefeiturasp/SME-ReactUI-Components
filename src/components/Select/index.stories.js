@@ -2,7 +2,7 @@ import React from 'react';
 import { Select } from '~/components';
 
 export default {
-  title: 'Select',
+  title: 'Components|Select',
   component: Select
 };
 

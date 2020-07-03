@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Tag, TextField, Icon } from '~/components';
 
 export default {
-  title: 'Tag',
+  title: 'Components|Tag',
   component: Tag
 };
 

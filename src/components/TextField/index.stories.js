@@ -6,7 +6,7 @@ import { TextField, Icon } from '~/components';
 const { Search } = TextField;
 
 export default {
-  title: 'TextField',
+  title: 'Components|TextField',
   component: TextField,
   subcomponents: { Search },
 };

@@ -6,7 +6,7 @@ import { Alert, TextField, Button, Typography } from '~/components';
 const { Box, Toastr } = Alert;
 
 export default {
-  title: 'Alert',
+  title: 'Components|Alert',
   component: Alert,
   subcomponents: { Toastr, Box },
 };

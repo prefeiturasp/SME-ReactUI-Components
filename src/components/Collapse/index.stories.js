@@ -6,7 +6,7 @@ import { Collapse } from '~/components';
 const { Panel } = Collapse;
 
 export default {
-  title: 'Collapse',
+  title: 'Components|Collapse',
   component: Collapse,
   subcomponents: { Panel },
 };

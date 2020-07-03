@@ -4,7 +4,7 @@ import React from 'react';
 import { Icon, Typography } from '~/components';
 
 export default {
-  title: 'Icons',
+  title: 'Components|Icons',
   component: Icon,
 };
 

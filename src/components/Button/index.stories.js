@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button, Icon } from '~/components';
 
 export default {
-  title: 'Button',
+  title: 'Components|Button',
   component: Button,
 };
 
