@@ -6,8 +6,14 @@ import { Card } from 'antd';
 export const CardStyle = styled(Card)`
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1);
   border: 1px solid #dadada;
-	border-radius: 2px !important;
+	border-radius: 1px !important;
 	position: relative;
+
+	${(props) =>
+    props.rounded &&
+    `
+		border-radius: 6px !important;
+	`}
 
   ${(props) =>
     props.animate &&
@@ -29,9 +35,18 @@ export const CardStyle = styled(Card)`
 				width: 8px;
 				position: absolute;
 				height: 100%;
-				background-color: ${props.theme.primary};
+				background-color: ${props.theme?.Colors?.Primary};
 				border-top-left-radius: 1px;
 				border-bottom-left-radius: 1px;
+
+				${
+          props.rounded &&
+          `
+					border-top-left-radius: 6px;
+					border-bottom-left-radius: 6px;
+				`
+        }
+
 				z-index: 9999;
 			}
 		}
@@ -50,9 +65,18 @@ export const CardStyle = styled(Card)`
 				width: 100%;
 				position: absolute;
 				height: 8px;
-				background-color: ${props.theme.primary};
+				background-color: ${props.theme?.Colors?.Primary};
 				border-top-left-radius: 1px;
 				border-bottom-left-radius: 1px;
+
+				${
+          props.rounded &&
+          `
+					border-bottom-left-radius: 6px;
+					border-bottom-right-radius: 6px;
+				`
+        }
+				
 				z-index: 9999;
 			}
 		}
@@ -81,6 +105,7 @@ export const CardBodyStyle = styled(Card)`
 export const CardFootStyle = styled(Card)`
   padding: 0.5rem;
   margin: 0;
+  background: transparent;
 
   ${(props) => console.log(props)}
   ${(props) =>

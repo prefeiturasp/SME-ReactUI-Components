@@ -12,6 +12,11 @@ import ModalExample from '~/examples/Modal';
 import TooltipExample from '~/examples/Tooltip';
 import CardExample from '~/examples/Card';
 import UploadExample from '~/examples/Upload';
+import TableExample from '~/examples/Table';
+import TypographyExample from '~/examples/Typography';
+import TagExample from '~/examples/Tag';
+import TextFieldExample from '~/examples/TextField';
+import DatePickerExample from '~/examples/DatePicker';
 import Summary from '~/Summary';
 
 export default [
@@ -103,5 +108,35 @@ export default [
     path: '/components/upload',
     component: UploadExample,
     exact: true,
-  }
+  },
+  {
+    title: 'Table',
+    path: '/components/table',
+    component: TableExample,
+    exact: true,
+  },
+  {
+    title: 'Typography',
+    path: '/components/typography',
+    component: TypographyExample,
+    exact: true,
+  },
+  {
+    title: 'Tag',
+    path: '/components/tag',
+    component: TagExample,
+    exact: true,
+  },
+  {
+    title: 'TextField',
+    path: '/components/text-field',
+    component: TextFieldExample,
+    exact: true,
+  },
+  {
+    title: 'DatePicker',
+    path: '/components/datepicker',
+    component: DatePickerExample,
+    exact: true,
+  },
 ];

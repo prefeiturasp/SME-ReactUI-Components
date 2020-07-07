@@ -7,9 +7,12 @@ import { Icon } from '~/components';
 
 const IconBackground = styled.span`
   background-color: whitesmoke;
-  display: inline;
-  padding: 0.5rem;
+  display: flex;
+  align-items: center;
   border-radius: 50%;
+  justify-content: center;
+  height: 35px;
+  width: 35px;
 `;
 
 function Chevron({ opened }) {

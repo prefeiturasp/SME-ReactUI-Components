@@ -1,18 +1,16 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import shortid from 'shortid';
 
-// Ant
-import { Input } from 'antd';
-
 // Componentes
-import { Alert } from '~/components';
+import { Alert, useTheme } from '~/components';
 
 // Theme
 import { ThemeProvider } from 'styled-components';
-import Temas, { support } from '~/themes';
+import Temas from '~/themes';
 
 function AlertExample() {
   const [alertas, setAlertas] = useState([]);
+  const tema = useTheme(Temas.temaSGP);
 
   useEffect(() => {
     setAlertas([
@@ -60,7 +58,7 @@ function AlertExample() {
 
   return (
     <div style={{ width: '50%' }}>
-      <ThemeProvider theme={{ ...support, ...Temas.temaSGC }}>
+      <ThemeProvider theme={tema}>
         <Alert.AlertToastr
           afterClose={(item) => handleClose(item)}
           list={alertas}
