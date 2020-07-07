@@ -14,18 +14,7 @@ pipeline {
         
   stages {
     
-    stage('NPM publish') {
-        
-          steps {
-          
-      
-          withCredentials([string(credentialsId: 'NPM_TOKEN', variable: 'npm-token')]) {
-            sh "echo //https://registry.sme.prefeitura.sp.gov.br/repository/npm-private/:_authToken=${npm-token} > .npmrc"
-	    
-          }
-        }
-      }  
-	  
+     
 	  
     stage('Docker build DEV') {
         when {
