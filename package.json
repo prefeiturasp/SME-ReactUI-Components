@@ -2,8 +2,10 @@
   "name": "@sme/secretui",
   "version": "1.0.0",
   "description": "Biblioteca de componentes visuais construída em React para a secretaria municipal de educação de São Paulo",
-  "main": "dist/index.js",
-  "files": ["dist"],
+  "main": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "yarn test",
     "start": "webpack-dev-server --mode development",
@@ -62,8 +64,8 @@
     "storybook-addon-react-docgen": "^1.2.39"
   },
   "peerDependencies": {
-    "react": ">=16.9.0",
-    "react-dom": ">=16.9.0",
-    "styled-components": "^4.4.1"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.1.1"
   }
 }
