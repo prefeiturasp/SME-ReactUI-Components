@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Biblioteca de componentes visuais construída em React para a secretaria municipal de educação de São Paulo",
   "main": "dist/index.js",
+  "files": ["dist"],
   "scripts": {
     "test": "yarn test",
     "start": "webpack-dev-server --mode development",

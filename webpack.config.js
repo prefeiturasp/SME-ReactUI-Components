@@ -8,7 +8,7 @@ const htmlWebpackPlugin = new HtmlWebpackPlugin({
 });
 
 module.exports = {
-  entry: path.join(__dirname, 'examples/src/index.js'),
+  entry: path.join(__dirname, './index.js'),
   output: {
     filename: 'index.js',
     library: '',
