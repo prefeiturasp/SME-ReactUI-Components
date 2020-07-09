@@ -22,7 +22,7 @@ pipeline {
            
          steps {
                           
-             sh 'npm publish'
+             sh 'npm install'
 	     sh 'npm run build'	 
            
          }
