@@ -1,9 +1,10 @@
+import React from 'react';
 import styled from 'styled-components';
-
-// Ant
 import { Card } from 'antd';
 
-export const CardStyle = styled(Card)`
+const _CardWithoutDomProps = ({ borderLeft, borderBottom, ...rest }) => <Card {...rest} />;
+
+export const CardStyle = styled(_CardWithoutDomProps)`
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1);
   border: 1px solid #dadada;
 	border-radius: 1px !important;
@@ -107,7 +108,6 @@ export const CardFootStyle = styled(Card)`
   margin: 0;
   background: transparent;
 
-  ${(props) => console.log(props)}
   ${(props) =>
     typeof props.children === 'object' &&
     !props?.children?.length ?
