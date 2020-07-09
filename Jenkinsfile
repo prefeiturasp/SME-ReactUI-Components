@@ -17,7 +17,26 @@ pipeline {
       steps {
         checkout scm	
       }
-    }	  
+    }
+    stage('NPM Build') {
+           
+         steps {
+                          
+             sh 'npm publish'
+	     sh 'npm run build'	 
+           
+         }
+       }
+	  
+    stage('NPM Publish') {
+           
+         steps {
+           withNPM(npmrcConfig: '7d7f2af1-31fb-4540-8450-ed1bdc920157') {
+               
+             sh 'npm publish'
+           }
+         }
+       }	  
 
     stage('Docker build DEV') {
       when {
@@ -195,15 +214,7 @@ pipeline {
             }
         }
 	  
-	  stage('NPM Publish') {
-           
-         steps {
-           withNPM(npmrcConfig: '7d7f2af1-31fb-4540-8450-ed1bdc920157') {
-               
-             sh 'npm publish'
-           }
-         }
-       }
+	  
 	  
   }    
 
