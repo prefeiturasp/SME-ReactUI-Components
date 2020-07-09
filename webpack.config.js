@@ -8,18 +8,14 @@ const htmlWebpackPlugin = new HtmlWebpackPlugin({
 });
 
 module.exports = {
-  entry: path.join(__dirname, 'examples/src/index.js'),
+  entry: path.join(__dirname, './index.js'),
   output: {
+    path: path.join(__dirname, './dist'),
     filename: 'index.js',
-    library: '',
-    // libraryTarget: 'commonjs2',
-    publicPath: '/',
+    library: 'secretui',
+    libraryTarget: 'umd',
+    // umdNamedDefine: true 
   },
-  target: 'web',
-  // externals: {
-  //   react: 'commonjs react',
-  //   'react-dom': 'commonjs react-dom',
-  // },
   module: {
     rules: [
       {

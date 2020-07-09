@@ -20,6 +20,8 @@ pipeline {
         }
        }	  
     
+     
+	  
     stage('Docker build DEV') {
         when {
           branch 'dev'

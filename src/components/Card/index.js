@@ -21,10 +21,10 @@ import CardFooter from './components/CardFooter';
 function Card({ children, animate, borderLeft, borderBottom, rounded }) {
   return (
     <CardStyle
-      animate={animate}
-      borderLeft={borderLeft}
-      borderBottom={borderBottom}
-      rounded={rounded}
+      animate={animate?.toString() ?? "true"}
+      borderLeft={borderLeft?.toString() ?? "false"}
+      borderBottom={borderBottom?.toString() ?? "false"}
+      rounded={rounded?.toString() ?? "false"}
     >
       {children}
     </CardStyle>

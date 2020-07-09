@@ -39,6 +39,6 @@ export const IconStyle = styled(Icon)`
   }
 
   svg {
-    fill: ${(props) => props.theme.primary};
+    fill: ${(props) => props.theme?.primary};
   }
 `;

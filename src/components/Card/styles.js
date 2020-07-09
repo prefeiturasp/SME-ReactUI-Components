@@ -1,30 +1,31 @@
+import React from 'react';
 import styled from 'styled-components';
-
-// Ant
 import { Card } from 'antd';
 
-export const CardStyle = styled(Card)`
+const _CardWithoutDomProps = ({ borderLeft, borderBottom, ...rest }) => <Card {...rest} />;
+
+export const CardStyle = styled(_CardWithoutDomProps)`
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1);
   border: 1px solid #dadada;
 	border-radius: 1px !important;
 	position: relative;
 
 	${(props) =>
-    props.rounded &&
+    props.rounded ?
     `
 		border-radius: 6px !important;
-	`}
+	` : undefined}
 
   ${(props) =>
-    props.animate &&
+    props.animate ?
     `
 		&:hover {
 			box-shadow: none;
 		}  
-	`}
+	` : undefined}
 
   ${(props) =>
-    props.borderLeft &&
+    props.borderLeft ?
     `
 		padding-left: 8px;
 		border-left: 0;
@@ -40,21 +41,21 @@ export const CardStyle = styled(Card)`
 				border-bottom-left-radius: 1px;
 
 				${
-          props.rounded &&
+          props.rounded ?
           `
 					border-top-left-radius: 6px;
 					border-bottom-left-radius: 6px;
-				`
+				` : undefined
         }
 
 				z-index: 9999;
 			}
 		}
 		
-	`}
+	` : undefined}
 
 	${(props) =>
-    props.borderBottom &&
+    props.borderBottom ?
     `
 		padding-bottom: 8px;
 		border-bottom: 0;
@@ -70,17 +71,17 @@ export const CardStyle = styled(Card)`
 				border-bottom-left-radius: 1px;
 
 				${
-          props.rounded &&
+          props.rounded ?
           `
 					border-bottom-left-radius: 6px;
 					border-bottom-right-radius: 6px;
-				`
+				` : undefined
         }
 				
 				z-index: 9999;
 			}
 		}
-	`}
+	` : undefined}
 
   .ant-card-body {
     padding: 0;
@@ -107,10 +108,9 @@ export const CardFootStyle = styled(Card)`
   margin: 0;
   background: transparent;
 
-  ${(props) => console.log(props)}
   ${(props) =>
     typeof props.children === 'object' &&
-    !props?.children?.length &&
+    !props?.children?.length ?
     `
 		text-align: center;
 		display: flex;
@@ -125,5 +125,5 @@ export const CardFootStyle = styled(Card)`
 				color: gray;
 			}
 		}
-	`}
+	` : undefined}
 `;
