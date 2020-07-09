@@ -34,8 +34,7 @@ pipeline {
          }  
          steps {
            withNPM(npmrcConfig: '7d7f2af1-31fb-4540-8450-ed1bdc920157') {
-               
-             sh 'npm publish'
+             sh 'cp package.json dist/package.json && cd dist && npm publish'
            }
          }
        }	  
