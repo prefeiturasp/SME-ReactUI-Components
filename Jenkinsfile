@@ -13,6 +13,12 @@ pipeline {
     
         
   stages {
+	  
+    stage('CheckOut') {
+        steps {
+          checkout scm	
+        }
+       }	  
     
     stage('Docker build DEV') {
         when {
