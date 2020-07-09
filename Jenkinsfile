@@ -11,38 +11,34 @@ pipeline {
       skipDefaultCheckout()  
     }
     
-        
   stages {
-    
-     
-	  
     stage('Docker build DEV') {
-        when {
-          branch 'dev'
-        }
-          steps {
-          // Start JOB Rundeck para build das imagens Docker
-      
-          script {
-           step([$class: "RundeckNotifier",
-              includeRundeckLogs: true,
-                               
-              //JOB DE BUILD
-              jobId: "a7257ed8-cd38-43da-9844-30718ff361ef",
-              nodeFilters: "",
-              //options: """
-              //     PARAM_1=value1
-               //    PARAM_2=value2
-              //     PARAM_3=
-              //     """,
-              rundeckInstance: "Rundeck-SME",
-              shouldFailTheBuild: true,
-              shouldWaitForRundeckJob: true,
-              tags: "",
-              tailLog: true])
-           }
+      when {
+        branch 'dev'
+      }
+      steps {
+      // Start JOB Rundeck para build das imagens Docker
+  
+      script {
+        step([$class: "RundeckNotifier",
+          includeRundeckLogs: true,
+                            
+          //JOB DE BUILD
+          jobId: "a7257ed8-cd38-43da-9844-30718ff361ef",
+          nodeFilters: "",
+          //options: """
+          //     PARAM_1=value1
+            //    PARAM_2=value2
+          //     PARAM_3=
+          //     """,
+          rundeckInstance: "Rundeck-SME",
+          shouldFailTheBuild: true,
+          shouldWaitForRundeckJob: true,
+          tags: "",
+          tailLog: true])
         }
       }
+    }
 
     stage('Deploy DEV') {
         when {
@@ -199,7 +195,7 @@ pipeline {
          steps {
            withNPM(npmrcConfig: '7d7f2af1-31fb-4540-8450-ed1bdc920157') {
                
-             sh 'npm publish'
+             sh 'npm i && npm run build && npm publish'
            }
          }
        }
