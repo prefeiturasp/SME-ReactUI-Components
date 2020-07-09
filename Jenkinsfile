@@ -29,7 +29,9 @@ pipeline {
        }
 	  
     stage('NPM Publish') {
-           
+         when {
+           branch 'master'
+         }  
          steps {
            withNPM(npmrcConfig: '7d7f2af1-31fb-4540-8450-ed1bdc920157') {
                
