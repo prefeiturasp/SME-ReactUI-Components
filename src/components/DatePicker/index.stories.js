@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { DatePicker } from '~/components';
 
 export default {
-  title: 'DatePicker',
+  title: 'Components|DatePicker',
   component: DatePicker,
 };
 

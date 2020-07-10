@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Switch } from '~/components';
 
 export default {
-  title: 'Switch',
+  title: 'Components|Switch',
   component: Switch,
 };
 

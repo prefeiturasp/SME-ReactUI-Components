@@ -2,7 +2,7 @@ import React from 'react';
 import { Upload } from '~/components';
 
 export default {
-  title: 'Upload',
+  title: 'Components|Upload',
   component: Upload
 };
 

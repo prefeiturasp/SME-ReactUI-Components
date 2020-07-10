@@ -9,7 +9,7 @@ import DesignSystemImg from './assets/design-system.png';
 const { Title, Paragraph, Text } = Typography;
 
 export default {
-  title: 'An Introduction',
+  title: 'Overview|Design System',
 };
 
 export const IntroStory = () => {
@@ -122,5 +122,5 @@ export const IntroStory = () => {
 };
 
 IntroStory.story = {
-  name: 'all',
+  name: 'Bem Vindo',
 };

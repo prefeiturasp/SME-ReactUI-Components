@@ -14,7 +14,7 @@ const IconCard = styled.div`
   justify-content: center;
   flex-direction: column;
   font-size: 20px;
-  color: ${(props) => props.theme.primary};
+  color: ${(props) => props.theme?.primary};
   padding: 1rem 1rem;
 
   i {

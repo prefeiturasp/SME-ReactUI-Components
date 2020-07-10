@@ -6,7 +6,7 @@ import { Tabs, Icon } from '~/components';
 const { TabPane } = Tabs;
 
 export default {
-  title: 'Tabs',
+  title: 'Components|Tabs',
   component: Tabs,
 };
 

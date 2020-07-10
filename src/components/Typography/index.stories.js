@@ -7,7 +7,7 @@ import { Typography } from '~/components';
 const { Title, Paragraph, Text } = Typography;
 
 export default {
-  title: 'Typography',
+  title: 'Components|Typography',
   component: Title,
   subcomponents: { Paragraph, Text },
 };

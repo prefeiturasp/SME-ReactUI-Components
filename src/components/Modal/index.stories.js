@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Modal, Button } from '~/components';
 
 export default {
-  title: 'Modal',
+  title: 'Components|Modal',
   component: Modal
 };
 

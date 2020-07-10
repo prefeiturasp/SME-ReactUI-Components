@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Breadcrumb } from '~/components';
 
 export default {
-  title: 'Breadcrumb',
+  title: 'Components|Breadcrumb',
   component: Breadcrumb,
   subcomponents: { Item: Breadcrumb.Item },
 };

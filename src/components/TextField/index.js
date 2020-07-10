@@ -6,6 +6,7 @@ import { Icon } from '~/components';
 
 // Internal Components
 import TextFieldSearch from './components/TextFieldSearch';
+import TextFieldPassword from './components/TextFieldPassword';
 
 // Styles
 import { InputStyle, InputWrapperStyle } from './styles';
@@ -75,9 +76,10 @@ TextField.propTypes = {
   value: t.string,
   onChange: t.func,
   onPressEnter: t.func,
-  allowClear: t.bool,
+  allowClear: t.bool
 };
 
 TextField.Search = TextFieldSearch;
+TextField.Password = TextFieldPassword;
 
 export default TextField;
