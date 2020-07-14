@@ -24,8 +24,8 @@ export const ButtonStyle = styled(Button)`
 
   &:disabled {
     background: transparent !important;
-    border-color: ${(props) => props.theme?.Colors?.disabled} !important;
-    color: ${(props) => props.theme?.Colors?.disabled} !important;
+    border-color: ${(props) => props.theme?.Colors?.Disabled} !important;
+    color: ${(props) => props.theme?.Colors?.Disabled} !important;
   }
 
   i {
@@ -33,7 +33,7 @@ export const ButtonStyle = styled(Button)`
   }
 
   &.ant-btn-link {
-    color: ${(props) => props.theme?.Colors?.info} !important;
+    color: ${(props) => props.theme?.Colors?.Info} !important;
     border: none;
 
     &:hover {
@@ -41,7 +41,7 @@ export const ButtonStyle = styled(Button)`
     }
 
     &:disabled {
-      color: ${(props) => props.theme?.Colors?.disabled} !important;
+      color: ${(props) => props.theme?.Colors?.Disabled} !important;
     }
   }
 
@@ -72,20 +72,20 @@ export const ButtonStyle = styled(Button)`
 
     &:disabled {
       background: transparent !important;
-      border-color: ${(props) => props.theme?.Colors?.disabled} !important;
-      color: ${(props) => props.theme?.Colors?.disabled} !important;
+      border-color: ${(props) => props.theme?.Colors?.Disabled} !important;
+      color: ${(props) => props.theme?.Colors?.Disabled} !important;
     }
   }
 
   &.ant-btn-secondary {
-    background-color: ${(props) => props.theme?.Colors?.info} !important;
-    border-color: ${(props) => props.theme?.Colors?.info} !important;
+    background-color: ${(props) => props.theme?.Colors?.Info} !important;
+    border-color: ${(props) => props.theme?.Colors?.Info} !important;
     color: white;
 
     &:disabled {
       background: transparent !important;
-      border-color: ${(props) => props.theme?.Colors?.disabled} !important;
-      color: ${(props) => props.theme?.Colors?.disabled} !important;
+      border-color: ${(props) => props.theme?.Colors?.Disabled} !important;
+      color: ${(props) => props.theme?.Colors?.Disabled} !important;
     }
   }
 
@@ -104,10 +104,10 @@ export const ButtonStyle = styled(Button)`
 
     &.ant-btn-secondary {
       background-color: transparent !important;
-      color: ${props.theme?.Colors?.info} !important;
+      color: ${props.theme?.Colors?.Info} !important;
 
       &:hover:not(:disabled) {
-        background-color: ${props.theme?.Colors?.info} !important;
+        background-color: ${props.theme?.Colors?.Info} !important;
         color: white !important;
       }
     }

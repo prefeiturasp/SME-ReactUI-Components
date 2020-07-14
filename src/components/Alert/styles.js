@@ -21,7 +21,7 @@ export const AlertToastStyle = styled(Alert)`
     props.type === 'success' &&
     `
     .ant-alert-message {
-        color: ${props.theme?.Colors?.success};
+        color: ${props.theme?.Colors?.Success};
     }
   `}
 
@@ -29,7 +29,7 @@ ${(props) =>
   props.type === 'info' &&
   `
     .ant-alert-message {
-        color: ${props.theme?.Colors?.info};
+        color: ${props.theme?.Colors?.Info};
     }
   `}
 
@@ -37,7 +37,7 @@ ${(props) =>
   props.type === 'error' &&
   `
     .ant-alert-message {
-        color: ${props.theme?.Colors?.warning};
+        color: ${props.theme?.Colors?.Warning};
     }
   `}
 
@@ -45,7 +45,7 @@ ${(props) =>
   props.type === 'warning' &&
   `
     .ant-alert-message {
-        color: ${props.theme?.Colors?.alert};
+        color: ${props.theme?.Colors?.Alert};
     }
   `}
 `;
@@ -93,15 +93,15 @@ export const AlertToastrStyle = styled.div`
 `;
 
 export const AlertBoxStyle = styled.div`
-  border: 2px solid ${(props) => props.theme?.Colors?.warning};
-  color: ${(props) => props.theme?.Colors?.warning};
+  border: 2px solid ${(props) => props.theme?.Colors?.Warning};
+  color: ${(props) => props.theme?.Colors?.Warning};
   border-radius: 0.2rem;
   text-align: center;
   padding: 1.5rem;
   font-size: 15px;
 
   h2 {
-    color: ${(props) => props.theme?.Colors?.warning};
+    color: ${(props) => props.theme?.Colors?.Warning};
     margin: 0;
     margin-bottom: 0.5rem;
     line-height: 1;
