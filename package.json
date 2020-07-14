@@ -13,8 +13,7 @@
     "prepublishOnly": "npm run transpile",
     "build": "webpack --mode development",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "webpack": "node_modules/.bin/webpack"
+    "build-storybook": "build-storybook"
   },
   "keywords": [
     "react"
