@@ -1,8 +1,14 @@
 import './index.css';
 import 'antd/dist/antd.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+
+// Default
 import { ThemeProvider } from 'styled-components';
 
+// Hooks
+import useTheme from '~/utils/hook/useTheme';
+
+// Components
 import { 
     Button, 
     Icon, 
@@ -24,8 +30,7 @@ import {
     Tag,
     TextField,
     DatePicker,
-    Tabs,
-    useTheme
+    Tabs
 } from './src/components';
 
 export {
@@ -50,8 +55,6 @@ export {
     TextField,
     DatePicker,
     Tabs,
-    useTheme,
-    ThemeProvider
+    ThemeProvider,
+    useTheme
 }
-
-// module.exports = require('./src/components');
