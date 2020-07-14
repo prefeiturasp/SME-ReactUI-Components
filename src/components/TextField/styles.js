@@ -15,14 +15,14 @@ export const InputWrapperStyle = styled.div`
       `
         &::after {
 					content: '*';
-					color: ${props.theme?.Colors?.warning};
+					color: ${props.theme?.Colors?.Warning};
 					margin: 2px;
         }
     `}
   }
 
   .errorMessage {
-    color: ${(props) => props.theme?.Colors?.warning};
+    color: ${(props) => props.theme?.Colors?.Warning};
     font-size: ${(props) => props.theme?.Typography?.Size?.XXSmall};
     margin-top: ${(props) => props.theme?.Spacing?.XXXS};
     display: block;
@@ -56,7 +56,7 @@ export const InputStyle = styled(Input)`
 
     &.has-error {
       .ant-input-suffix {
-        color: ${(props) => props.theme?.Colors?.warning};
+        color: ${(props) => props.theme?.Colors?.Warning};
       }
     }
   }
@@ -65,7 +65,7 @@ export const InputStyle = styled(Input)`
     height: 38px;
 
     &.has-error {
-      border-color: ${(props) => props.theme?.Colors?.warning};
+      border-color: ${(props) => props.theme?.Colors?.Warning};
     }
 
     &::placeholder {
@@ -112,7 +112,7 @@ export const InputSearchStyle = styled(Input.Search)`
     height: 38px;
 
     &.has-error {
-      border-color: ${(props) => props.theme?.Colors?.warning};
+      border-color: ${(props) => props.theme?.Colors?.Warning};
     }
 
     &::placeholder {
@@ -159,7 +159,7 @@ export const InputPasswordStyle = styled(Input.Password)`
     height: 38px;
 
     &.has-error {
-      border-color: ${(props) => props.theme?.Colors?.warning};
+      border-color: ${(props) => props.theme?.Colors?.Warning};
     }
 
     &::placeholder {

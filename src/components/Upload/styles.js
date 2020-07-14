@@ -27,7 +27,7 @@ export const UploadStyle = styled(Upload)`
     align-items: center;
     
     &.error {
-      color: ${props => props.theme?.Colors?.alert};
+      color: ${props => props.theme?.Colors?.Alert};
     }
   }
   

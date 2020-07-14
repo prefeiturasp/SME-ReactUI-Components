@@ -1,6 +1,7 @@
 import './index.css';
 import 'antd/dist/antd.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import { ThemeProvider } from 'styled-components';
 
 import { 
     Button, 
@@ -49,7 +50,8 @@ export {
     TextField,
     DatePicker,
     Tabs,
-    useTheme
+    useTheme,
+    ThemeProvider
 }
 
 // module.exports = require('./src/components');

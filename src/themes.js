@@ -21,15 +21,13 @@ export default {
 
 export const Support = {
   Colors: {
-    info: '#086397',
-    info2: '#10A3FB',
-    cancel: '#040404',
-    warning: '#B40C02',
-    success: '#297805',
-    alert: '#D06D12',
-    attention: '#FFFF30',
-    disabled: '#dadada',
-    neutralDark: '#42474A',
+    Info: '#086397',
+    Info2: '#10A3FB',
+    Warning: '#B40C02',
+    Success: '#297805',
+    Alert: '#D06D12',
+    Disabled: '#dadada',
+    NeutralDark: '#42474A',
   },
   Typography: {
     FontWeight: {

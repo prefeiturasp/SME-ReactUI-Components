@@ -34,8 +34,8 @@ export const RadioStyle = styled(Radio)`
   // Disabled
   .ant-radio-disabled {
     .ant-radio-inner {
-      background-color: ${(props) => props.theme?.Colors?.disabled};
-      border-color: ${(props) => props.theme?.Colors?.disabled} !important;
+      background-color: ${(props) => props.theme?.Colors?.Disabled};
+      border-color: ${(props) => props.theme?.Colors?.Disabled} !important;
     }
 
     &.ant-radio-checked {
@@ -44,7 +44,7 @@ export const RadioStyle = styled(Radio)`
         background-color: transparent;
 
         &::after {
-          background-color: ${(props) => props.theme?.Colors?.disabled};
+          background-color: ${(props) => props.theme?.Colors?.Disabled};
         }
       }
     }
