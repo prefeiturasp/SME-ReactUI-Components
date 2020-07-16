@@ -31,6 +31,6 @@ export const BreadcrumbItemStyle = styled(Breadcrumb.Item)`
   ${(props) =>
     props.disabled &&
     `
-    color: ${props.theme?.Colors?.neutralDark} !important;
+    color: ${props.theme?.Colors?.NeutralDark} !important;
   `}
 `;

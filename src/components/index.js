@@ -20,9 +20,6 @@ import  TextField  from './TextField';
 import  DatePicker  from './DatePicker';
 import  Tabs  from './Tabs';
 
-// Hooks
-import  useTheme  from '~/utils/hook/useTheme';
-
 export {
     Button,
     Icon,
@@ -44,6 +41,5 @@ export {
     Tag,
     TextField,
     DatePicker,
-    Tabs,
-    useTheme
+    Tabs
 }

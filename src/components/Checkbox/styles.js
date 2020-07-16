@@ -32,8 +32,8 @@ export const CheckboxStyle = styled(Checkbox)`
   // Disabled
   .ant-checkbox-disabled {
     .ant-checkbox-inner {
-      background-color: ${(props) => props.theme?.Colors?.disabled};
-      border-color: ${(props) => props.theme?.Colors?.disabled} !important;
+      background-color: ${(props) => props.theme?.Colors?.Disabled};
+      border-color: ${(props) => props.theme?.Colors?.Disabled} !important;
     }
 
     &.ant-checkbox-checked {
