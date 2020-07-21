@@ -1,0 +1,82 @@
+/* Select story book */
+#story--components-select--all .ant-select {
+  margin: 0.2rem 0;
+}
+
+/* Button story book */
+#story--components-button--button-group:nth-child(1) div {
+  margin-bottom: 0.1rem;
+}
+
+#story--components-button--button-group button {
+  margin: 0;
+}
+
+[id*='story--button'] button {
+  margin-right: 0.2rem;
+}
+
+/* Upload story book */
+#story--components-upload--all > div > div {
+  margin-bottom: 2rem;
+}
+
+/* Tooltip storybook */
+#story--components-tooltip--all > div > div:first-child {
+  margin-bottom: 2rem;
+}
+
+.examplePlacements__globalHorizontal {
+  display: flex;
+  width: 100%;
+  padding: 0 70px;
+  justify-content: space-between;
+}
+
+.examplePlacements__globalVertical {
+  display: flex;
+  justify-content: space-between;
+}
+
+.examplePlacements__globalVertical > div {
+  width: 70px;
+  display: flex;
+  flex-direction: column;
+}
+
+.examplePlacements__globalVertical button {
+  width: 100%;
+  margin: 0.2rem 0;
+}
+
+/* Table story book */
+#story--components-table--all .ant-table-wrapper {
+  margin-bottom: 2rem; 
+}
+#story--components-table--all .ant-table-wrapper:last-child {
+  margin-bottom: 0;
+}
+
+/* Pagination story book */
+#story--components-pagination--all ul {
+  margin-bottom: 2rem;
+}
+
+#story--components-pagination--all ul:last-child {
+  margin-bottom: 0;
+}
+
+/* Tag story book */
+#story--components-tag--all > div > div:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+/* Radio story book */
+#story--components-radio--all > div > div:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+/* Spin story book */
+#story--components-spin--all > div > div:not(:last-child) {
+  margin-bottom: 2rem;
+}

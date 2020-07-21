@@ -22,6 +22,12 @@ const { themeSGP } = useTheme();
 </ThemeProvider>
 ```
 
+## Importando dependências
+
+Também é necessário importar o fontawesome no arquivo principal do projeto:
+
+`import '@fortawesome/fontawesome-free/css/all.min.css';`
+
 ## Importando componentes
 
 Abaixo você vê um exemplo de importação de dois componentes: o Button e o TextField. Na seção componentes dessa documentação você descobre como utilizar os demais.
