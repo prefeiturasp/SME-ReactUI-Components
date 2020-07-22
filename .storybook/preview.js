@@ -1,4 +1,4 @@
-import '../index.css';
+import './styles.css';
 import 'antd/dist/antd.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
