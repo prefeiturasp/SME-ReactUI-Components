@@ -122,5 +122,5 @@ export const IntroStory = () => {
 };
 
 IntroStory.story = {
-  name: 'Bem Vindo',
+  name: 'Introdução',
 };

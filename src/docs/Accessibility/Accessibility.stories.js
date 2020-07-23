@@ -16,5 +16,5 @@ export const AccessibilityStory = () => {
 };
 
 AccessibilityStory.story = {
-  name: 'Bem Vindo',
+  name: 'Introdução',
 };
