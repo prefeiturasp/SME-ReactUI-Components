@@ -31,6 +31,7 @@ function Alert({
   showIcon,
   icon,
   message,
+  description,
   closable,
   closeText,
 }) {
@@ -41,6 +42,7 @@ function Alert({
       showIcon={showIcon}
       icon={icon}
       message={message}
+      description={description}
       closable={closable}
       closeText={closeText}
     />
@@ -53,20 +55,21 @@ Alert.propTypes = {
   showIcon: t.bool,
   icon: t.element,
   message: t.string.isRequired,
+  description: t.string.isRequired,
   closable: t.bool,
   closeText: t.string,
 };
 
 Alert.defaultProps = {
   type: 'info',
-  showIcon: false,
+  showIcon: true,
   icon: null,
   closable: true,
   closeText: '',
 };
 
 Alert.Utils = Utils;
-Alert.Box = Box;
-Alert.Toastr = Toastr;
+// Alert.Box = Box;
+// Alert.Toastr = Toastr;
 
 export default Alert;

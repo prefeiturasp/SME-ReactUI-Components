@@ -8,44 +8,27 @@ import { Alert } from 'antd';
 import Utils from './utils';
 
 export const AlertToastStyle = styled(Alert)`
+  width: auto;
   margin: 0.3rem 0 !important;
   font-weight: bold;
-  text-align: center;
-
-  .ant-alert-close-icon {
-    top: 5px;
-    right: 5px;
-  }
-
+  text-align: left;
+  background-color: #333638;
   ${(props) =>
-    props.type === 'success' &&
-    `
-    .ant-alert-message {
-        color: ${props.theme?.Colors?.Success};
-    }
-  `}
-
-${(props) =>
-  props.type === 'info' &&
   `
-    .ant-alert-message {
-        color: ${props.theme?.Colors?.Info};
+    border-bottom: 3px solid ${Utils.Colors[props.type.toUpperCase()]};
+    .ant-alert-close-icon {
+      top: 5px;
+      right: 5px;
+      .anticon-close{
+        color: ${props.theme?.Colors?.Light};
+      }
     }
-  `}
-
-${(props) =>
-  props.type === 'error' &&
-  `
     .ant-alert-message {
-        color: ${props.theme?.Colors?.Warning};
+        color: ${props.theme?.Colors?.Light};
     }
-  `}
-
-${(props) =>
-  props.type === 'warning' &&
-  `
-    .ant-alert-message {
-        color: ${props.theme?.Colors?.Alert};
+    .ant-alert-description {
+      color: ${props.theme?.Colors?.Light};
+      font-weight: initial;
     }
   `}
 `;
