@@ -1,0 +1,10 @@
+.toastr{
+    background-color:  #333638 !important;
+}
+.toastr .ant-notification-notice-message, .ant-notification-notice-description{
+    color: #ffff !important;
+}
+
+.toastr .ant-notification-close-icon{
+    color: #ffff !important;
+}

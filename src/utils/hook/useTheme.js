@@ -9,6 +9,7 @@ const Support = {
     Alert: '#D06D12',
     Disabled: '#dadada',
     NeutralDark: '#42474A',
+    Light: '#ffff'
   },
   Typography: {
     FontWeight: {
