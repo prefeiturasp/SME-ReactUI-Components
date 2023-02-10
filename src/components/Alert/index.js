@@ -1,16 +1,11 @@
 import * as React from 'react';
 import t from 'prop-types';
-import shortid from 'shortid';
 
 // Estilo
-import { AlertToastStyle, AlertToastrStyle, AlertBoxStyle } from './styles';
+import { AlertStyle } from './styles';
 
 // Utils
 import Utils from './utils';
-
-// Internal components
-import Box from './components/AlertBox';
-import Toastr from './components/AlertToastr';
 
 /**
  * `import { Alert } from "@sme/secretui"`
@@ -36,7 +31,7 @@ function Alert({
   closeText,
 }) {
   return (
-    <AlertToastStyle
+    <AlertStyle
       afterClose={afterClose}
       type={type}
       showIcon={showIcon}
@@ -69,7 +64,5 @@ Alert.defaultProps = {
 };
 
 Alert.Utils = Utils;
-// Alert.Box = Box;
-// Alert.Toastr = Toastr;
 
 export default Alert;
