@@ -1,6 +1,7 @@
 import Button from './Button';
 import  Icon  from './Icon';
 import  Alert  from './Alert';
+import Toastr from './Toastr';
 import  Breadcrumb  from './Breadcrumb';
 import  Collapse  from './Collapse';
 import  Spin  from './Spin';
@@ -20,10 +21,12 @@ import  TextField  from './TextField';
 import  DatePicker  from './DatePicker';
 import  Tabs  from './Tabs';
 
+
 export {
     Button,
     Icon,
     Alert,
+    Toastr,
     Breadcrumb,
     Collapse,
     Spin,
