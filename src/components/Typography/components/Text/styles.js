@@ -16,7 +16,7 @@ export const TextStyleWrapper = styled(Typography)`
 export const TextStyle = styled(Typography.Text)`
   font-weight: ${(props) =>
     props.theme?.Typography?.FontWeight[Weight[props.weight]]} !important;
-  color: ${(props) => (props.inverted ? 'white' : 'black')} !important;
+  color: ${(props) => (props.inverted ? 'white' : 'rgba(0, 0, 0, 0.65)')} !important;
   font-size: ${(props) => props.theme?.Typography?.Size?.XSmall} !important;
 
   ${(props) =>

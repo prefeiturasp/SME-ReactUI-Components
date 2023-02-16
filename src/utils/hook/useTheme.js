@@ -2,6 +2,11 @@ import { merge } from 'lodash';
 
 const Support = {
   Colors: {
+    primary: '#6933FF',
+    Primary: '#6933FF',
+    PrimaryDark: '#490CF5',
+    PrimaryLight: '#9670FF',
+
     Info: '#086397',
     Info2: '#10A3FB',
     Warning: '#B40C02',
@@ -11,6 +16,7 @@ const Support = {
     NeutralDark: '#42474A',
     Light: '#ffff'
   },
+  
   Typography: {
     FontWeight: {
       Regular: 400,
@@ -30,6 +36,12 @@ const Support = {
       Regular: 4,
       Small: 2,
     },
+  },
+  IconSize: {
+    'xs': '16px',
+    'sm': '20px',
+    'md': '24px',
+    'lg': '32px'
   },
   Spacing: {
     XXXS: '4px',
