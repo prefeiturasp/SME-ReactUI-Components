@@ -1,8 +1,8 @@
+import { Col, Row } from 'antd';
 import React from 'react';
-import styled from 'styled-components';
 
 // Components
-import { Card, Icon } from '~/components';
+import { Card, Icon, Button, Typography } from '~/components';
 
 const { Header, Body, Footer } = Card;
 
@@ -12,70 +12,126 @@ export default {
   subcomponents: { Header, Body, Footer },
 };
 
-const IconCard = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  font-size: 20px;
-  color: ${(props) => props.theme?.Colors?.Primary};
-  padding: 1rem 1rem;
-
-  i {
-    font-size: 100px;
-    margin-bottom: 1rem;
-  }
-`;
-
 export const CardStory = () => (
-  <Card rounded animate>
-    <Card.Header bordered={false}>Título</Card.Header>
-    <Card.Body>
-      <div>Conteúdo</div>
-      <div>Conteúdo</div>
-      <div>Conteúdo</div>
-      <div>Conteúdo</div>
-    </Card.Body>
-    <Card.Footer>
-      <a href="#">Novo pedido</a>
-    </Card.Footer>
-  </Card>
+  <Row>
+    <Col span={12}>
+      <Card rounded animate>
+        <Card.Body style={{marginTop: 16, marginBottom: 16}}>
+            <div style={{paddingTop: 16}}>
+              <Row type='flex' justify='start' style={{marginBottom: 16}}>
+                <Icon 
+                  color="primary"
+                  type="solid" 
+                  size="lg" 
+                  icon="fa-calendar-alt" 
+                />
+              </Row>
+              <Typography.Title level={4}>
+                Enabled
+              </Typography.Title>
+            </div>
+        </Card.Body>
+      </Card>
+    </Col>
+  </Row>
 );
 
-export const CardBorderLeftStory = () => (
-  <Card rounded animate borderLeft>
-    <Card.Header bordered={false}>Título</Card.Header>
-    <Card.Body>
-      <div>Conteúdo</div>
-      <div>Conteúdo</div>
-      <div>Conteúdo</div>
-      <div>Conteúdo</div>
-    </Card.Body>
-    <Card.Footer>
-      <a href="#">Novo pedido</a>
-    </Card.Footer>
-  </Card>
+export const CardDescriptionStory = () => (
+  <Row>
+    <Col span={12}>
+      <Card rounded animate>
+        <Card.Body style={{marginTop: 16, marginBottom: 16}}>
+            <div style={{paddingTop: 16}}>
+              <Row type='flex' justify='start' style={{marginBottom: 16}}>
+                <Icon 
+                  color="primary"
+                  type="solid" 
+                  size="lg" 
+                  icon="fa-calendar-alt" 
+                />
+              </Row>
+              <Typography.Title level={4}>
+                Enabled
+              </Typography.Title>
+              <Typography.Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+              </Typography.Text>
+            </div>
+        </Card.Body>
+      </Card>
+    </Col>
+  </Row>
 );
 
-export const CardBorderBottomStory = () => (
-  <Card rounded animate borderBottom>
-    <Card.Body>
-      <IconCard>
-        <Icon type="solid" icon="fa-calendar-alt" />
-        Título
-      </IconCard>
-    </Card.Body>
-  </Card>
+export const CardActionStory = () => (
+  <Row>
+    <Col span={12}>
+      <Card rounded animate>
+        <Card.Body>
+          <div style={{paddingTop: 16}}>
+            <Row type='flex' justify='start' style={{marginBottom: 16}}>
+              <Icon 
+                color="primary"
+                type="solid" 
+                size="lg" 
+                icon="fa-calendar-alt" 
+              />
+            </Row>
+            <Typography.Title level={4}>
+              Enabled
+            </Typography.Title>
+            <Typography.Text>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+            </Typography.Text>
+          </div>
+        </Card.Body>
+        <Card.Footer>
+          <Row type='flex' justify='end'>
+            <Button type="primary" outline style={{marginRight: 5}}>Não</Button>
+            <Button type="primary">Sim</Button>
+          </Row>
+        </Card.Footer>
+      </Card>
+    </Col>
+  </Row>
+);
+
+export const CardDisabledStory = () => (
+  <Row>
+    <Col span={12}>
+      <Card rounded animate disabled>
+        <Card.Body style={{marginTop: 16, marginBottom: 16}}>
+            <div style={{paddingTop: 16}}>
+              <Row type='flex' justify='start' style={{marginBottom: 16}}>
+                <Icon 
+                  color="primary"
+                  type="solid" 
+                  size="lg" 
+                  icon="fa-calendar-alt" 
+                />
+              </Row>
+              <Typography.Title level={4}>
+                Disabled
+              </Typography.Title>
+            </div>
+        </Card.Body>
+      </Card>
+    </Col>
+  </Row>
 );
 
 CardStory.story = {
   name: 'default card',
 };
 
-CardBorderLeftStory.story = {
-  name: 'border left card',
+CardDescriptionStory.story = {
+  name: 'description card',
 };
 
-CardBorderBottomStory.story = {
-  name: 'border bottom card',
+CardActionStory.story = {
+  name: 'action card',
+};
+
+CardDisabledStory.story = {
+  name: 'disabled card',
 };

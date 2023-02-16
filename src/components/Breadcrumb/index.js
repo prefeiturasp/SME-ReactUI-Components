@@ -12,7 +12,7 @@ import { BreadcrumbStyle } from './styles';
 function Separator() {
   return (
     <BreadcrumbStyle.Separator>
-      <Icon typeColor="primary" type="solid" icon="fa-chevron-circle-right" />
+      <Icon color="primary" type="solid" icon="fa-chevron-circle-right" />
     </BreadcrumbStyle.Separator>
   );
 }
@@ -33,7 +33,7 @@ function Breadcrumb({ items }) {
   return (
     <BreadcrumbStyle routes={[]} separator="">
       <BreadcrumbItem text="" separator="" href="/">
-        <Icon typeColor="primary" type="solid" icon="fa-home" />
+        <Icon color="primary" type="solid" icon="fa-home" />
       </BreadcrumbItem>
       <Separator />
       {items?.map((item, index) => (
