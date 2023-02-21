@@ -1,22 +1,70 @@
 import { merge } from 'lodash';
 
+const Primary = '#F26419';
+const PrimaryDark = '#ba4105';
+const PrimaryLight = '#ff9c6b';
+
+const Secondary = '#297373';
+const SecondaryDark = '#126363';
+const SecondaryLight = '#479e9e';
+
+const Tertiary = '#2F4858';
+const TertiaryDark = '#1f333f';
+const TertiaryLight = '#516f82';
+
+const Info = '#009dff';
+const Info2 = '#009dff';
+const Warning = '#fcaf3c';
+const Success = '#37d11f';
+const Alert = '#e647ff';
+const Disabled = '#d8d2d2';
+const Dark = '#230528';
+const Light = '#f9f4f9';
+const Error = '#cc3300';
+
 const Support = {
   Colors: {
-    primary: '#6933FF',
-    Primary: '#6933FF',
-    PrimaryDark: '#490CF5',
-    PrimaryLight: '#9670FF',
-
-    Info: '#086397',
-    Info2: '#10A3FB',
-    Warning: '#B40C02',
-    Success: '#297805',
-    Alert: '#D06D12',
-    Disabled: '#dadada',
-    NeutralDark: '#42474A',
-    Light: '#ffff'
+    Primary: Primary,
+    PrimaryDark: PrimaryDark,
+    PrimaryLight: PrimaryLight,
+    Info: Info,
+    Info2: Info2,
+    Warning: Warning,
+    Success: Success,
+    Alert: Alert,
+    Disabled: Disabled,
+    NeutralDark: Dark,
+    Light: Light
   },
-  
+
+  Button: {
+    colors: {
+      primary: {
+        default: Primary,
+        dark: PrimaryDark,
+        light: PrimaryLight
+      },
+      secondary: {
+        default: Secondary,
+        dark: SecondaryDark,
+        light: SecondaryLight
+      },
+      tertiary: {
+        default: Tertiary,
+        dark: TertiaryDark,
+        light: TertiaryLight
+      }, 
+      light: {
+        default: Light,
+        dark: Light,
+      },
+      dark: {
+        default: Dark,
+        dark: Dark,
+      }     
+    }
+  },
+
   Typography: {
     FontWeight: {
       Regular: 400,
@@ -40,25 +88,25 @@ const Support = {
 
   Icon: {
     colors: {
-      primary: '#6933FF',
-      secondary: '#32fff1',
-      tertiary: '#0ad8cb',
-      success: '#297805',
-      error: '#ff0000',
-      info: '#086397',
-      warning: '#ffbb00',
-      dark: '#000',
-      light: '#ffff'
+      primary: Primary,
+      secondary: Secondary,
+      tertiary: Tertiary,
+      success: Success,
+      error: Error,
+      info: Info,
+      warning: Warning,
+      dark: Dark,
+      light: Light
+    },
+    sizes: {
+      xxs: '12px',
+      xs: '16px',
+      sm: '20px',
+      md: '24px',
+      lg: '32px'
     }
   },
-
-  IconSize: {
-    'xxs': '12px',
-    'xs': '16px',
-    'sm': '20px',
-    'md': '24px',
-    'lg': '32px'
-  },
+  
   Spacing: {
     XXXS: '4px',
     XXS: '8px',
