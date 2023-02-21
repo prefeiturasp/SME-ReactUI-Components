@@ -4,7 +4,7 @@ import  Alert  from './Alert';
 import Toastr from './Toastr';
 import  Breadcrumb  from './Breadcrumb';
 import  Collapse  from './Collapse';
-import  Spin  from './Spin';
+// import  Spin  from './Spin';
 import  Checkbox  from './Checkbox';
 import  Radio  from './Radio';
 import  Select  from './Select';
@@ -29,7 +29,7 @@ export {
     Toastr,
     Breadcrumb,
     Collapse,
-    Spin,
+    // Spin,
     Checkbox,
     Radio,
     Select,
