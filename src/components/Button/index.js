@@ -21,11 +21,11 @@ const Button = React.forwardRef(
   (
     {
       children,
-      type,
+      type = 'filled',
+      color = 'primary',
       size,
       shape,
       icon,
-      outline,
       block,
       loading,
       disabled,
@@ -34,12 +34,20 @@ const Button = React.forwardRef(
     },
     ref
   ) => {
+
+    const types =  {
+      text: 'text',
+      filled: 'primary',
+      outlined: 'outlined',
+      link: 'link'
+    };
+
     return (
       <ButtonStyle
-        type={type}
+        type={types[type] ? types[type] : types.filled}
+        color={color}
         size={size}
         shape={shape}
-        outline={outline ? 1 : 0}
         block={block}
         onClick={onClick}
         loading={loading}
@@ -56,10 +64,10 @@ const Button = React.forwardRef(
 );
 
 Button.propTypes = {
-  type: t.oneOf(['primary', 'secondary', 'dashed', 'link']),
+  type: t.oneOf(['filled', 'outlined', 'text', 'link']),
   size: t.oneOf(['small', 'default', 'large']),
+  color: t.oneOf(['primary', 'secondary']),
   icon: t.oneOfType([t.element, t.elementType, t.string, t.bool]),
-  outline: t.oneOfType([t.bool, t.string, t.number]),
   block: t.bool,
   loading: t.bool,
   disabled: t.bool,
@@ -68,7 +76,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  type: 'secondary',
+  type: 'filled',
   size: 'large',
   icon: false,
   outline: false,
