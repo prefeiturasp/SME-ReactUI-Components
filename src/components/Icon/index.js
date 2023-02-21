@@ -27,7 +27,7 @@ function Icon({
 
 Icon.propTypes = {
   type: t.oneOf(['solid', 'brand', 'regular']),
-  size: t.oneOf(['xs', 'sm', 'md', 'lg']),
+  size: t.oneOf(['xxs', 'xs', 'sm', 'md', 'lg']),
   color: t.oneOf(['primary', 'secondary', 'tertiary', 'success', 'error', 'info', 'warning', 'dark', 'light']),
   icon: t.string,
 };

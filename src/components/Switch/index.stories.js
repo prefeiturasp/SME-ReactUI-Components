@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 // Components
-import { Switch } from '~/components';
+import { Switch, Icon } from '~/components';
 
 export default {
   title: 'Components|Switch',
@@ -9,7 +9,7 @@ export default {
 };
 
 export const SwitchStory = () => {
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState(true);
   return <Switch checked={active} onChange={() => setActive(!active)} />;
 };
 
@@ -24,6 +24,30 @@ export const SwitchFrequenceStory = () => {
   );
 };
 
+export const SwitchWithTextStory = () => {
+  const [active, setActive] = useState(true);
+  return (
+    <Switch 
+      checked={active} 
+      onChange={() => setActive(!active)}
+      checkedChildren='Ativo' 
+      unCheckedChildren='Inativo'
+    />
+  );
+};
+
+export const SwitchWithIconStory = () => {
+  const [active, setActive] = useState(true);
+  return (
+    <Switch 
+      checked={active} 
+      onChange={() => setActive(!active)}
+      checkedChildren={<Icon icon='fa-check' size='xxs' color='light' />} 
+      unCheckedChildren={<Icon icon='fa-xmark' size='xxs' color='light' />} 
+    />
+  );
+};
+
 SwitchStory.story = {
   name: 'default switch',
 };
@@ -34,4 +58,12 @@ SwitchDisabledStory.story = {
 
 SwitchFrequenceStory.story = {
   name: 'frequence switch (SGP)',
+};
+
+SwitchWithTextStory.story = {
+  name: 'with text',
+};
+
+SwitchWithIconStory.story = {
+  name: 'with icon',
 };
