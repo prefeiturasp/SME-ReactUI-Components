@@ -37,6 +37,21 @@ const Support = {
       Small: 2,
     },
   },
+
+  Icon: {
+    colors: {
+      primary: '#6933FF',
+      secondary: '#32fff1',
+      tertiary: '#0ad8cb',
+      success: '#297805',
+      error: '#ff0000',
+      info: '#086397',
+      warning: '#ffbb00',
+      dark: '#000',
+      light: '#ffff'
+    }
+  },
+
   IconSize: {
     'xs': '16px',
     'sm': '20px',
