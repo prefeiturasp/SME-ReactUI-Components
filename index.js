@@ -1,5 +1,5 @@
 import './index.css';
-import 'antd/dist/antd.css';
+
 
 // Default
 import { ThemeProvider } from 'styled-components';

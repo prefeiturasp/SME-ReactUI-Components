@@ -20,6 +20,7 @@ export const IconStory = () => (
 
 export const IconSizesStory = () => (
   <>
+    <Icon type="solid" size='xxs' icon="fa-user"/> &nbsp;
     <Icon type="solid" size='xs' icon="fa-user"/> &nbsp;
     <Icon type="solid" size='sm' icon="fa-address-book" /> &nbsp;
     <Icon type="solid" size='md' icon="fa-calendar" /> &nbsp;
