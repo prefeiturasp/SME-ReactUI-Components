@@ -53,6 +53,7 @@ const Support = {
   },
 
   IconSize: {
+    'xxs': '12px',
     'xs': '16px',
     'sm': '20px',
     'md': '24px',
