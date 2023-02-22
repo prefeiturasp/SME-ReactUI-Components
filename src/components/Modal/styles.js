@@ -8,9 +8,12 @@ import { Icon } from '~/components';
 import { Modal } from 'antd';
 
 export const ModalStyle = styled(Modal)`
+  border-radius: 4px !important;
+
   .ant-modal-header {
-    margin: 0 24px;
     padding-left: 0;
+    border-bottom: 1px solid #BFBFBF;
+    padding-bottom: 12px;
     
     .ant-modal-title {
       font-weight: bold;
@@ -25,7 +28,8 @@ export const ModalStyle = styled(Modal)`
   }
 
   .ant-modal-footer {
-    border-top: 0;
+    padding-top: 12px;
+    border-top: 1px solid #BFBFBF;
   }
 `;
 

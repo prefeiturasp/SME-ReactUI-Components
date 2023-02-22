@@ -15,7 +15,15 @@ import { ModalStyle, CloseIcon } from './styles';
  * - Deve ser descartado pressionando a tecla ESC, clicando / tocando fora da área modal e usando o ícone "x" no canto superior direito do modal.
  * - Mantenha o usuário focado no elemento anterior após fechar o modal.
  */
-function Modal({ children, visible, title, width, footer, onCancel }) {
+function Modal({ 
+  children, 
+  visible, 
+  title, 
+  width, 
+  footer, 
+  onCancel,
+  ...props
+}) {
   return (
     <ModalStyle
       visible={visible}
@@ -24,6 +32,7 @@ function Modal({ children, visible, title, width, footer, onCancel }) {
       closeIcon={CloseIcon}
       footer={footer}
       onCancel={onCancel}
+      {...props}
     >
       {children}
     </ModalStyle>
@@ -36,13 +45,19 @@ Modal.propTypes = {
   width: t.oneOfType([t.string, t.number]),
   footer: t.any,
   onCancel: t.func,
+  mask: t.bool,
+  closable: t.bool,
+  maskClosable: t.bool
 };
 
 Modal.defaultProps = {
   visible: false,
   title: "",
   width: 520,
-  onCancel: () => {}
+  onCancel: () => {},
+  mask: true,
+  closable: true,
+  maskClosable: true
 };
 
 export default Modal;
