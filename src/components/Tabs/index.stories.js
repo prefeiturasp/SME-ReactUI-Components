@@ -11,94 +11,62 @@ export default {
 };
 
 export const TabsStory = () => {
+  const items = [
+    {
+    key: "1",
+    title: "Tab 1",
+    content: "Content 1"
+  },
+  {
+    key: "2",
+    title: "Tab 2",
+    content: "Content 2"
+  }
+];
   return (
-    <Tabs>
-      <TabPane key="1" tab="Tab 1">
-        Content 1
-      </TabPane>
-      <TabPane key="2" tab="Tab 2">
-        Content 2
-      </TabPane>
-      <TabPane key="3" tab="Tab 3">
-        Content 3
-      </TabPane>
-    </Tabs>
+    <Tabs items={items}/>
   );
 };
 
 export const TabsIconStory = () => {
+  const items = [
+      {
+      key: "1",
+      title: "Tab 1",
+      icon: "fa-home",
+      content: "Content 1"
+    },
+    {
+      key: "2",
+      title: "Tab 2",
+      icon: "fa-user",
+      content: "Content 2"
+    },
+    {
+      key: "3",
+      title: "Tab 3",
+      icon: "fa-gear",
+      content: "Content 3",
+      disabled: true
+    }
+  ];
   return (
-    <Tabs>
-      <TabPane
-        key="1"
-        tab={
-          <span>
-            <Icon type="brand" icon="fa-apple" />
-            &nbsp; Tab 1
-          </span>
-        }
-      >
-        Content 1
-      </TabPane>
-      <TabPane
-        key="2"
-        tab={
-          <span>
-            <Icon type="brand" icon="fa-apple" />
-            &nbsp; Tab 2
-          </span>
-        }
-      >
-        Content 2
-      </TabPane>
-      <TabPane
-        key="3"
-        tab={
-          <span>
-            <Icon type="brand" icon="fa-apple" />
-            &nbsp; Tab 3
-          </span>
-        }
-      >
-        Content 3
-      </TabPane>
-    </Tabs>
+    <Tabs items={items}/>
   );
 };
 
 export const TabsSlideStory = () => {
   return (
-    <Tabs>
-      {[...Array(30).keys()].map((item, index) => (
-        <TabPane
-          key={String(index + 1)}
-          tab={
-            <span>
-              <Icon type="brand" icon="fa-apple" />
-              &nbsp; Tab {index + 1}
-            </span>
-          }
-        >
-          Content {index + 1}
-        </TabPane>
-      ))}
-    </Tabs>
-  );
-};
-
-export const TabsCardStory = () => {
-  return (
-    <Tabs type="card">
-      <TabPane key="1" tab="Tab 1">
-        Content 1
-      </TabPane>
-      <TabPane disabled key="2" tab="Tab 2">
-        Content 2
-      </TabPane>
-      <TabPane key="3" tab="Tab 3">
-        Content 3
-      </TabPane>
-    </Tabs>
+    <Tabs items={
+      [...Array(15).keys()].map((item, index) => {
+        return {
+          key: `String ${(index + 1)}`,
+          title: `Tab ${index + 1}`,
+          content: `Content ${index + 1}`
+        }
+      })
+    }>
+    </Tabs> 
   );
 };
 
@@ -112,8 +80,4 @@ TabsIconStory.story = {
 
 TabsSlideStory.story = {
   name: 'slide tab',
-};
-
-TabsCardStory.story = {
-  name: 'card tab',
 };

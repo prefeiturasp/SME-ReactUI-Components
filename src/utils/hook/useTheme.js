@@ -75,6 +75,10 @@ const Support = {
     colors: colors
   },
 
+  Tab: {
+    colors: colors
+  },
+
   Typography: {
     FontWeight: {
       Regular: 400,
