@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import { Icon } from '~/components';
 
 const IconBackground = styled.span`
-  background-color: whitesmoke;
+  background-color: transparent;
   display: flex;
   align-items: center;
   border-radius: 50%;

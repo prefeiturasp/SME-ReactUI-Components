@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import { Collapse } from 'antd';
 
 export const CollapseStyle = styled(Collapse)`
-  box-shadow: 0px 0px 4px -2px grey;
   width: 100%;
 
   &.ant-collapse-icon-position-right {
@@ -13,6 +12,11 @@ export const CollapseStyle = styled(Collapse)`
       right: 15px;
       top: 10px;
     }
+  }
+
+  &.ant-collapse{
+    border: none !important;
+    background-color: transparent !important;
   }
 `;
 
@@ -26,22 +30,53 @@ export const PanelStyle = styled(Collapse.Panel)`
   width: 100%;
 
   .ant-collapse-header {
-    padding: 18px 40px 18px 18px !important;
-    ${(props) => props.bordered && `border-radius: 4px !important`};
-    ${(props) =>
-      props.bordered &&
-      `border-left: 7px solid ${
-        props.borderColor
-          ? props.borderColor
-          : `${props.theme?.Colors?.Primary}`
-      }`};
-  }
-
-  &.ant-collapse-item-active {
-    .ant-collapse-header {
-      box-shadow: 0px 3px 4px -3px #42474a94;
-      padding: 18px 16px;
-      padding-right: 40px;
+    min-height: 3rem !important;
+    box-shadow: 0px 1px 4px rgba(8, 35, 48, 0.1);
+    background: ${(props) => props.theme?.Colors?.Light};
+    ${(props) => props.bordered && 
+      `border-radius: 4px !important`};
+    ${(props) => props.bordered && 
+      `border-left: 7px solid ${`${props.theme?.Collapse?.colors?.[props.borderColor]?.default}`}`};
+    ${(props) => (props.bordered && props.disabled) &&  
+      `border-left: 7px solid ${`${props.theme?.Collapse?.colors?.[props.borderColor]?.default}66`}`};
+    .ant-collapse-expand-icon{
+      ${(props) => props.disabled &&  
+        `opacity: 0.1`};
     }
   }
+  &.ant-collapse-item {
+    margin-bottom: 1em;
+    border-bottom: 0 !important;
+    .ant-collapse-content {
+      border-radius: 0px 0px 4px 4px !important;
+      border-top: 0 !important;
+      border: 1px solid #DADADA;
+      box-shadow: 0px 1px 4px rgb(8 35 48 / 10%);
+    }
+  }
+`;
+
+export const PanelHeaderStyle = styled.div`
+  display: flex;
+`;
+
+export const PanelHeaderIconContentStyle = styled.div`
+  margin-right: 1rem;
+`;
+
+export const PanelHeaderTextStyle = styled.div``;
+
+export const PanelHeaderTitleStyle = styled.span`
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+`;
+
+export const PanelHeaderSubtitleStyle = styled.span`
+  display: block;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  opacity: 0.7;
 `;
