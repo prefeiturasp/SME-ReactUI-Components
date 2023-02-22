@@ -19,8 +19,38 @@ const Success = '#37d11f';
 const Alert = '#e647ff';
 const Disabled = '#d8d2d2';
 const Dark = '#230528';
-const Light = '#f9f4f9';
+const Light = '#ffff';
 const Error = '#cc3300';
+
+const colors = {
+  primary: {
+    default: Primary,
+    dark: PrimaryDark,
+    light: PrimaryLight
+  },
+  secondary: {
+    default: Secondary,
+    dark: SecondaryDark,
+    light: SecondaryLight
+  },
+  tertiary: {
+    default: Tertiary,
+    dark: TertiaryDark,
+    light: TertiaryLight
+  }, 
+  light: {
+    default: Light,
+    dark: Light,
+  },
+  dark: {
+    default: Dark,
+    dark: Dark,
+  },
+  warning: { default: Warning },
+  error: { default: Error },
+  info: { default: Info },
+  success: { default: Success }
+}
 
 const Support = {
   Colors: {
@@ -38,31 +68,11 @@ const Support = {
   },
 
   Button: {
-    colors: {
-      primary: {
-        default: Primary,
-        dark: PrimaryDark,
-        light: PrimaryLight
-      },
-      secondary: {
-        default: Secondary,
-        dark: SecondaryDark,
-        light: SecondaryLight
-      },
-      tertiary: {
-        default: Tertiary,
-        dark: TertiaryDark,
-        light: TertiaryLight
-      }, 
-      light: {
-        default: Light,
-        dark: Light,
-      },
-      dark: {
-        default: Dark,
-        dark: Dark,
-      }     
-    }
+    colors: colors
+  },
+
+  Collapse: {
+    colors: colors
   },
 
   Typography: {

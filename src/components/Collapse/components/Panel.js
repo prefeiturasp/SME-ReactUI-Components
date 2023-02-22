@@ -1,6 +1,6 @@
 import React from 'react';
 import t from 'prop-types';
-
+import PanelHeader from './PanelHeader';
 // Styles
 import { PanelStyle } from '../styles';
 
@@ -11,6 +11,8 @@ function Panel({
   bordered,
   borderColor,
   header,
+  subtitle,
+  icon,
   key,
   ...props
 }) {
@@ -19,7 +21,14 @@ function Panel({
       disabled={disabled}
       bordered={bordered}
       borderColor={borderColor}
-      header={header}
+      header={
+      <PanelHeader 
+        key={key} 
+        icon={icon} 
+        iconColor={borderColor}
+        title={header} 
+        subtitle={subtitle}/>
+      }
       key={key}
       {...props}
     >
@@ -41,5 +50,7 @@ Panel.defaultProps = {
   bordered: false,
   borderColor: null,
 };
+
+Panel.PanelHeader = PanelHeader;
 
 export default Panel;
