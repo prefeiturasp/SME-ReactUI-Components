@@ -4,7 +4,10 @@ import styled from 'styled-components';
 import { Tabs } from 'antd';
 
 export const TabsStyle = styled(Tabs)`
-  .ant-tabs-tab-active {
+  .ant-tabs-tab i {
+    color: unset !important;
+  }
+  .ant-tabs-tab-active .ant-tabs-tab-btn{
     color: ${(props) => props.theme?.Colors?.Primary} !important;
   }
 

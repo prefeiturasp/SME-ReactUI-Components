@@ -6,6 +6,7 @@ import { TabsStyle } from './styles';
 
 // Internal Components
 import TabPane from './components/TabPane';
+import TabPaneTitle from './components/TabPaneTitle';
 
 /**
  * `import { Tabs } from "@sme/secretui"`
@@ -19,16 +20,30 @@ import TabPane from './components/TabPane';
  * - Abas com conteúdos relacionados devem ser mantidas próximas uma das outras.
  * - Não é recomendado utilizar abas como componente de filtro.
  */
-const Tabs = ({ children, type }) => {
-  return <TabsStyle type={type}>{children}</TabsStyle>;
+const Tabs = ({ items = [] }) => {
+
+  return (
+    <TabsStyle type='card'>
+      {items.map((_item) => {
+        return (
+          <TabPane
+            tab={<TabPaneTitle title={_item.title} icon={_item.icon}/>}
+            {..._item}
+          >
+            {_item.content}
+          </TabPane>
+        )
+      })}
+    </TabsStyle>
+  );
 };
 
 Tabs.propTypes = {
-  type: t.oneOf(['line', 'card']),
+  items: t.array
 };
 
 Tabs.defaultProps = {
-  type: 'line',
+  items: []
 };
 
 Tabs.TabPane = TabPane;
