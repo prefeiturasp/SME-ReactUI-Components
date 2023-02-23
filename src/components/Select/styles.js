@@ -8,16 +8,50 @@ import { Icon } from '~/components';
 import { Select } from 'antd';
 const { Option } = Select;
 
+
+export const SelectContentStyle = styled.div`
+  position: relative;
+`;
+
+export const IconErrorStyle = styled.div`
+  i {
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    right: 2rem;
+    top: 34%;
+  };
+`;
+
 export const SelectStyle = styled(Select)`
   width: 100%;
+  background-color: #ffff !important;
 
+  .ant-select-selector {
+    height: 40px !important;
+    border: 1px solid ${(props) => props.disabled ? '' : props.theme?.Select?.colors?.grey?.default} !important;
+
+    .ant-select-selection-placeholder{
+      line-height: 40px !important;
+    }
+    .ant-select-selection-item {
+      ${(props) => props.mode !== 'multiple' && `line-height: 40px !important;`};
+      ${(props) => props.mode === 'multiple' ? `border: 1px solid ${props.theme?.Select?.colors?.grey?.default}` : ''} !important;
+    }
+    &:focus, &:hover, &:active, &:visited, &:focus-within  {
+      border: 1px solid ${(props) => props.error ? props.theme?.Select?.colors?.error?.default : props.theme?.Select?.colors.primary?.default} !important;
+    }
+    ${(props) => props.error &&
+      `border: 1px solid ${props.theme?.Select?.colors?.error?.default} !important;`
+    }
+  }
   .ant-select-selection {
-    height: 38px;
+    height: 40px;
 
     .ant-select-selection__rendered {
       margin-left: 18px;
       margin-right: 0; // toDo: change this
-      line-height: 36px;
+      line-height: 40px;
 
       // Multiselect - Placeholder
       .ant-select-selection__placeholder {
@@ -72,7 +106,8 @@ export const GlobalStyle = createGlobalStyle`
         padding-left: 18px;
         padding-right: 10px !important;
         font-size: ${(props) => props.theme?.Typography?.Size.XSmall};
-    
+        min-height: 39px !important;
+
         &.ant-select-dropdown-menu-item-active:not(.ant-select-dropdown-menu-item-disabled) {
           background-color: ${(props) => props.theme?.Colors?.Primary};
           color: #FFF;
@@ -101,13 +136,27 @@ export const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export const SuffixIcon = <Icon type="solid" icon="fa-caret-down" />;
+export const HelptexttStyle = styled.span`
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  ${(props) => props.error ? (
+    `color: ${props.theme?.Select?.colors?.error?.default};`
+  ) : (
+    `color: #6F777C;`
+  )}
+  margin-top: 5px;
+  margin-left: 5px;
+`;
+
+export const SuffixIcon = <Icon type="solid" icon="fa-chevron-down" size="xs"/>;
 
 export const MenuItemSelectedIcon = (
-  <>
-    <Icon type="regular" icon="fa-square" />
     <Icon type="solid" icon="fa-check-square" />
-  </>
 );
 
 export const NotFoundContent = <span className="notFound">Nada encontrado</span>
+
+export const ErrorIcon = <Icon icon="fa-circle-exclamation" size="xs" color="error"/>;
