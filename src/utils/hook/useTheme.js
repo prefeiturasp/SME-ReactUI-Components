@@ -17,10 +17,13 @@ const Info2 = '#009dff';
 const Warning = '#fcaf3c';
 const Success = '#37d11f';
 const Alert = '#e647ff';
+const Error = '#cc3300';
+
 const Disabled = '#d8d2d2';
+
 const Dark = '#230528';
 const Light = '#ffff';
-const Error = '#cc3300';
+const Grey = '#6F777C';
 
 const colors = {
   primary: {
@@ -49,7 +52,8 @@ const colors = {
   warning: { default: Warning },
   error: { default: Error },
   info: { default: Info },
-  success: { default: Success }
+  success: { default: Success },
+  grey: { default: Grey }
 }
 
 const Support = {
@@ -76,6 +80,10 @@ const Support = {
   },
 
   Tab: {
+    colors: colors
+  },
+  
+  Select: {
     colors: colors
   },
 

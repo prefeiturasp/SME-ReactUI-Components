@@ -34,6 +34,7 @@ export const All = () => {
       <Select
         placeholder="Select a option"
         options={optionsExample}
+        defaultValue={"Text example #1"}
       />
 
       <Select
@@ -46,12 +47,24 @@ export const All = () => {
         mode="multiple"
         placeholder="Multiple select"
         options={optionsExample}
+        defaultValue={["Text example #1", "Text example #2"]}
       />
 
       <Select
         placeholder="Select with onChange event"
         options={optionsExample}
         onChange={handleChangeTest}
+      />
+
+      <Select
+        placeholder="Select a option"
+        options={optionsExample}
+        defaultValue={{
+          text: "Text example #1",
+          value: "Text example #1"
+        }}
+        helpText="There's an error with your input"
+        error={true}
       />
     </>
   );
@@ -134,6 +147,7 @@ export const MultiSelect = () => {
       <Select
         mode="multiple"
         placeholder="Select with onChange event"
+        defaultValue={["Text example #1", "Text example #2"]}
         options={optionsExample}
       />
     </>
@@ -169,6 +183,40 @@ export const OnChange = () => {
         placeholder="Select with onChange event"
         options={optionsExample}
         onChange={handleChangeTest}
+        helpText="Helptext onChange event story"
+      />
+    </>
+  );
+}
+
+export const ErrorSelect = () => {
+  const optionsExample = [
+    {
+      text: "Text example #1",
+      value: "Text example #1"
+    },
+    {
+      text: "Text example #2",
+      value: "Text example #2"
+    },
+    {
+      text: "Text example disabled",
+      value: "Text example disabled",
+      disabled: true
+    }
+  ];
+
+  return (
+    <>
+      <Select
+        placeholder="Select a option"
+        options={optionsExample}
+        defaultValue={{
+          text: "Text example #1",
+          value: "Text example #1"
+        }}
+        helpText="There's an error with your input"
+        error={true}
       />
     </>
   );
@@ -179,3 +227,4 @@ Default.story = { name: 'default' }
 Disabled.story = { name: 'disabled' }
 MultiSelect.story = { name: 'multi select' }
 OnChange.story = { name: 'onChange action' }
+ErrorSelect.story = { name: 'error' }
