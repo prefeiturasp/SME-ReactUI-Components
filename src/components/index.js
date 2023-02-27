@@ -18,7 +18,7 @@ import  Table  from './Table';
 import  Typography  from './Typography';
 import  Tag  from './Tag';
 import  TextField  from './TextField';
-import  DatePicker  from './DatePicker';
+import  DatePickerComponent  from './DatePicker';
 import  Tabs  from './Tabs';
 
 
@@ -43,6 +43,6 @@ export {
     Typography,
     Tag,
     TextField,
-    DatePicker,
+    DatePickerComponent,
     Tabs
 }

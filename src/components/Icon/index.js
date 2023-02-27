@@ -13,7 +13,7 @@ function Icon({
   type = 'solid', 
   icon = '', 
   size = 'md', 
-  color = 'dark', 
+  color = '', 
   className = ''
 }) {
   return (
