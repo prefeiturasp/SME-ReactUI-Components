@@ -9,15 +9,15 @@ import { PaginationStyle } from './styles';
 
 export function customRenderNavButtons(_, type, originalElement) {
   if (type === 'prev') {
-    return <Icon icon="fa-chevron-left" />;
+    return <Icon icon="fa-chevron-left" size="xxs"/>;
   }
 
   if (type === 'next') {
-    return <Icon icon="fa-chevron-right" />;
+    return <Icon icon="fa-chevron-right" size="xxs"/>;
   }
 
   if (type === 'jump-prev' || type === 'jump-next') {
-    return <Icon icon="fa-ellipsis-h" />;
+    return <Icon icon="fa-ellipsis-h" size="xxs"/>;
   }
 
   return originalElement;
@@ -36,7 +36,7 @@ function Pagination({ defaultCurrent, pageSize, size, total, onChange }) {
       pageSize={pageSize}
       size={size}
       onChange={onChange}
-      itemRender={customRenderNavButtons}
+      // itemRender={customRenderNavButtons}
     />
   );
 };
