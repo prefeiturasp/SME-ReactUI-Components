@@ -21,6 +21,8 @@ import  TextField  from './TextField';
 import  DatePickerComponent  from './DatePicker';
 import  Tabs  from './Tabs';
 import Dropdown from './Dropdown';
+import Slider from './Slider';
+import NumberField from './NumberField';
 
 export {
     Button,
@@ -43,7 +45,9 @@ export {
     Typography,
     Tag,
     TextField,
+    NumberField,
     DatePickerComponent,
     Tabs,
-    Dropdown
+    Dropdown,
+    Slider
 }
