@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import { Icon } from '~/components';
 
-import { Dropdown, ConfigProvider } from 'antd';
+import { Dropdown } from 'antd';
 
 export const DropdownStyle = styled(Dropdown.Button)`
     font-family: 'Roboto', sans-serif !important;
@@ -73,9 +73,7 @@ export const DropdownStyle = styled(Dropdown.Button)`
     }
 `;
 
-export const DropdownButttonStyle = styled(Dropdown.Button)`
-
-`;
+export const DropdownButttonStyle = styled(Dropdown.Button)``;
 export const ArrowDown = <Icon type="solid" icon="fa-chevron-down" size="xs"/>;
 export const DropdownIconLeft = ({icon}) => <Icon type="solid" style={{paddingRight: 12}} icon={icon} size="xs"/>;
 
