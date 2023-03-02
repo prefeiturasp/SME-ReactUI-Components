@@ -14,13 +14,15 @@ function Icon({
   icon = '', 
   size = 'md', 
   color = '', 
-  className = ''
+  className = '',
+  style = {}
 }) {
   return (
     <IconStyle
       color={color}
       size={size}
       className={`sme__icon ${typesMap[type]} ${icon} ${className}`}
+      style={style}
     />
   );
 }

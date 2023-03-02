@@ -5,8 +5,6 @@ import { Button } from 'antd';
 
 export const ButtonStyle = styled(Button)`
   font-family: 'Roboto', sans-serif !important;
-  font-weight: ${(props) => props.theme?.Typography?.FontWeight?.Bold} !important;
-  font-size: ${(props) => props.theme?.Typography?.Size?.XSmall};
   overflow: hidden;
   pointer-events: initial !important;
 
@@ -85,7 +83,6 @@ export const ButtonStyle = styled(Button)`
       outline: unset;
     }
   }
-  
 `;
 
 export const ButtonGroupStyle = styled(Button.Group)`

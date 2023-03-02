@@ -1,9 +1,6 @@
 import * as React from 'react';
 import t from 'prop-types';
 
-// Ant
-import { Button as BotaoAnt } from 'antd';
-
 // Estilos
 import { ButtonStyle, ButtonGroupStyle } from './styles';
 
@@ -77,9 +74,8 @@ Button.propTypes = {
 
 Button.defaultProps = {
   type: 'filled',
-  size: 'large',
+  size: 'default',
   icon: false,
-  outline: false,
   block: false,
   loading: false,
   disabled: false,

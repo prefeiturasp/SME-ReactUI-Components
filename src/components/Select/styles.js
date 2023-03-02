@@ -24,69 +24,71 @@ export const IconErrorStyle = styled.div`
 `;
 
 export const SelectStyle = styled(Select)`
-  width: 100%;
-  background-color: #ffff !important;
+  ${(props) => `
+    width: 100%;
+    background-color: #ffff !important;
 
-  .ant-select-selector {
-    height: 40px !important;
-    border: 1px solid ${(props) => props.disabled ? '' : props.theme?.Select?.colors?.grey?.default} !important;
+    .ant-select-selector {
+      height: 40px !important;
+      ${props.disabled ? '' : `border: 1px solid ${props.theme?.Select?.colors?.grey?.default} !important;`}
 
-    .ant-select-selection-placeholder{
-      line-height: 40px !important;
-    }
-    .ant-select-selection-item {
-      ${(props) => props.mode !== 'multiple' && `line-height: 40px !important;`};
-      ${(props) => props.mode === 'multiple' ? `border: 1px solid ${props.theme?.Select?.colors?.grey?.default}` : ''} !important;
-    }
-    &:focus, &:hover, &:active, &:visited, &:focus-within  {
-      border: 1px solid ${(props) => props.error ? props.theme?.Select?.colors?.error?.default : props.theme?.Select?.colors.primary?.default} !important;
-    }
-    ${(props) => props.error &&
-      `border: 1px solid ${props.theme?.Select?.colors?.error?.default} !important;`
-    }
-  }
-  .ant-select-selection {
-    height: 40px;
-
-    .ant-select-selection__rendered {
-      margin-left: 18px;
-      margin-right: 0; // toDo: change this
-      line-height: 40px;
-
-      // Multiselect - Placeholder
-      .ant-select-selection__placeholder {
-        margin-left: 0;
-        font-size: ${(props) => props.theme?.Typography?.Size.XSmall};
+      .ant-select-selection-placeholder{
+        line-height: 40px !important;
       }
-
-      .ant-select-selection-selected-value {
-        font-size: ${(props) => props.theme?.Typography?.Size.XSmall};
+      .ant-select-selection-item {
+        ${props.mode !== 'multiple' && `line-height: 40px !important;`};
+        ${props.mode === 'multiple' ? `border: 1px solid ${props.theme?.Select?.colors?.grey?.default}` : ''} !important;
       }
+      &:focus, &:hover, &:active, &:visited, &:focus-within  {
+        ${(props.error || props.disabled) ? '' : `
+          border: 1px solid ${props.theme?.Select?.colors.primary?.default} !important;
+        `}
+      }
+      ${props.error && `border: 1px solid ${props.theme?.Select?.colors?.error?.default} !important;`}
+    }
+    .ant-select-selection {
+      height: 40px;
 
-      // Multiselect - tag
-      .ant-select-selection__choice {
-        display: inline-flex;
-        align-items: center;
-        padding-left: 6px;
-        margin-top: 6px;
-        border-radius: 6px;
-        font-size: ${(props) => props.theme?.Typography?.Size.XSmall};
+      .ant-select-selection__rendered {
+        margin-left: 18px;
+        margin-right: 0; // toDo: change this
+        line-height: 40px;
 
-        &:first-child {
-          margin-left: -7px;
+        // Multiselect - Placeholder
+        .ant-select-selection__placeholder {
+          margin-left: 0;
+          font-size: ${props.theme?.Typography?.Size.XSmall};
+        }
+
+        .ant-select-selection-selected-value {
+          font-size: ${props.theme?.Typography?.Size.XSmall};
+        }
+
+        // Multiselect - tag
+        .ant-select-selection__choice {
+          display: inline-flex;
+          align-items: center;
+          padding-left: 6px;
+          margin-top: 6px;
+          border-radius: 6px;
+          font-size: ${props.theme?.Typography?.Size.XSmall};
+
+          &:first-child {
+            margin-left: -7px;
+          }
         }
       }
     }
-  }
 
-  // Suffix arrow
-  .ant-select-arrow {
-    transition: transform 300ms;
-  }
+    // Suffix arrow
+    .ant-select-arrow {
+      transition: transform 300ms;
+    }
 
-  &.ant-select-open .ant-select-arrow {
-    transform: rotate(180deg);
-  }
+    &.ant-select-open .ant-select-arrow {
+      transform: rotate(180deg);
+    }
+ `}
 `;
 
 export const OptionStyle = styled(Option)``;
@@ -153,10 +155,8 @@ export const HelptexttStyle = styled.span`
 
 export const SuffixIcon = <Icon type="solid" icon="fa-chevron-down" size="xs"/>;
 
-export const MenuItemSelectedIcon = (
-    <Icon type="solid" icon="fa-check-square" />
-);
+export const MenuItemSelectedIcon = <Icon type="solid" icon="fa-check-square" />;
 
-export const NotFoundContent = <span className="notFound">Nada encontrado</span>
+export const NotFoundContent = <span className="notFound">Nada encontrado</span>;
 
 export const ErrorIcon = <Icon icon="fa-circle-exclamation" size="xs" color="error"/>;
