@@ -20,7 +20,7 @@ import  Tag  from './Tag';
 import  TextField  from './TextField';
 import  DatePickerComponent  from './DatePicker';
 import  Tabs  from './Tabs';
-
+import Dropdowns from './Dropdown';
 
 export {
     Button,
@@ -44,5 +44,6 @@ export {
     Tag,
     TextField,
     DatePickerComponent,
-    Tabs
+    Tabs,
+    Dropdowns
 }

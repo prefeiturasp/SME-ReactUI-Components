@@ -77,9 +77,8 @@ Button.propTypes = {
 
 Button.defaultProps = {
   type: 'filled',
-  size: 'large',
+  size: 'default',
   icon: false,
-  outline: false,
   block: false,
   loading: false,
   disabled: false,
