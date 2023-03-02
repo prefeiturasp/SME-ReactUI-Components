@@ -1,10 +1,10 @@
 import { Space } from 'antd';
 import React from 'react';
-import { Dropdowns } from '~/components';
+import { Dropdown } from '~/components';
 
 export default {
   title: 'Components|Dropdown',
-  component: Dropdowns,
+  component: Dropdown,
 };
 
 export const All = () => {
@@ -32,44 +32,44 @@ export const All = () => {
   return (
     <Space>
       <Space>
-        <Dropdowns 
+        <Dropdown 
           items={items} 
           onClick={(itemClicked) => console.log(itemClicked)}
           color="primary"
           type="filled"
           >
             Primary
-        </Dropdowns>
+        </Dropdown>
       </Space>
       <Space>
-        <Dropdowns 
+        <Dropdown 
           items={items} 
           onClick={(itemClicked) => console.log(itemClicked)}
           color="secondary"
           type="filled"
           >
             Secondary
-        </Dropdowns>
+        </Dropdown>
       </Space>      
       <Space>
-        <Dropdowns 
+        <Dropdown 
           items={items} 
           onClick={(itemClicked) => console.log(itemClicked)}
           color="primary"
           type="outlined"
           >
             Primary outlined
-        </Dropdowns>
+        </Dropdown>
       </Space> 
       <Space>
-        <Dropdowns 
+        <Dropdown 
           items={items} 
           onClick={(itemClicked) => console.log(itemClicked)}
           color="secondary"
           type="outlined"
           >
             Secondary outlined
-        </Dropdowns>
+        </Dropdown>
       </Space>            
     </Space>
   );
@@ -100,33 +100,33 @@ export const Colors = () => {
   return (
     <Space>
       <Space>
-        <Dropdowns 
+        <Dropdown 
           items={items} 
           onClick={(itemClicked) => console.log(itemClicked)}
           color="primary"
           >
             Primary
-        </Dropdowns>
+        </Dropdown>
       </Space>
       <Space>
-        <Dropdowns 
+        <Dropdown 
           items={items} 
           onClick={(itemClicked) => console.log(itemClicked)}
           color="secondary"
           type="outlined"
           >
             Secondary
-        </Dropdowns>
+        </Dropdown>
       </Space> 
       <Space>
-        <Dropdowns 
+        <Dropdown 
           items={items} 
           onClick={(itemClicked) => console.log(itemClicked)}
           color="dark"
           type="text"
           >
             Dark
-        </Dropdowns>
+        </Dropdown>
       </Space>                      
     </Space>
   );
@@ -157,34 +157,34 @@ export const Types = () => {
   return (
     <Space>
       <Space>
-        <Dropdowns 
+        <Dropdown 
           items={items} 
           onClick={(itemClicked) => console.log(itemClicked)}
           color="primary"
           type="filled"
           >
             Primary
-        </Dropdowns>
+        </Dropdown>
       </Space>
       <Space>
-        <Dropdowns 
+        <Dropdown 
           items={items} 
           onClick={(itemClicked) => console.log(itemClicked)}
           color="primary"
           type="outlined"
           >
             Primary
-        </Dropdowns>
+        </Dropdown>
       </Space> 
       <Space>
-        <Dropdowns 
+        <Dropdown 
           items={items} 
           onClick={(itemClicked) => console.log(itemClicked)}
           color="primary"
           type="text"
           >
             Text
-        </Dropdowns>
+        </Dropdown>
       </Space>                      
     </Space>
   );
@@ -215,7 +215,7 @@ export const Sizes = () => {
   return (
     <Space>
       <Space>
-        <Dropdowns 
+        <Dropdown 
           items={items} 
           onClick={(itemClicked) => console.log(itemClicked)}
           color="secondary"
@@ -223,10 +223,10 @@ export const Sizes = () => {
           size="small"
           >
             Small
-        </Dropdowns>
+        </Dropdown>
       </Space>
       <Space>
-        <Dropdowns 
+        <Dropdown 
           items={items} 
           onClick={(itemClicked) => console.log(itemClicked)}
           color="secondary"
@@ -234,10 +234,10 @@ export const Sizes = () => {
           size="default"
           >
             Default
-        </Dropdowns>
+        </Dropdown>
       </Space> 
       <Space>
-        <Dropdowns 
+        <Dropdown 
           items={items} 
           onClick={(itemClicked) => console.log(itemClicked)}
           color="secondary"
@@ -245,7 +245,7 @@ export const Sizes = () => {
           size="large"
           >
             Large
-        </Dropdowns>
+        </Dropdown>
       </Space>                      
     </Space>
   );
@@ -276,7 +276,7 @@ export const Disabled = () => {
   return (
     <Space>
       <Space>
-        <Dropdowns 
+        <Dropdown 
           items={items} 
           onClick={(itemClicked) => console.log(itemClicked)}
           color="secondary"
@@ -284,7 +284,7 @@ export const Disabled = () => {
           disabled
           >
             Default
-        </Dropdowns>
+        </Dropdown>
       </Space>                      
     </Space>
   );
@@ -315,7 +315,7 @@ export const WithIcon = () => {
   return (
     <Space>
       <Space>
-        <Dropdowns 
+        <Dropdown 
           items={items} 
           onClick={(itemClicked) => console.log(itemClicked)}
           color="secondary"
@@ -323,10 +323,10 @@ export const WithIcon = () => {
           iconLeft={"fa-user"}
           >
             Default
-        </Dropdowns>
+        </Dropdown>
       </Space>
       <Space>
-        <Dropdowns 
+        <Dropdown 
           items={items} 
           onClick={(itemClicked) => console.log(itemClicked)}
           color="primary"
@@ -334,7 +334,7 @@ export const WithIcon = () => {
           iconLeft={"fa-list"}
           >
             Default
-        </Dropdowns>
+        </Dropdown>
       </Space>                      
     </Space>
   );

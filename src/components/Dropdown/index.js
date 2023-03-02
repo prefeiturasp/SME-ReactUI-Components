@@ -11,7 +11,7 @@ import { DropdownStyle, DropdownIconLeft, ArrowDown } from './styles';
  *
  */
 
-function Dropdowns({
+function Dropdown({
     children,
     items = [],
     type,
@@ -48,7 +48,7 @@ function Dropdowns({
     );
 }
 
-Dropdowns.propTypes = {
+Dropdown.propTypes = {
     items: t.array,
     type: t.oneOf(['filled', 'outlined', 'text']),
     size: t.oneOf(['small', 'default', 'large']),
@@ -56,11 +56,11 @@ Dropdowns.propTypes = {
     disabled: t.bool,
 };
 
-Dropdowns.defaultProps = {
+Dropdown.defaultProps = {
     items: [],
     type: 'filled',
     size: 'default',
     disabled: false,
 };
 
-export default Dropdowns;
+export default Dropdown;
