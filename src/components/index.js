@@ -23,6 +23,7 @@ import  Tabs  from './Tabs';
 import Dropdown from './Dropdown';
 import Slider from './Slider';
 import NumberField from './NumberField';
+import Carousel from './Carousel';
 
 export {
     Button,
@@ -49,5 +50,6 @@ export {
     DatePickerComponent,
     Tabs,
     Dropdown,
-    Slider
+    Slider,
+    Carousel
 }
