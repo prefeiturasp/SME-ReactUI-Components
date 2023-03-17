@@ -29,18 +29,18 @@ const colors = {
   primary: {
     default: Primary,
     dark: PrimaryDark,
-    light: PrimaryLight
+    light: PrimaryLight,
   },
   secondary: {
     default: Secondary,
     dark: SecondaryDark,
-    light: SecondaryLight
+    light: SecondaryLight,
   },
   tertiary: {
     default: Tertiary,
     dark: TertiaryDark,
-    light: TertiaryLight
-  }, 
+    light: TertiaryLight,
+  },
   light: {
     default: Light,
     dark: Light,
@@ -53,8 +53,8 @@ const colors = {
   error: { default: Error },
   info: { default: Info },
   success: { default: Success },
-  grey: { default: Grey }
-}
+  grey: { default: Grey },
+};
 
 const Support = {
   Colors: {
@@ -68,23 +68,27 @@ const Support = {
     Alert: Alert,
     Disabled: Disabled,
     NeutralDark: Dark,
-    Light: Light
+    Light: Light,
   },
 
   Button: {
-    colors: colors
+    colors: colors,
   },
 
   Collapse: {
-    colors: colors
+    colors: colors,
   },
 
   Tab: {
-    colors: colors
+    colors: colors,
   },
-  
+
   Select: {
-    colors: colors
+    colors: colors,
+  },
+
+  Stepper: {
+    colors: colors,
   },
 
   Typography: {
@@ -118,17 +122,17 @@ const Support = {
       info: Info,
       warning: Warning,
       dark: Dark,
-      light: Light
+      light: Light,
     },
     sizes: {
       xxs: '12px',
       xs: '16px',
       sm: '20px',
       md: '24px',
-      lg: '32px'
-    }
+      lg: '32px',
+    },
   },
-  
+
   Spacing: {
     XXXS: '4px',
     XXS: '8px',
@@ -143,31 +147,40 @@ const Support = {
 };
 
 const themes = {
-  'themeSGP': merge({
-    name: 'Tema SGP',
-    Colors: {
-      Primary: '#6933FF',
-      PrimaryDark: '#490CF5',
-      PrimaryLight: '#9670FF'
-    }
-  }, Support),
-  'themeSGC': merge({
-    name: 'Tema SGC',
-    Colors: {
-      Primary: '#602A2A',
-      PrimaryDark: '#431E1E',
-      PrimaryLight: '#864241'
-    }
-  }, Support),
-  'themeSIGPAE': merge({
-    name: 'Tema SIGPAE',
-    Colors: {
-      Primary: '#198459',
-      PrimaryDark: '#0C6B45',
-      PrimaryLight: '#20AA73',
-    }
-  }, Support),
-}
+  themeSGP: merge(
+    {
+      name: 'Tema SGP',
+      Colors: {
+        Primary: '#6933FF',
+        PrimaryDark: '#490CF5',
+        PrimaryLight: '#9670FF',
+      },
+    },
+    Support
+  ),
+  themeSGC: merge(
+    {
+      name: 'Tema SGC',
+      Colors: {
+        Primary: '#602A2A',
+        PrimaryDark: '#431E1E',
+        PrimaryLight: '#864241',
+      },
+    },
+    Support
+  ),
+  themeSIGPAE: merge(
+    {
+      name: 'Tema SIGPAE',
+      Colors: {
+        Primary: '#198459',
+        PrimaryDark: '#0C6B45',
+        PrimaryLight: '#20AA73',
+      },
+    },
+    Support
+  ),
+};
 
 function useTheme() {
   return themes;

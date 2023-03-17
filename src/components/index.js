@@ -24,6 +24,7 @@ import Dropdown from './Dropdown';
 import Slider from './Slider';
 import NumberField from './NumberField';
 import Carousel from './Carousel';
+import Stepper from './Stepper';
 
 export {
     Button,
@@ -51,5 +52,6 @@ export {
     Tabs,
     Dropdown,
     Slider,
-    Carousel
+    Carousel,
+    Stepper
 }
