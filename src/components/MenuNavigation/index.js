@@ -85,10 +85,12 @@ MenuNavigation.propTypes = {
   defaultSelectedKeys: t.array,
   defaultOpenKeys: t.array,
   items: t.array,
+  onClick: t.func,
 };
 
 MenuNavigation.defaultProps = {
   items: [],
+  onClick: () => {},
 };
 
 export default MenuNavigation;
