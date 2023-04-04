@@ -24,10 +24,10 @@ export const Default = () => {
         visible={openModal}
         title="Example title"
         footer={[
-          <Button type="primary" outline key="back" onClick={() => setOpenModal(false)}>
+          <Button type="text" color="dark" key="back" onClick={() => setOpenModal(false)}>
             Cancel
           </Button>,
-          <Button type="primary" key="submit"  onClick={exampleSubmit}>
+          <Button type="outlined" color="primary" key="submit"  onClick={exampleSubmit}>
             Submit
           </Button>,
         ]}
@@ -43,4 +43,42 @@ export const Default = () => {
   );
 }
 
+export const ModalDialog = () => {
+  const [ openModal, setOpenModal ] = useState(false);
+
+  function exampleSubmit(){
+    console.log('exampleSubmit');
+    setOpenModal(false);
+  }
+
+  return (
+    <>
+      <Button type="primary" onClick={() => setOpenModal(true)}>
+        Open modal dialog
+      </Button>
+
+      <Modal
+        visible={openModal}
+        mask={false}
+        closable={false}
+        maskClosable={false}
+        title="Confirm action"
+        footer={[
+          <Button type="text" color="dark" key="back" onClick={() => setOpenModal(false)}>
+            Cancel
+          </Button>,
+          <Button type="outlined" color="primary" key="submit"  onClick={exampleSubmit}>
+            Confirm
+          </Button>,
+        ]}
+        onCancel={() => setOpenModal(false)}
+      >
+        <p>Are you sure you want to do this?</p>
+      </Modal>
+    </>
+  );
+}
+
+
 Default.story = { name: 'default' }
+ModalDialog.story = { name: 'modal dialog' }

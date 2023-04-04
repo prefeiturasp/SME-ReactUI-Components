@@ -10,6 +10,12 @@ export const CardStyle = styled(_CardWithoutDomProps)`
 	border-radius: 1px !important;
 	position: relative;
 
+	${(props) => 
+		props.disabled ? `
+		opacity: 0.3;
+		`
+	: undefined}
+
 	${(props) =>
     props.rounded ?
     `
@@ -105,25 +111,6 @@ export const CardBodyStyle = styled(Card)`
 
 export const CardFootStyle = styled(Card)`
   padding: 0.5rem;
-  margin: 0;
+  margin: 0.5rem 0px;
   background: transparent;
-
-  ${(props) =>
-    typeof props.children === 'object' &&
-    !props?.children?.length ?
-    `
-		text-align: center;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-
-		a {
-			color: #42474A;
-			font-weight: bold;
-
-			&:hover {
-				color: gray;
-			}
-		}
-	` : undefined}
 `;

@@ -3,14 +3,8 @@ import styled from 'styled-components';
 // Ant
 import { Button } from 'antd';
 
-export const Teste = styled(Button)``;
-
 export const ButtonStyle = styled(Button)`
   font-family: 'Roboto', sans-serif !important;
-  font-weight: ${(props) =>
-    props.theme?.Typography?.FontWeight?.Bold} !important;
-  font-size: ${(props) => props.theme?.Typography?.Size?.XSmall};
-  border-radius: 0.25rem;
   overflow: hidden;
   pointer-events: initial !important;
 
@@ -18,6 +12,14 @@ export const ButtonStyle = styled(Button)`
     margin-left: ${(props) => props.theme?.Spacing?.XXS} !important;
   }
 
+  &.ant-btn:disabled i{
+    color: unset !important;
+  }
+
+  &.ant-btn:not(.ant-btn-group *){
+    border-radius: 4px !important;
+  }
+  
   &.ant-btn-group {
     background: red;
   }
@@ -26,10 +28,6 @@ export const ButtonStyle = styled(Button)`
     background: transparent !important;
     border-color: ${(props) => props.theme?.Colors?.Disabled} !important;
     color: ${(props) => props.theme?.Colors?.Disabled} !important;
-  }
-
-  i {
-    font-size: ${(props) => props.theme?.Typography?.Size?.XSmall};
   }
 
   &.ant-btn-link {
@@ -45,29 +43,12 @@ export const ButtonStyle = styled(Button)`
     }
   }
 
-  &.ant-btn-sm {
-    font-size: ${(props) => props.theme?.Typography?.Size?.XXSmall};
-
-    i {
-      font-size: ${(props) => props.theme?.Typography?.Size?.XXSmall};
-    }
-  }
-
-  &.ant-btn-lg {
-    font-size: ${(props) => props.theme?.Typography?.Size?.Small};
-
-    i {
-      font-size: ${(props) => props.theme?.Typography?.Size?.Small};
-    }
-  }
-
   &.ant-btn-primary {
-    background-color: ${(props) => props.theme?.Colors?.Primary} !important;
-    border-color: ${(props) => props.theme?.Colors?.Primary} !important;
+    background-color: ${(props) => props.theme?.Button.colors[props.color]?.default} !important;
+    border-color: ${(props) => props.theme?.Button.colors[props.color]?.default} !important;
 
     &:hover:not(:disabled) {
-      background-color: ${(props) =>
-        props.theme?.Colors?.PrimaryDark} !important;
+      background-color: ${(props) => props.theme?.Button.colors[props.color]?.dark}  !important;
     }
 
     &:disabled {
@@ -77,41 +58,31 @@ export const ButtonStyle = styled(Button)`
     }
   }
 
-  &.ant-btn-secondary {
-    background-color: ${(props) => props.theme?.Colors?.Info} !important;
-    border-color: ${(props) => props.theme?.Colors?.Info} !important;
-    color: white;
+  &.ant-btn-text {
+    color: ${(props) => props.theme?.Button.colors[props.color]?.default} !important;
 
-    &:disabled {
-      background: transparent !important;
-      border-color: ${(props) => props.theme?.Colors?.Disabled} !important;
+    &:disabled{
       color: ${(props) => props.theme?.Colors?.Disabled} !important;
+      border: unset !important;
     }
   }
 
-  ${(props) =>
-    props.outline &&
-    `
-    &.ant-btn-primary {
-      background-color: transparent !important;
-      color: ${props.theme?.Colors?.Primary} !important;
+  &.ant-btn-outlined:not(:disabled) {
+    background-color: transparent !important;
+    color: ${(props) => props.theme?.Button.colors[props.color]?.default} !important;
+    border-color: ${(props) => props.theme?.Button.colors[props.color]?.default} !important;
 
-      &:hover:not(:disabled) {
-        background-color: ${props.theme?.Colors?.Primary} !important;
-        color: white !important;
-      }
+    &:hover:not(:disabled) {
+      background-color: ${(props) => props.theme?.Button.colors[props.color]?.dark}66 !important;
+      color: ${(props) => props.theme?.Button.colors[props.color]?.dark} !important;
+      border-color: ${(props) => props.theme?.Button.colors[props.color]?.dark} !important;
     }
-
-    &.ant-btn-secondary {
+    &:not(:disabled):focus-visible{
       background-color: transparent !important;
-      color: ${props.theme?.Colors?.Info} !important;
-
-      &:hover:not(:disabled) {
-        background-color: ${props.theme?.Colors?.Info} !important;
-        color: white !important;
-      }
+      color: ${(props) => props.theme?.Colors[props.color]} !important;
+      outline: unset;
     }
-  `}
+  }
 `;
 
 export const ButtonGroupStyle = styled(Button.Group)`

@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const IconStyle = styled.i`
-  ${(props) =>
-    props.typeColor === 'primary' &&
-    `
-    color: ${props.theme?.Colors?.Primary}`}
+  ${(props) => `
+      color: ${props.theme?.Icon?.colors[props.color]};
+      font-size: ${props.theme?.Icon?.sizes[props.size]};
+  `}
 `;

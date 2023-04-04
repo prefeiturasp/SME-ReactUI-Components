@@ -18,6 +18,36 @@ export const IconStory = () => (
   </>
 );
 
+export const IconSizesStory = () => (
+  <>
+    <Icon type="solid" size='xxs' icon="fa-user"/> &nbsp;
+    <Icon type="solid" size='xs' icon="fa-user"/> &nbsp;
+    <Icon type="solid" size='sm' icon="fa-address-book" /> &nbsp;
+    <Icon type="solid" size='md' icon="fa-calendar" /> &nbsp;
+    <Icon type="regular" size='lg' icon="fa-angry" /> &nbsp;
+  </>
+);
+
+export const IconColorsStory = () => (
+  <>
+    <Icon type="solid" size='md' icon="fa-user" color="primary"/> &nbsp;
+    <Icon type="solid" size='md' icon="fa-phone" color="secondary" /> &nbsp;
+    <Icon type="solid" size='md' icon="fa-bell" color="tertiary" /> &nbsp;
+    <Icon type="solid" size='md' icon="fa-address-book" color="success" /> &nbsp;
+    <Icon type="solid" size='md' icon="fa-calendar" color="error" /> &nbsp;
+    <Icon type="solid" size='md' icon="fa-star" color="info" /> &nbsp;
+    <Icon type="solid" size='md' icon="fa-fire" color="warning" /> &nbsp;
+  </>
+);
+
+export const IconTypesStory = () => (
+  <>
+    <Icon type="solid" icon="fa-user"/> &nbsp;
+    <Icon type="brand" icon="fa-facebook" /> &nbsp;
+    <Icon type="regular" icon="fa-angry" /> &nbsp;
+  </>
+);
+
 IconStory.story = {
   name: 'all',
   decorators: [
@@ -45,3 +75,16 @@ IconStory.story = {
     ),
   ],
 };
+
+
+IconSizesStory.story = {
+  name: 'sizes'
+};
+
+IconColorsStory.story = {
+  name: 'colors'
+}
+
+IconTypesStory.story = {
+  name: 'types'
+}

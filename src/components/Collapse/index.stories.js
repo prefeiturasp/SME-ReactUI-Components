@@ -1,46 +1,25 @@
 import React, { useState } from 'react';
 
 // Components
-import { Collapse } from '~/components';
+import { Collapse, Icon } from '~/components';
 
 const { Panel } = Collapse;
+const { PanelHeader } = Panel;
 
 export default {
   title: 'Components|Collapse',
   component: Collapse,
-  subcomponents: { Panel },
+  subcomponents: { Panel, PanelHeader },
 };
 
 export const CollapseStory = () => {
-  const [activePanel, setActivePanel] = useState(['0']);
+  const [activePanel, setActivePanel] = useState(false);
   return (
     <Collapse
       activeKey={activePanel}
       onChange={(panel) => setActivePanel(panel)}
     >
-      <Collapse.Panel header="Título">Content</Collapse.Panel>
-      <Collapse.Panel header="Título">Content</Collapse.Panel>
-      <Collapse.Panel header="Título">Content</Collapse.Panel>
-    </Collapse>
-  );
-};
-
-export const CollapseDisabledStory = () => {
-  const [activePanel, setActivePanel] = useState([]);
-  return (
-    <Collapse
-      activeKey={activePanel}
-      onChange={(panel) => setActivePanel(panel)}
-    >
-      <Collapse.Panel disabled header="Título">
-        Content
-      </Collapse.Panel>
-      <Collapse.Panel disabled header="Título">
-        Content
-      </Collapse.Panel>
-      <Collapse.Panel disabled header="Título">
-        Content
-      </Collapse.Panel>
+      <Collapse.Panel bordered header="Title" borderColor="primary">Content</Collapse.Panel>
     </Collapse>
   );
 };
@@ -52,35 +31,85 @@ export const CollapseBorderedStory = () => {
       activeKey={activePanel}
       onChange={(panel) => setActivePanel(panel)}
     >
-      <Collapse.Panel bordered header="Título">
+      <Collapse.Panel bordered header="Title" borderColor="primary">
         Content
       </Collapse.Panel>
-      <Collapse.Panel bordered header="Título">
+      <Collapse.Panel bordered header="Title" borderColor="secondary">
         Content
       </Collapse.Panel>
-      <Collapse.Panel bordered header="Título">
+      <Collapse.Panel bordered header="Title" borderColor="tertiary">
         Content
       </Collapse.Panel>
     </Collapse>
   );
 };
 
-export const CollapseCustomBorderStory = () => {
+export const CollapseDisabledStory = () => {
   const [activePanel, setActivePanel] = useState([]);
   return (
     <Collapse
       activeKey={activePanel}
       onChange={(panel) => setActivePanel(panel)}
     >
-      <Collapse.Panel bordered borderColor="red" header="Título">
+      <Collapse.Panel disabled bordered header="Title" borderColor="primary">
         Content
       </Collapse.Panel>
-      <Collapse.Panel bordered borderColor="yellow" header="Título">
+      <Collapse.Panel disabled bordered header="Title" borderColor="primary">
         Content
       </Collapse.Panel>
-      <Collapse.Panel bordered borderColor="cyan" header="Título">
+      <Collapse.Panel disabled bordered header="Title" borderColor="primary">
         Content
       </Collapse.Panel>
+    </Collapse>
+  );
+};
+
+export const CollapseAdvancedHeaderStory = () => {
+  const [activePanel, setActivePanel] = useState(false);
+  return (
+    <Collapse
+      activeKey={activePanel}
+      onChange={(panel) => setActivePanel(panel)}
+    >
+      <Collapse.Panel 
+        bordered 
+        borderColor="info"
+        header="Info collapse" 
+        subtitle="Info collapse subtitle"
+        icon='fa-circle-exclamation'
+      >
+        Content
+      </Collapse.Panel>
+
+      <Collapse.Panel 
+        bordered 
+        header="Warning collapse" 
+        borderColor="warning"
+        subtitle="Warning collapse subtitle"
+        icon='fa-triangle-exclamation'
+      >
+        Content
+      </Collapse.Panel>      
+
+      <Collapse.Panel 
+        bordered 
+        header="Success collapse" 
+        borderColor="success"
+        subtitle="Success collapse subtitle"
+        icon='fa-circle-check'
+      >
+        Content
+      </Collapse.Panel>            
+
+      <Collapse.Panel 
+        bordered 
+        header="Error collapse" 
+        borderColor="error"
+        subtitle="Error collapse subtitle"
+        icon='fa-circle-xmark'
+      >
+        Content
+      </Collapse.Panel>                  
     </Collapse>
   );
 };
@@ -97,6 +126,6 @@ CollapseBorderedStory.story = {
   name: 'bordered collapse',
 };
 
-CollapseCustomBorderStory.story = {
-  name: 'custom border color collapse',
+CollapseAdvancedHeaderStory.store = {
+  name: 'advanced header collapse',
 };
