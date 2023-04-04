@@ -1,6 +1,6 @@
 {
   "name": "sme-secretui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Biblioteca de componentes visuais construída em React para a secretaria municipal de educação de São Paulo",
   "main": "./dist/index.js",
   "files": [
@@ -16,7 +16,10 @@
     "build-storybook": "build-storybook"
   },
   "keywords": [
-    "react"
+    "react",
+    "sme",
+    "antd",
+    "fortawesome"
   ],
   "author": "SME - Secretaria Municipal de Educação do Estado de São Paulo",
   "license": "ISC",
