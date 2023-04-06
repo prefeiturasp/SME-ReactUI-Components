@@ -147,17 +147,15 @@ const Support = {
 };
 
 const themes = {
-  themeSGP: merge(
-    {
-      name: 'Tema SGP',
-      Colors: {
-        Primary: '#6933FF',
-        PrimaryDark: '#490CF5',
-        PrimaryLight: '#9670FF',
-      },
+  themeSGP: {
+    name: 'Tema SGP',
+    Colors: {
+      Primary: '#6933FF',
+      PrimaryDark: '#490CF5',
+      PrimaryLight: '#9670FF',
     },
-    Support
-  ),
+    ...Support,
+  },
   themeSGC: merge(
     {
       name: 'Tema SGC',
