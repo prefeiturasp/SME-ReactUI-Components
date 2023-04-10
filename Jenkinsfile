@@ -25,7 +25,7 @@ pipeline {
           when { anyOf { branch 'master'; branch 'main'; branch "story/*"; branch 'develop'; branch 'release'; branch 'homolog';  } } 
           steps {
             script {
-              imagename1 = "registry.sme.prefeitura.sp.gov.br/storybook/sme-storybook:dev"
+              imagename1 = "registry.sme.prefeitura.sp.gov.br/storybook/sme-storybook:${env.branchname}"
               dockerImage1 = docker.build(imagename1, "-f Dockerfile .")
               docker.withRegistry( 'https://registry.sme.prefeitura.sp.gov.br', registryCredential ) {
               dockerImage1.push()
