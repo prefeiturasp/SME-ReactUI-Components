@@ -31,12 +31,11 @@ const Button = React.forwardRef(
     },
     ref
   ) => {
-
-    const types =  {
+    const types = {
       text: 'text',
       filled: 'primary',
       outlined: 'outlined',
-      link: 'link'
+      link: 'link',
     };
 
     return (
