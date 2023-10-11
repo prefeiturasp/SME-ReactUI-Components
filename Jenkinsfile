@@ -5,7 +5,7 @@ pipeline {
       registryCredential = 'jenkins_registry'
       namespace = "${env.branchname == 'developm' ? 'storybook-dev' : env.branchname == 'homolog' ? 'storybook-hom' : env.branchname == 'release-r2' ? 'storybook-hom2' : 'sme-storybook' }" 
     }
-    }
+    
   
     agent { kubernetes { 
               label 'builder'
